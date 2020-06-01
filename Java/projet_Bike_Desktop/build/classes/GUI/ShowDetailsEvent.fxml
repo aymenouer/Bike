@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowDetailsEventController">
+   <children>
+      <AnchorPane prefHeight="616.0" prefWidth="993.0" style="-fx-background-radius: 15; -fx-background-color: fff;">
+         <children>
+            <ListView fx:id="listViewQR" layoutX="50.0" layoutY="310.0" prefHeight="156.0" prefWidth="886.0" style="-fx-border-color: ff6601;" />
+            <Text fx:id="question" fill="#ff6601" layoutX="453.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITRE" wrappingWidth="87.99999609589577">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="type_vote_oui" layoutX="772.0" layoutY="25.0" onAction="#Like" prefHeight="39.0" prefWidth="81.0" stylesheets="@../css/style%20-%20Copie.css" text="LIKE" textFill="#3e4455">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="type_vote_non" layoutX="871.0" layoutY="25.0" onAction="#DesLike" stylesheets="@../css/style%20-%20Copie.css" text="DISLIKE" textFill="#3e4455">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="UpdateReponse" fx:id="addComment" layoutX="716.0" layoutY="574.0" onAction="#AddComment" prefHeight="27.0" prefWidth="128.0" stylesheets="@../css/style%20-%20Copie.css" text="COMMENT" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <Button id="Suprrimer" fx:id="back" layoutX="-1.0" layoutY="-1.0" onAction="#back" prefHeight="47.0" prefWidth="128.0" stylesheets="@../css/style%20-%20Copie.css" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="img_ev" fitHeight="217.0" fitWidth="250.0" layoutX="342.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/icons8_GPS_Antenna_64px_1.png" />
+               </image></ImageView>
+            <TextField fx:id="commentText" layoutX="158.0" layoutY="540.0" prefHeight="27.0" prefWidth="679.0" style="-fx-border-color: ff6601;" />
+            <Button id="Suprrimer" fx:id="participer" layoutX="708.0" layoutY="472.0" onAction="#Participer" prefHeight="28.0" prefWidth="128.0" stylesheets="@../css/style%20-%20Copie.css" text="PARTICIPER" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <Text fx:id="question1" fill="#ff6601" layoutX="161.0" layoutY="533.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD COMMENT" wrappingWidth="304.99999609589577">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="nbrLike" layoutX="802.0" layoutY="72.0" text="Like" />
+            <Label fx:id="nbrdeslike" layoutX="901.0" layoutY="72.0" text="deslike" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

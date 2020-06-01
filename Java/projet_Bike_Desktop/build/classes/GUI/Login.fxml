@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
+   <children>
+      <AnchorPane fx:id="layersignup" prefHeight="500.0" prefWidth="632.0">
+         <children>
+            <AnchorPane fx:id="layer1" layoutX="309.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="491.0" style="-fx-background-color: white;">
+               <children>
+                  <Label fx:id="a1" alignment="CENTER" contentDisplay="CENTER" layoutX="114.0" layoutY="249.0" prefHeight="10.0" prefWidth="267.0" text="PASSWORD" textAlignment="CENTER" textFill="#141124">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="b2" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="47.0" prefHeight="46.0" prefWidth="309.0" text="ACCOUNT LOGIN" textAlignment="CENTER" textFill="#555555" visible="false">
+                     <font>
+                        <Font name="Raleway Medium" size="30.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstname" layoutX="110.0" layoutY="75.0" prefHeight="23.0" prefWidth="258.0">
+                     <font>
+                        <Font name="Roboto Medium" size="10.0" />
+                     </font></TextField>
+                  <TextField fx:id="lastname" layoutX="110.0" layoutY="117.0" prefHeight="23.0" prefWidth="258.0" />
+                  <TextField fx:id="email" layoutX="110.0" layoutY="159.0" prefHeight="25.0" prefWidth="258.0" />
+                  <TextField fx:id="username" layoutX="110.0" layoutY="204.0" prefHeight="25.0" prefWidth="258.0" />
+                  <PasswordField fx:id="password" layoutX="110.0" layoutY="246.0" prefHeight="25.0" prefWidth="258.0" />
+                  <TextField fx:id="Number" layoutX="110.0" layoutY="293.0" prefHeight="25.0" prefWidth="258.0" promptText="Nmber" />
+                  <Button fx:id="btnsignup" layoutX="189.0" layoutY="457.0" onMouseClicked="#btnsignup" prefHeight="32.0" prefWidth="118.0" style="-fx-background-color: ff6601; -fx-background-radius: 200; -fx-text-fill: white;" text="Sign Up">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="12.0" />
+                     </font></Button>
+                  <Label fx:id="b1" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="213.0" prefHeight="19.0" prefWidth="135.0" text="PASSWORD" textAlignment="CENTER">
+                     <font>
+                        <Font name="Raleway Medium" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnsignin" layoutX="244.0" layoutY="307.0" onAction="#click" onMouseClicked="#sign" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #ff6601; -fx-background-radius: 200; -fx-text-fill: white;" text="Connexion">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="16.0" />
+                     </font></Button>
+                  <Label fx:id="n3" alignment="CENTER" contentDisplay="CENTER" layoutX="22.0" layoutY="290.0" prefHeight="19.0" prefWidth="239.0" text="FORGET YOUR PASSWORD" textAlignment="CENTER" textFill="#555555" visible="false">
+                     <font>
+                        <Font name="Raleway Medium" size="12.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="age" layoutX="111.0" layoutY="340.0" prefHeight="24.0" prefWidth="258.0" promptText="Age" />
+                  <ImageView fx:id="imageview" fitHeight="85.0" fitWidth="104.0" layoutX="202.0" layoutY="367.0" onDragDropped="#handleDrop" onDragOver="#handleDragOver" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/upload.gif" />
+                     </image></ImageView>
+                  <TextField fx:id="n1" layoutX="46.0" layoutY="151.0" prefHeight="46.0" prefWidth="336.0" />
+                  <PasswordField fx:id="n2" layoutX="46.0" layoutY="233.0" prefHeight="46.0" prefWidth="336.0" />
+                  <Label fx:id="lbl_firstname" layoutX="111.0" layoutY="56.0" text="FIRSTNAME" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_lastname" layoutX="111.0" layoutY="100.0" text="LASTNAME" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_email" layoutX="112.0" layoutY="144.0" text="EMAIL" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_username" layoutX="113.0" layoutY="188.0" text="USERNAME" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_password" layoutX="112.0" layoutY="232.0" text="PASSWORD" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_number" layoutX="113.0" layoutY="276.0" text="USERNUMBER" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_age" layoutX="113.0" layoutY="324.0" text="USERAGE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl_image" layoutX="114.0" layoutY="372.0" text="USERIMAGE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway SemiBold" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblErrors" layoutX="51.0" layoutY="321.0" prefHeight="23.0" prefWidth="182.0" text="USERNAME">
+                     <font>
+                        <Font name="Raleway Medium" size="15.0" />
+                     </font></Label>
+                  <Label layoutX="48.0" layoutY="128.0" text="USERNAME">
+                     <font>
+                        <Font name="Raleway Medium" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label fx:id="a2" alignment="CENTER" contentDisplay="CENTER" layoutX="337.0" layoutY="10.0" lineSpacing="1.0" prefHeight="36.0" prefWidth="388.0" text="ACCOUNT REGISTRATION" textAlignment="CENTER" textFill="#555555">
+               <font>
+                  <Font name="Raleway Medium" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="layer2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="309.0" style="-fx-background-color: #161616;" StackPane.alignment="CENTER_LEFT">
+         <children>
+            <Label fx:id="l1" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="112.0" prefHeight="39.0" prefWidth="211.0" text="Welcome Back !" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="l2" alignment="CENTER" contentDisplay="CENTER" layoutX="21.0" layoutY="162.0" prefHeight="23.0" prefWidth="267.0" text="Bike a new way to see life." textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="l3" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="185.0" prefHeight="23.0" prefWidth="173.0" text="Bike,the next step." textAlignment="CENTER" textFill="WHITE" />
+            <Button fx:id="signin" layoutX="87.0" layoutY="250.0" onMouseClicked="#btn" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #161616; -fx-border-radius: 200; -fx-border-color: white; -fx-background-radius: 200; -fx-text-fill: white;" text="SIGN IN">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="signup" layoutX="87.0" layoutY="250.0" onMouseClicked="#btn2" prefHeight="39.0" prefWidth="135.0" style="-fx-background-color: #161616; -fx-border-radius: 200; -fx-border-color: white; -fx-background-radius: 200; -fx-text-fill: white;" text="SIGN UP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="s1" alignment="CENTER" contentDisplay="CENTER" layoutX="49.0" layoutY="112.0" prefHeight="39.0" prefWidth="211.0" text="Hello, Friend !" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="s2" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="165.0" prefHeight="17.0" prefWidth="267.0" text="Enter your personal details" textAlignment="CENTER" textFill="WHITE" />
+            <Label fx:id="s3" alignment="CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="188.0" prefHeight="17.0" prefWidth="173.0" text="and start journey with us" textAlignment="CENTER" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

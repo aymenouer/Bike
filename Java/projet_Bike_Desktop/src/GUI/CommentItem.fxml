@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<HBox fx:id="Hbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="869.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <VBox prefHeight="156.0" prefWidth="886.0">
+         <children>
+            <Text fx:id="UserName" strokeType="OUTSIDE" strokeWidth="0.0" text="UserName" wrappingWidth="126.72265625">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            
+            <Text fx:id="reponse" strokeType="OUTSIDE" strokeWidth="0.0" text="Reponse" wrappingWidth="323.0107421875">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Text>
+            <Label fx:id="nbr_like" prefHeight="17.0" prefWidth="23.0" translateX="800.0" translateY="-15.0" />
+            <Label fx:id="nbr_deslike" translateX="750.0" translateY="-32.0" />
+            <ButtonBar prefHeight="135.0" prefWidth="486.0">
+               <buttons>
+                  <JFXButton id="Suprrimer" fx:id="supprimer" onAction="#DeleteQuestion" prefHeight="39.0" prefWidth="165.0" styleClass="button4" stylesheets="@../css/style.css" text="Delete" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" size="24" text="" />
+                     </graphic>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton id="UpdateReponse" fx:id="Update" onAction="#UpdateReponse" prefHeight="39.0" prefWidth="165.0" styleClass="button4" stylesheets="@../css/style.css" text="Update" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" size="24" text="" />
+                     </graphic>
+                  </JFXButton>
+               </buttons>
+            </ButtonBar>
+         </children>
+      </VBox>
+   </children>
+</HBox>

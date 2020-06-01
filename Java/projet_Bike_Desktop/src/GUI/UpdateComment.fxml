@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="300.0" prefWidth="538.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateCommentController">
+   <children>
+      <TextArea fx:id="contenu_reponse" layoutX="60.0" layoutY="105.0" prefHeight="135.0" prefWidth="445.0" />
+      <Text fill="#ff6601" layoutX="164.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UPDATE COMMENT">
+         <font>
+            <Font name="Montserrat ExtraBold" size="26.0" />
+         </font>
+      </Text>
+      <Button fx:id="UpdateComment" layoutX="233.0" layoutY="259.0" onAction="#UpdateComment" prefHeight="25.0" prefWidth="130.0" stylesheets="@../css/style%20-%20Copie.css" text="UPDATE" textFill="WHITE" />
+      <Button fx:id="Cancel" layoutX="381.0" layoutY="259.0" onAction="#handleClose" prefHeight="21.0" prefWidth="124.0" stylesheets="@../css/style%20-%20Copie.css" text="CANCEL" textFill="WHITE" />
+      <Button fx:id="backbtn" onAction="#back" prefHeight="39.0" prefWidth="98.0" stylesheets="@../css/style%20-%20Copie.css" text="BACK" textFill="SILVER">
+         <font>
+            <Font name="Montserrat ExtraBold" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.affichageproduit_site_Front">
+   <children>
+      <AnchorPane prefHeight="616.0" prefWidth="993.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+         <children>
+            <StackPane layoutX="73.0" prefHeight="616.0" prefWidth="919.0">
+               <children>
+                  <Pane prefHeight="412.0" prefWidth="919.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: #131022; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <Pane fx:id="pnl_Commande" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <TableView fx:id="tabCommande" editable="true" layoutX="2.0" layoutY="54.0" prefHeight="191.0" prefWidth="880.0" style="-fx-border-color: #515658; -fx-background-color: fff; -fx-border-radius: 10;">
+                                       <columns>
+                                          <TableColumn fx:id="col_lib_produit_Commande" prefWidth="150.0" text="Libelle_Produit" />
+                                          <TableColumn fx:id="col_quantite_produit_Commande" prefWidth="150.0" text="Quantite_Produit" />
+                                          <TableColumn fx:id="col_prix_produit_Commande" prefWidth="150.0" text="Prix_Produit" />
+                                          <TableColumn fx:id="col_Adresse_Commande" prefWidth="150.0" text="Adresse" />
+                                          <TableColumn fx:id="col_Ville_Commande" prefWidth="150.0" text="Ville" />
+                                          <TableColumn fx:id="col_telephone_Commande" prefWidth="150.0" text="Telephone" />
+                                       </columns>
+                                    </TableView>
+                                    <Label layoutX="21.0" layoutY="289.0" text="Adresse  " textFill="#0a0303">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="216.0" layoutY="289.0" text="Ville " textFill="#0a0303">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="426.0" layoutY="289.0" text="Telephone " textFill="#0a0303">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txt_adresse_Modifier" layoutX="21.0" layoutY="326.0" promptText="Adresse" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <TextField fx:id="txt_Ville_Modifier" layoutX="221.0" layoutY="326.0" promptText="Ville" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <TextField fx:id="txt_telephone_Modifier" layoutX="426.0" layoutY="326.0" promptText="Telephone" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <Button fx:id="btn_Modifier_Commande" layoutX="609.0" layoutY="426.0" mnemonicParsing="false" onAction="#modifier_Commande" prefHeight="38.0" prefWidth="118.0" stylesheets="@../css/style.css" text="MODIFIER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Line endX="100.0" layoutX="251.0" layoutY="521.0" startX="100.0" startY="-190.0" stroke="WHITE" />
+                                    <Button fx:id="btn_Supprimer_Commande" layoutX="739.0" layoutY="426.0" mnemonicParsing="false" onAction="#supprimer_Commande" prefHeight="38.0" prefWidth="118.0" stylesheets="@../css/style.css" text="SUPPRIMER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="btn_printer" layoutX="784.0" layoutY="20.0" mnemonicParsing="false" onAction="#printer_COmmande" prefHeight="28.0" prefWidth="88.0" stylesheets="@../css/style.css" text="PDF" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Label layoutX="679.0" layoutY="257.0" text="Prix total " textFill="#0a0303">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="label_total_Commande" layoutX="798.0" layoutY="251.0" text="total" textFill="#ff6601">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="4.0" layoutY="18.0" text="Commande" textFill="#251919">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="170.0" layoutY="18.0" text="Gold" textFill="#ff6601">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="pnl_accessoire" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <ScrollPane fx:id="scrollpaneAccessoire" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                       <content>
+                                          <HBox fx:id="hboxAccessoire" prefHeight="482.0" prefWidth="886.0" style="-fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Label layoutX="7.0" layoutY="8.0" text="Acheter" textFill="#251919">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="130.0" layoutY="9.0" text="Accessoires" textFill="#ff6601">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="pnl_panier" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <Label layoutX="548.0" layoutY="246.0" text="Prix Total : ">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="prixTotal" layoutX="636.0" layoutY="240.0" text="Flous" textFill="#ff6601">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="20.0" />
+                                       </font>
+                                    </Label>
+                                    <Line endX="304.0" layoutX="106.0" layoutY="354.0" startX="-100.0" stroke="WHITE" />
+                                    <Line endX="100.0" endY="-5.0" layoutX="310.0" layoutY="527.0" startX="100.0" startY="-173.0" stroke="WHITE" />
+                                    <Label layoutX="34.0" layoutY="238.0" prefHeight="34.0" prefWidth="228.0" text="Quantite a modifier">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txt_quantite_change" layoutX="38.0" layoutY="272.0" promptText="Quantite" style="-fx-background-color: fff;" styleClass="combo-box" stylesheets="@../css/fullpackstyling2.css" />
+                                    <Button fx:id="btn_Modifier" layoutX="233.0" layoutY="272.0" mnemonicParsing="false" onAction="#Modifier_quantite" stylesheets="@../css/style.css" text="Modifier" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Line endX="100.0" layoutX="151.0" layoutY="522.0" startX="100.0" startY="-168.0" stroke="WHITE" />
+                                    <TextField fx:id="txt_adresse" layoutX="32.0" layoutY="370.0" promptText="Adresse" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <TextField fx:id="txt_ville" layoutX="224.0" layoutY="370.0" promptText="Ville" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <TextField fx:id="txt_telephone" layoutX="413.0" layoutY="370.0" promptText="Tel" style="-fx-background-color: fff;" styleClass="combo-box" />
+                                    <Label layoutX="32.0" layoutY="341.0" text="Adresse">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="224.0" layoutY="343.0" text="Ville">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="413.0" layoutY="345.0" text="Telephone">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TableView fx:id="tabpanier" editable="true" layoutX="61.0" layoutY="46.0" prefHeight="185.0" prefWidth="628.0" style="-fx-border-color: #515658; -fx-background-color: fff;">
+                                       <columns>
+                                          <TableColumn fx:id="col_lib_produit" prefWidth="150.0" text="Libelle_Produit" />
+                                          <TableColumn fx:id="col_quantite_produit" prefWidth="215.0" text="Quantite_Produit" />
+                                          <TableColumn fx:id="col_prix_produit" prefWidth="261.0" text="Prix_Produit" />
+                                       </columns>
+                                    </TableView>
+                                    <Button fx:id="btn_Supprimer" layoutX="638.0" layoutY="480.0" mnemonicParsing="false" onAction="#Supprimer" stylesheets="@../css/style.css" text="Supprimer" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Button fx:id="btn_PasserCommande" layoutX="586.0" layoutY="410.0" mnemonicParsing="false" onAction="#handleClicks" stylesheets="@../css/style.css" text="PasserCommande" textFill="WHITE">
+                                       <font>
+                                          <Font name="Montserrat ExtraBold" size="14.0" />
+                                       </font></Button>
+                                    <Label layoutX="56.0" layoutY="14.0" text="Panier" textFill="#251919">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="152.0" layoutY="15.0" text="Gold" textFill="#ff6601">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Pane fx:id="pnl_Piece" prefHeight="541.0" prefWidth="896.0" style="-fx-background-color: fff; -fx-background-radius: 10;">
+                                 <children>
+                                    <ScrollPane fx:id="scrollpanePiece" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                       <content>
+                                          <HBox fx:id="hboxPiece" prefHeight="482.0" prefWidth="886.0" style="-fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css" />
+                                       </content>
+                                    </ScrollPane>
+                                    <Label layoutX="7.0" layoutY="8.0" text="Acheter" textFill="#251919">
+                                       <font>
+                                          <Font name="Montserrat Regular" size="26.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="124.0" layoutY="8.0" text="Piece" textFill="#ff6601">
+                                       <font>
+                                          <Font name="Montserrat Medium" size="26.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="username" layoutX="654.0" layoutY="20.0" prefHeight="27.0" prefWidth="194.0" text="Client" textFill="#161616">
+                           <font>
+                              <Font name="Montserrat Regular" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="image_user" fitHeight="38.0" fitWidth="34.0" layoutX="863.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ic_usr.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="12.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #161616; -fx-background-radius: 15 0 0 15;" stylesheets="@../css/style%20-%20Copie.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Pane prefHeight="79.0" prefWidth="74.0" style="-fx-background-radius: 15 0 15 15;" />
+                  <Button fx:id="btn_product" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../css/style%20-%20Copie.css" text="Accessoire" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/security.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_product1" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../css/style%20-%20Copie.css" text="Piece" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/interface.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Back_front" contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../css/style%20-%20Copie.css" text="Back" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/multimedia-option.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Panier" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../css/style%20-%20Copie.css" text="panier" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/commerce-and-shopping%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Sign_Out" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" styleClass="button3" stylesheets="@../css/style%20-%20Copie.css" text="Sign Out" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/signs.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

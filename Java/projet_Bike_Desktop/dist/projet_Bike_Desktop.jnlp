@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="projet_Bike_Desktop.jnlp">
+  <information>
+    <title>projet_Bike_Desktop</title>
+    <vendor>aymen</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\AnimateFX-1.2.0.jar" size="85823" download="eager" />
+    <jar href="lib\GMapsFX-2.10.0.jar" size="154471" download="eager" />
+    <jar href="lib\KGradientPanel.jar" size="3699" download="eager" />
+    <jar href="lib\NotificationAPI.jar" size="2821" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\facebook4j-core-2.4.13.jar" size="538159" download="eager" />
+    <jar href="lib\itextpdf-5.1.0.jar" size="1614453" download="eager" />
+    <jar href="lib\itextpdf-5.4.1-sources.jar" size="1934883" download="eager" />
+    <jar href="lib\javax.mail-api-1.4.7.jar" size="189526" download="eager" />
+    <jar href="lib\javax.mail.jar" size="659033" download="eager" />
+    <jar href="lib\jbcrypt-0.3m.jar" size="17750" download="eager" />
+    <jar href="lib\jdom.jar" size="314590" download="eager" />
+    <jar href="lib\jfoenix-1.0.0.jar" size="2186636" download="eager" />
+    <jar href="lib\jfoenix-1.4.0.jar" size="2363143" download="eager" />
+    <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2386350" download="eager" />
+    <jar href="lib\junit-4.13.jar" size="381765" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+    <jar href="lib\openjfx-dialogs-1.0.3.jar" size="149178" download="eager" />
+    <jar href="lib\twilio-7.14.5-jar-with-dependencies.jar" size="8319358" download="eager" />
+    <jar href="lib\twilio-7.14.5-javadoc.jar" size="7318331" download="eager" />
+    <jar href="lib\twilio-7.14.5-sources.jar" size="1463997" download="eager" />
+    <jar href="lib\twilio-7.14.5.jar" size="2310539" download="eager" />
+    <jar href="lib\zxing-2.1.jar" size="449685" download="eager" />
+    <jar href="projet_Bike_Desktop.jar" size="27139349" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="projet_Bike_Desktop" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="GUI.main"  name="projet_Bike_Desktop" />
+  <update check="always"/>
+</jnlp>

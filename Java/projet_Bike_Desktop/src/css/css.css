@@ -1,0 +1,117 @@
+.text-input
+{
+	-fx-background-radius: 20;
+	-fx-text-fill : #ffffff;
+	-fx-prompt-text-fill:#D4CEE3;
+}
+
+.button1
+{
+	
+	-fx-background-color : #30C39E;
+	-fx-text-fill : #ffffff ;
+}
+.button1:hover
+{
+	-fx-text-fill : #A7B3C4 ;
+}
+.button1:pressed
+{
+	-fx-text-fill : #80AFF5 ;
+}
+.button1:active
+{
+	-fx-text-fill : #80AFF5 ;
+}
+.button2
+{
+	
+	-fx-background-color : #ffffff;
+	-fx-background-radius : 20;
+	-fx-text-fill : #2262C6 ;
+}
+.button2:hover
+{
+	-fx-background-color : #E4EEFD;
+	-fx-background-radius : 20;
+}
+.button2:pressed
+{
+	-fx-background-color : #E4EEFD;
+	-fx-background-radius : 20;
+}
+.button3
+{
+	
+	-fx-background-color : linear-gradient(to top left, #35ACF1, #F6B46F);
+	-fx-background-radius : 12;
+	-fx-border-style: solid;
+	-fx-border-radius: 12;
+	-fx-border-insets: -5;
+	-fx-border-color : linear-gradient(to top left, #35ACF1, #F6B46F);
+}
+.button3:hover
+{
+	-fx-background-color : linear-gradient(to top left, #F6B46F, #35ACF1);
+	-fx-background-radius : 12;
+	-fx-border-style: solid;
+	-fx-border-radius: 12;
+	-fx-border-insets: -5;
+	-fx-border-color : linear-gradient(to top left, #F6B46F, #35ACF1);
+}
+.button3:pressed
+{
+	-fx-background-color : linear-gradient(to top left, #35ACF1, #F6B46F);
+	-fx-background-radius : 12;
+	-fx-border-style: solid;
+	-fx-border-radius: 12;
+	-fx-border-insets: -5;
+	-fx-border-color : linear-gradient(to top left, #35ACF1, #F6B46F);
+}
+.button4
+{
+	-fx-background-color : linear-gradient(to top left, #41951C, #D4CEE3);
+	-fx-background-radius : 30 30 30 30;
+}
+.button4:hover
+{
+	-fx-background-color : linear-gradient(to top left, #D4CEE3, #41951C);
+	-fx-background-radius : 30 30 30 30;
+}
+.button4:pressed
+{
+	-fx-background-color : linear-gradient(to top left, #41951C, #D4CEE3);
+	-fx-background-radius : 30 30 30 30;
+}
+.combo-box
+{
+	-fx-background-color : #141124;
+	-fx-border-color: #515658;
+	-fx-border-radius: 30;
+}
+.combo-box:hover
+{
+	-fx-background-color : #141124;
+	-fx-border-color: #FFFF;
+	-fx-border-radius: 30;
+}
+.combo-box:pressed
+{
+	-fx-background-color : #141124;
+	-fx-border-color: #FFFF;
+	-fx-border-radius: 30;
+}
+.linear-grad
+{
+	-fx-background-color : #ffffff;
+	-fx-border-color: #30C39E;
+	
+}
+.parent
+{
+    -fx-background-color : #ffffff;
+}
+.sidebar
+{
+    -fx-background-color : #333645;
+}

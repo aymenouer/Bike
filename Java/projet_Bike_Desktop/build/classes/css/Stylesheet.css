@@ -1,0 +1,21 @@
+.white-bg{
+    -fx-background-color: #333333;
+}
+.blue-bg{
+    -fx-background-color: #333333;
+}
+.get-started-btn{
+    -fx-background-color: transparent;
+    -fx-background-radius: 3px;
+    -fx-border-color: #333333;
+    -fx-border-radius: 3px;
+    -fx-border-width: 1px;
+    -fx-border-style: solid;
+}
+.text-field{
+    -fx-background-color:white;
+}
+.loginButton{
+    -fx-background-color:#159F5C;
+    -fx-text-fill:white; 
+}

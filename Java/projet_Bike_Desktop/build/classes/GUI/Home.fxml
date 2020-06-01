@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.homeController">
+   <children>
+      <VBox fx:id="vboxdrawer" alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #161616;">
+         <children>
+            <ImageView fx:id="imagechange" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="fullName" text="Jimmy Fallon" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btn_affichage" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Affichage User" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_modifier_user" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Modifier Admin">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/edit.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_back" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Back">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Sign Out">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnl_affichage_user" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: fff;">
+               <children>
+                  <TextField fx:id="txt_Seach" layoutX="593.0" layoutY="31.0" prefHeight="27.0" prefWidth="183.0" promptText="search" style="-fx-border-color: #64c3c2;" styleClass="combo-box" />
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="72.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="Nombre_User" text="22000" textFill="#2a73ff">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Total User" textFill="#555555" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="Nombre_Client_active" text="1500" textFill="#26bfbc">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="17.0" prefWidth="108.0" text="Client Active" textFill="#555555" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="Nombre_Client_desactive" text="1000" textFill="#fa5f7e">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Client Desactive" textFill="#555555" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tabview" layoutX="52.0" layoutY="164.0" prefHeight="306.0" prefWidth="547.0" style="-fx-background-color: FFF; -fx-border-color: #161616;" styleClass="button2" stylesheets="@../css/fullpackstyling2.css">
+                    <columns>
+                      <TableColumn fx:id="col_fname" prefWidth="57.0" text="fname" />
+                      <TableColumn fx:id="col_lname" prefWidth="61.0" text="lname" />
+                        <TableColumn fx:id="col_mail" prefWidth="70.0" text="mail" />
+                        <TableColumn fx:id="col_number" prefWidth="66.0" text="number" />
+                        <TableColumn fx:id="col_username" prefWidth="77.0" text="username" />
+                        <TableColumn fx:id="col_age" prefWidth="45.0" text="age" />
+                        <TableColumn fx:id="col_enabled" prefWidth="60.0" text="enable" />
+                        <TableColumn fx:id="col_id" prefWidth="57.0" text="#" />
+                    </columns>
+                  </TableView>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="752.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="74.0" layoutY="489.0" prefHeight="27.0" prefWidth="60.0" text="EMAIL" textAlignment="RIGHT" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_mail_user" layoutX="71.0" layoutY="522.0" promptText="E-mail" style="-fx-border-color: #f0ad4e;" styleClass="combo-box" />
+                  <Button fx:id="Desactiver_Client" layoutX="495.0" layoutY="524.0" mnemonicParsing="false" onAction="#Desactiver" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 200; -fx-background-color: #f0ad4e;" text="Desactiver " textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="Activer_Client" layoutX="302.0" layoutY="524.0" mnemonicParsing="false" onAction="#activer" prefHeight="25.0" prefWidth="148.0" style="-fx-background-radius: 200; -fx-background-color: #f0ad4e;" text="Activer " textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font></Button>
+                  <Label layoutX="38.0" layoutY="32.0" text="U S E R S" textFill="#64c3c2">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="Image_user" fitHeight="133.0" fitWidth="148.0" layoutX="622.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="stat" layoutX="460.0" layoutY="32.0" mnemonicParsing="false" onAction="#faire_stat" prefHeight="25.0" prefWidth="124.0" style="-fx-background-radius: 200; -fx-background-color: #64c3c2;" text="Statistique" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font></Button>
+                  <Button fx:id="pdf" layoutX="337.0" layoutY="32.0" mnemonicParsing="false" onAction="#faire_PDF" prefHeight="25.0" prefWidth="106.0" style="-fx-background-radius: 200; -fx-background-color: #64c3c2;" text="PDF" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="664.0" layoutY="164.0" text="IMAGE" textFill="#64c3c2">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_modifier" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+               <children>
+                  <TextField fx:id="txtFirstname_modifier" layoutX="51.0" layoutY="110.0" prefHeight="35.0" prefWidth="300.0" promptText="First Name">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtLastname_modifier" layoutX="51.0" layoutY="192.0" prefHeight="35.0" prefWidth="300.0" promptText="Last Name">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtEmail_modifier" layoutX="51.0" layoutY="271.0" prefHeight="35.0" prefWidth="300.0" promptText="Email">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtUSername_modifier" layoutX="51.0" layoutY="356.0" prefHeight="35.0" prefWidth="300.0" promptText="UserName">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="txtPassword_modifier" layoutX="387.0" layoutY="110.0" prefHeight="35.0" prefWidth="300.0" promptText="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+                  <TextField fx:id="txtNumber_modifier" layoutX="387.0" layoutY="265.0" prefHeight="35.0" prefWidth="300.0" promptText="Number">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="txtage_modifier" layoutX="387.0" layoutY="192.0" prefHeight="27.0" prefWidth="300.0" promptText="Age" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling2.css" />
+                  <Button fx:id="edit_profil" layoutX="50.0" layoutY="454.0" mnemonicParsing="false" onAction="#update_profil" prefHeight="34.0" prefWidth="654.0" styleClass="button2" stylesheets="@../css/style.css" text="UPDATE" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="50.0" layoutY="86.0" text="FIRST NAME" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="165.0" text="LASTNAME" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="50.0" layoutY="245.0" text="EMAIL" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="53.0" layoutY="329.0" text="USERNAME" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="387.0" layoutY="86.0" text="PASSWORD" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="388.0" layoutY="238.0" text="USERNUMBER" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="387.0" layoutY="165.0" text="USERAGE" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="386.0" layoutY="314.0" text="USERIMAGE" textFill="#220f0f">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageview_modifier" fitHeight="98.0" fitWidth="165.0" layoutX="488.0" layoutY="325.0" onDragDropped="#handleDrop" onDragOver="#handleDragOver" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/upload.gif" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="50.0" layoutY="33.0" text="E D I T     U S E R S" textFill="#64c3c2">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="26.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>

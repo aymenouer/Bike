@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="325.0" spacing="80.0" style="-fx-background-color: #131022; -fx-background-insets: 0;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Item_SiteController">
+    <children>
+      <Pane prefHeight="397.0" prefWidth="325.0" style="-fx-background-color: FFF; -fx-background-radius: 15;">
+         <children>
+            <Label layoutX="34.0" layoutY="240.0" text="Lieu">
+               <font>
+                  <Font name="Montserrat Medium" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lieu" layoutX="130.0" layoutY="240.0" prefHeight="62.0" prefWidth="122.0" text="Lieu">
+               <font>
+                  <Font name="Montserrat Medium" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_Google_Map" layoutX="98.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="128.0" style="-fx-background-color: ff6601;" styleClass="button4" stylesheets="@../css/style.css" text="GOOGLE MAP" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font></Button>
+            <Label fx:id="libelle" layoutX="103.0" layoutY="25.0" text="LIBELLE" textFill="#0d0303">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="30.0" />
+               </font>
+            </Label>
+            <Button fx:id="btn_produit_dispo" layoutX="53.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="35.0" prefWidth="218.0" styleClass="button4" stylesheets="@../css/style.css" text="PRODUITS DISPONIBLES" textFill="WHITE">
+               <font>
+                  <Font name="Montserrat ExtraBold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="125.0" fitWidth="200.0" layoutX="52.0" layoutY="77.0">
+               <image>
+                  <Image url="@../images/point.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+    </children>
+    <effect>
+        <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>

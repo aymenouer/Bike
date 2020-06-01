@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-radius: 20;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FrontCrontroller">
+   <children>
+      <AnchorPane prefHeight="616.0" prefWidth="993.0" style="-fx-background-color: #030307; -fx-background-radius: 15;">
+         <children>
+            <StackPane layoutX="73.0" prefHeight="616.0" prefWidth="919.0">
+               <children>
+                  <Pane fx:id="pnl_edit" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: FFF; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <TextField fx:id="txtFirstname" layoutX="46.0" layoutY="86.0" prefHeight="35.0" prefWidth="300.0" promptText="First Name">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtLastname" layoutX="46.0" layoutY="165.0" prefHeight="35.0" prefWidth="300.0" promptText="Last Name">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtEmail" layoutX="46.0" layoutY="242.0" prefHeight="35.0" prefWidth="300.0" promptText="Email">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="txtUSername" layoutX="46.0" layoutY="326.0" prefHeight="35.0" prefWidth="300.0" promptText="UserName">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="txtPassword" layoutX="374.0" layoutY="85.0" prefHeight="35.0" prefWidth="300.0" promptText="Password">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </PasswordField>
+                              <TextField fx:id="txtNumber" layoutX="374.0" layoutY="164.0" prefHeight="35.0" prefWidth="300.0" promptText="Number">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </TextField>
+                              <ImageView fx:id="imageviwerphoto" fitHeight="179.0" fitWidth="160.0" layoutX="701.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
+                              <ComboBox fx:id="txtage" layoutX="378.0" layoutY="243.0" prefHeight="27.0" prefWidth="300.0" promptText="Age" styleClass="chart-plot-background" stylesheets="@../css/fullpackstyling2.css" />
+                              <Button fx:id="edit_profil" layoutX="50.0" layoutY="454.0" mnemonicParsing="false" onAction="#update_profial" prefHeight="35.0" prefWidth="634.0" styleClass="button2" text="UPDATE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="18.0" />
+                                 </font>
+                                 <stylesheets>
+                                    <URL value="@../css/fullpackstyling2.css" />
+                                    <URL value="@../css/style.css" />
+                                 </stylesheets></Button>
+                              <Label layoutX="44.0" layoutY="52.0" text="FIRST NAME" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="131.0" text="LAST NAME" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="46.0" layoutY="210.0" text="EMAIL" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="47.0" layoutY="294.0" text="USERNAME" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="374.0" layoutY="52.0" text="PASSWORD" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="374.0" layoutY="135.0" text="PHONE NUMBER" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="374.0" layoutY="211.0" text="USERAGE" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="377.0" layoutY="294.0" text="IMAGE" textFill="#110c0c">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageview_user" fitHeight="107.0" fitWidth="168.0" layoutX="443.0" layoutY="326.0" onDragDropped="#handleDrop_user" onDragOver="#handleDragOver_user" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/upload.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="41.0" layoutY="8.0" text="Modifier" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="155.0" layoutY="8.0" text="Mon Profil" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Abonnement" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: FFF;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: FFF; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ScrollPane fx:id="scrollpane_Abonnment" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                 <content>
+                                    <HBox fx:id="hbox_abonnment" prefHeight="482.0" prefWidth="886.0" style="-fx-border-color: FFF; -fx-background-color: FFF;" stylesheets="@../css/fullpackstyling2.css" />
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="45.0" layoutY="11.0" text="Consulter" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="190.0" layoutY="11.0" text="Produits" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="23.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Maintenance" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="17.0" layoutY="71.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <Label layoutX="92.0" layoutY="-13.0" text="Consulter" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="232.0" layoutY="-13.0" text="Maintenance" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tab_Maintenance" layoutX="96.0" layoutY="42.0" prefHeight="179.0" prefWidth="708.0">
+                                <columns>
+                                  <TableColumn fx:id="col_id_main" prefWidth="44.0" text="#" />
+                                  <TableColumn fx:id="col_DateD_main" prefWidth="89.0" text="Date Debut" />
+                                    <TableColumn fx:id="col_DateF_main" prefWidth="83.0" text="Date Fin" />
+                                    <TableColumn fx:id="col_Problem_main" prefWidth="103.0" text="Problem" />
+                                    <TableColumn fx:id="col_prix_main" prefWidth="38.0" text="Prix" />
+                                    <TableColumn fx:id="col_Etat_main" prefWidth="143.0" text="Etat" />
+                                    <TableColumn fx:id="col_Type_main" prefWidth="207.0" text="Type" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btn_ajout_main" layoutX="363.0" layoutY="253.0" mnemonicParsing="false" onAction="#ajouter_maintenance" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: ff6601; -fx-background-radius: 100;" text="AJOUTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="11.0" />
+                                 </font></Button>
+                              <TextArea fx:id="txt_contenu_maintenance" layoutX="96.0" layoutY="253.0" prefHeight="141.0" prefWidth="218.0" />
+                              <Label layoutX="96.0" layoutY="236.0" text="CONTENU" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <Label layoutX="96.0" layoutY="412.0" text="TYPE" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="combo_type_maintenance" layoutX="96.0" layoutY="445.0" prefHeight="27.0" prefWidth="218.0" style="-fx-background-color: fff;" />
+                              <ImageView fx:id="imageview_maintenance" fitHeight="70.0" fitWidth="78.0" layoutX="363.0" layoutY="439.0" onDragDropped="#handleDrop_maintenance" onDragOver="#handleDragOver_maintenance" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/upload.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="363.0" layoutY="412.0" text="IMAGE" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <Button fx:id="btn_accepter_prix" layoutX="533.0" layoutY="472.0" mnemonicParsing="false" onAction="#accepter_prix_maintenance" prefHeight="38.0" prefWidth="160.0" stylesheets="@../css/style.css" text="ACCEPTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="12.0" />
+                                 </font></Button>
+                              <ImageView fx:id="Image_Maintenance" fitHeight="141.0" fitWidth="131.0" layoutX="613.0" layoutY="278.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="btn_Supprimer_maintenance" layoutX="363.0" layoutY="299.0" mnemonicParsing="false" onAction="#Supprimer_maintenance" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: ff6601; -fx-background-radius: 100;" text="SUPPRIMER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="11.0" />
+                                 </font></Button>
+                              <Label layoutX="648.0" layoutY="257.0" text="IMAGE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="17.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Reclamation" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="17.0" layoutY="71.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <TableView fx:id="tab_Reclamation" layoutX="35.0" layoutY="73.0" prefHeight="238.0" prefWidth="739.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_id_rec" prefWidth="37.0" text="#" />
+                                    <TableColumn fx:id="col_contenu_rec" prefWidth="127.0" text="Contenu" />
+                                    <TableColumn fx:id="col_Etat_rec" prefWidth="120.0" text="Etat" />
+                                    <TableColumn fx:id="col_Type_rec" prefWidth="221.0" text="Type" />
+                                    <TableColumn fx:id="col_Traite_rec" prefWidth="233.0" text="Traite" />
+                                 </columns>
+                              </TableView>
+                              <Button fx:id="btn_ajout_reclamation" layoutX="489.0" layoutY="470.0" mnemonicParsing="false" onAction="#ajouter_reclamation" prefHeight="32.0" prefWidth="160.0" stylesheets="@../css/style.css" text="AJOUTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="14.0" />
+                                 </font></Button>
+                              <Label layoutX="35.0" layoutY="21.0" text="Consulter" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="180.0" layoutY="21.0" text="Reclamation" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                              <TextArea fx:id="txt_contenu_reclamation" layoutX="25.0" layoutY="352.0" prefHeight="141.0" prefWidth="218.0" />
+                              <Label layoutX="25.0" layoutY="325.0" text="CONTENU">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <Label layoutX="263.0" layoutY="325.0" text="TYPE">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <ComboBox fx:id="combo_type_reclamation" layoutX="264.0" layoutY="352.0" prefWidth="150.0" style="-fx-background-color: FFF;" />
+                              <ImageView fx:id="imageview_reclamation" fitHeight="70.0" fitWidth="78.0" layoutX="330.0" layoutY="456.0" onDragDropped="#handleDrop_reclamation" onDragOver="#handleDragOver_reclamation" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/upload.gif" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="264.0" layoutY="460.0" text="IMAGE">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <ImageView fx:id="Image_Reclamation" fitHeight="118.0" fitWidth="149.0" layoutX="657.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="pdf" layoutX="642.0" layoutY="34.0" mnemonicParsing="false" onAction="#fairepdf_reclalamtion" prefHeight="25.0" prefWidth="133.0" style="-fx-background-color: ff6601;" styleClass="button4" text="PDF" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="12.0" />
+                                 </font></Button>
+                              <ComboBox fx:id="combo_etat_reclamation" layoutX="264.0" layoutY="422.0" prefWidth="150.0" style="-fx-background-color: FFF;" />
+                              <Label layoutX="264.0" layoutY="397.0" text="ETAT">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="11.0" />
+                                 </font></Label>
+                              <Label layoutX="699.0" layoutY="327.0" text="IMAGE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_mes_reservation" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <Label layoutX="35.0" layoutY="14.0" textFill="WHITE">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageviwerphoto11" fitHeight="179.0" fitWidth="160.0" layoutX="24.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+                              <TableView fx:id="tab_mes_reservation" layoutX="89.0" layoutY="34.0" prefHeight="305.0" prefWidth="597.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_id_reservation" prefWidth="76.0" text="#" />
+                                    <TableColumn fx:id="col_prix_reservation" minWidth="6.0" prefWidth="67.0" text="Prix" />
+                                    <TableColumn fx:id="col_Dated_reservation" prefWidth="98.0" text="Date Debut" />
+                                    <TableColumn fx:id="col_Datef_reservation" prefWidth="173.0" text="Date Fin" />
+                                 </columns>
+                              </TableView>
+                              <Label layoutX="144.0" layoutY="379.0" prefHeight="35.0" prefWidth="150.0" text="PRIX TOTAL" textFill="#0a0505">
+                                 <font>
+                                    <Font name="Montserrat SemiBold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl_prix_total_reservation" layoutX="318.0" layoutY="382.0" text="0 DT" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="image_velo_reservation" fitHeight="118.0" fitWidth="149.0" layoutX="512.0" layoutY="379.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="86.0" layoutY="-13.0" text="Consulter" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="231.0" layoutY="-13.0" text="Reservations" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="548.0" layoutY="352.0" text="IMAGE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="23.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Reservation" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ScrollPane fx:id="scrollpaneVelo" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                 <content>
+                                    <HBox fx:id="hox_Velo" prefHeight="482.0" prefWidth="886.0" style="-fx-border-color: fff; -fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css" />
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="6.0" layoutY="9.0" text="Reserver" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="129.0" layoutY="10.0" text="Maintenant" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Event" layoutX="10.0" layoutY="10.0" prefHeight="573.0" prefWidth="919.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ScrollPane fx:id="scrollpaneEvent" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                 <content>
+                                    <HBox fx:id="hbox_event" prefHeight="482.0" prefWidth="886.0" style="-fx-border-color: fff; -fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css" />
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="6.0" layoutY="10.0" text="Participer" textFill="#251919">
+                                 <font>
+                                    <Font name="Montserrat Regular" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="141.0" layoutY="10.0" text="Evenement" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="19.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_mon_offre" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="25.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ImageView fx:id="imageviwerphoto1" fitHeight="179.0" fitWidth="160.0" layoutX="24.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="Delete_offre_user" layoutX="50.0" layoutY="454.0" mnemonicParsing="false" onAction="#delete_offre" prefHeight="45.0" prefWidth="785.0" styleClass="button2" stylesheets="@../css/style.css" text="DELETE OFFRE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="24.0" />
+                                 </font></Button>
+                              <Label layoutX="104.0" layoutY="80.0" text="Abonnment" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="104.0" layoutY="123.0" text="Description" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="104.0" layoutY="227.0" text="Categorie" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="104.0" layoutY="278.0" text="Site" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="697.0" layoutY="308.0" text="QR CODE" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="104.0" layoutY="327.0" text="Date Debut" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="104.0" layoutY="374.0" text="Date Fin" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_label_offre_abonnment" layoutX="302.0" layoutY="80.0" text="None" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_description_offre_abonnment" alignment="TOP_LEFT" layoutX="277.0" layoutY="119.0" prefHeight="107.0" prefWidth="354.0" text="None" textFill="#171111" textOverrun="CLIP" wrapText="true">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_categorie_offre_abonnment" layoutX="302.0" layoutY="227.0" text="None" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_site_offre_abonnment" layoutX="302.0" layoutY="278.0" text="None" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_dateD_offre_abonnment" layoutX="302.0" layoutY="327.0" text="None" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="txt_dateF_offre_abonnment" layoutX="302.0" layoutY="374.0" text="None" textFill="#171111">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="imageview_abonnment_offre_qr" fitHeight="173.0" fitWidth="175.0" layoutX="667.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="722.0" layoutY="71.0" text="IMAGE">
+                                 <font>
+                                    <Font name="Montserrat ExtraBold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="29.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="114.0" layoutY="83.0" text="Consulter" textFill="#251919">
+                           <font>
+                              <Font name="Montserrat Regular" size="26.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="259.0" layoutY="83.0" text="Offres" textFill="#ff6601">
+                           <font>
+                              <Font name="Montserrat Medium" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pnl_Home_Sites" prefHeight="616.0" prefWidth="919.0" style="-fx-background-color: fff;">
+                     <children>
+                        <AnchorPane layoutX="33.0" layoutY="62.0" prefHeight="531.0" prefWidth="886.0" style="-fx-background-color: fff; -fx-background-radius: 10;" stylesheets="@../css/fullpackstyling2.css">
+                           <children>
+                              <ScrollPane fx:id="scrollpaneSite" layoutX="7.0" layoutY="47.0" prefHeight="484.0" prefWidth="880.0" style="-fx-background-color: #131022;">
+                                 <content>
+                                    <HBox fx:id="hbox_site" prefHeight="482.0" prefWidth="886.0" style="-fx-border-color: fff; -fx-background-color: fff;" stylesheets="@../css/fullpackstyling2.css" />
+                                 </content>
+                              </ScrollPane>
+                              <Label layoutX="36.0" layoutY="9.0" text="Site" textFill="WHITE">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="7.0" layoutY="12.0" text="SITES" textFill="#ff6601">
+                                 <font>
+                                    <Font name="Montserrat Medium" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <ImageView fitHeight="79.0" fitWidth="78.0" layoutX="14.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LOGO_BLACK.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+            <VBox prefHeight="544.0" prefWidth="74.0" style="-fx-background-color: #131022; -fx-background-radius: 15 0 0 15;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btn_Home" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Site" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fx:id="btn_Acceuil" fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/parking.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Product_Abonnement" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Abonnment" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/arrows%20(6).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Mon_offre" contentDisplay="TOP" layoutX="10.0" layoutY="501.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Offres" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/commerce-and-shopping.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Book_Reservation" contentDisplay="TOP" layoutX="10.0" layoutY="76.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Reserver" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/food-and-restaurant.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Mes_Reservations" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Reservations" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/zoom%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Maintenance" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Maintenance" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/interface.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Reclamation" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Reclamation" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/signaling.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#chat" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Chat" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/interface%20(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Event" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Events" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/interface%20(2).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Edit" contentDisplay="TOP" layoutX="10.0" layoutY="142.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Edit" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/interface%20(3).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btn_Sign_Out" contentDisplay="TOP" mnemonicParsing="false" onAction="#handleClicks" prefHeight="66.0" prefWidth="74.0" stylesheets="@../css/style%20-%20Copie.css" text="Sign Out" textFill="#a868a0">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/signs.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fx:id="image_user" fitHeight="38.0" fitWidth="34.0" layoutX="900.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/ic_usr.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="username" layoutX="700.0" layoutY="20.0" prefHeight="27.0" prefWidth="149.0" text="Client">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

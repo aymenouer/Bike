@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.home_PieceController">
+   <children>
+      <VBox fx:id="vboxdrawer" alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #161616;">
+         <children>
+            <ImageView fx:id="imagechange" fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/jimmy-fallon.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="50.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="fullName" text="Jimmy Fallon" textFill="#e7e5e5">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="btn_affichage" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Piece" textFill="#e7e5e5">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Home_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn_back" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Back">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Box_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@../css/style.css" text="Sign Out">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Sign_Out_32px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+         <children>
+            <Pane fx:id="pnl_abonnement" prefHeight="554.0" prefWidth="793.0" style="-fx-background-color: #fff;">
+               <children>
+                  <TextField fx:id="txt_Seach" layoutX="588.0" layoutY="74.0" prefHeight="27.0" prefWidth="174.0" promptText="search" style="-fx-border-color: #64c3c2;" styleClass="combo-box" />
+                  <TableView fx:id="tabview" layoutX="31.0" layoutY="114.0" prefHeight="252.0" prefWidth="558.0" style="-fx-background-color: #fff; -fx-border-color: #333333;" styleClass="button2" stylesheets="@../css/fullpackstyling2.css">
+                    <columns>
+                      <TableColumn fx:id="col_libelle" prefWidth="75.0" text="LIBELLE" />
+                      <TableColumn fx:id="col_categorie" prefWidth="75.0" text="CATEGORIE" />
+                        <TableColumn fx:id="col_site" prefWidth="45.0" text="SITE" />
+                        <TableColumn fx:id="col_description" prefWidth="92.0" text="DESCRIPTION" />
+                        <TableColumn fx:id="col_prix" prefWidth="37.0" text="PRIX" />
+                        <TableColumn fx:id="col_quantite" prefWidth="72.0" text="QUANTITE" />
+                        <TableColumn fx:id="col_Etat" prefWidth="61.0" text="ETAT" />
+                        <TableColumn fx:id="col_id" prefWidth="99.0" text="#" />
+                    </columns>
+                  </TableView>
+                  <ImageView fitHeight="17.0" fitWidth="16.0" layoutX="736.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Search_52px.png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txt_libelle" layoutX="14.0" layoutY="442.0" prefHeight="27.0" prefWidth="139.0" promptText="Libelle" style="-fx-border-color: f0ad4e;" styleClass="combo-box" />
+                  <TextField fx:id="txt_prix" layoutX="14.0" layoutY="509.0" prefHeight="27.0" prefWidth="139.0" promptText="Prix" style="-fx-border-color: f0ad4e;" styleClass="combo-box" />
+                  <Label layoutX="14.0" layoutY="415.0" text="LIBELLE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="486.0" text="PRIX" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_quantite" layoutX="184.0" layoutY="442.0" prefHeight="27.0" prefWidth="139.0" promptText="Quantite" style="-fx-border-color: f0ad4e;" styleClass="combo-box" />
+                  <TextField fx:id="txt_description" layoutX="184.0" layoutY="508.0" prefHeight="27.0" prefWidth="139.0" promptText="Description" style="-fx-border-color: f0ad4e;" styleClass="combo-box" />
+                  <ComboBox fx:id="combo_categorie" layoutX="353.0" layoutY="508.0" prefHeight="27.0" prefWidth="139.0" promptText="Categorie" style="-fx-border-color: f0ad4e;" />
+                  <ComboBox fx:id="combo_site" layoutX="529.0" layoutY="442.0" prefWidth="150.0" promptText="Site" style="-fx-border-color: f0ad4e;" />
+                  <Label layoutX="184.0" layoutY="415.0" text="QUANTITE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="353.0" layoutY="486.0" text="CATEGORIE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="535.0" layoutY="415.0" text="SITE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_ajout" layoutX="621.0" layoutY="537.0" mnemonicParsing="false" onAction="#ajouter_piece" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: f0ad4e; -fx-background-radius: 200;" styleClass="button4" stylesheets="@../css/fullpackstyling2.css" text="Ajouter" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="54.0" layoutY="68.0" text="Vous pouvez afficher, ajouter, supprimer et modifier une Piece" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="184.0" layoutY="486.0" text="DESCRIPTION" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="pdf" layoutX="485.0" layoutY="75.0" mnemonicParsing="false" onAction="#fairepdf" prefHeight="25.0" prefWidth="78.0" style="-fx-background-color: #64c3c2; -fx-background-radius: 200;" stylesheets="@../css/fullpackstyling2.css" text="PDF" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="stat" layoutX="342.0" layoutY="75.0" mnemonicParsing="false" onAction="#faire_stat" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: #64c3c2; -fx-background-radius: 200;" stylesheets="@../css/fullpackstyling2.css" text="Statistique" textFill="WHITE">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="12.0" />
+                     </font></Button>
+                  <Label layoutX="529.0" layoutY="486.0" text="IMAGE" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageview" fitHeight="70.0" fitWidth="78.0" layoutX="642.0" layoutY="468.0" onDragDropped="#handleDrop" onDragOver="#handleDragOver" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/upload.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="Image_Acc" fitHeight="129.0" fitWidth="126.0" layoutX="621.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label layoutX="357.0" layoutY="415.0" text="ETAT" textFill="#555555">
+                     <font>
+                        <Font name="Raleway Medium" size="13.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="combo_Etat" layoutX="357.0" layoutY="442.0" prefHeight="27.0" prefWidth="139.0" promptText="Etat" style="-fx-border-color: f0ad4e;" />
+                  <Label layoutX="31.0" layoutY="44.0" text="P I E C E" textFill="#64c3c2">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="378.0" text="ADD PIECE" textFill="#f0ad4e">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="657.0" layoutY="136.0" text="IMAGE" textFill="#64c3c2">
+                     <font>
+                        <Font name="Raleway ExtraBold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+   <effect>
+      <DropShadow color="#1b1eeb" />
+   </effect>
+</AnchorPane>
