@@ -1,0 +1,218 @@
+{% extends 'base.html.twig' %}
+
+{% block content1 %}
+    {{ x }}
+{% endblock %}
+{% block content2 %}
+    {{ x }}
+{% endblock %}
+
+{% block content %}
+<div class="wrap-bread-crumb breadcrumb_collection2">
+    <div class="text-center bg-breadcrumb" style="background-image : url({{ asset('cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_aboutusa7d1.jpg?v=1580436779') }})">
+        <div class="title-page">
+
+            <h2 class="" style="color: #fff">RESERVATIONS</h2>
+
+        </div>
+        <!-- /snippets/breadcrumb.liquid -->
+
+
+
+        <div class="bread-crumb">
+            <a href="index.html" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+            <strong>MES RESERVATIONS</strong>
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+<section class="page-cart">
+    <div id="shopify-section-1580703879140" class="shopify-section"><div data-section-id="1580703879140" data-section-type="section-newsletter-v1" style=" ">
+
+            <div class="section-newsletter-v1 pd-small" style="background: #fbf3f0">
+                <div class="container container-v2">
+
+
+
+                    <div class="title_newletter">
+                        <h3 class="title mb-0 " style="font-size:40px">SEARCH RESERVATIONS</h3>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-lg-12">
+                            <div class="newletter_email">
+                                <form class="needs-validation form-inline" action="#" method="post">
+                                    <div class="form-group">
+
+                                        <input class="form-control" id="search" type="text" placeholder="Search..">
+
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+
+        </style>
+
+
+
+
+
+
+    </div>
+    <div class="content-pages">
+        <div class="container">
+            <div class="content-about content-cart-page">
+
+
+
+        <br><br>
+                <p>Continue browsing <a href="{{ path('reservation_affichage') }}">here</a>.</p>
+
+                <section class="page-cart">
+
+                    <div class="content-pages">
+                        <div class="container">
+                            <div class="content-about content-cart-page">
+
+
+                                <form action="/cart" method="post" novalidate="">
+                                    <div class="table-responsive">
+                                        <table id="tableac"   class="shop_table table--responsive cart table">
+                                            <thead>
+                                            <tr class="cart-title">
+                                                <th knp_pagination_sortable class="product-id">#</th>
+                                                <th colspan="2" class="product-thumbnail"> Product name</th>
+                                                <th class="product-price">Price</th>
+                                                <th class="product-dateD">DATE DEBUT</th>
+                                                <th class="product-dateF">DATE FIN</th>
+                                                <th class="product-remove">&nbsp;</th>
+
+
+                                            </tr>
+                                            </thead>
+
+
+
+                                            <tbody>
+                                    {% for i in rese %}
+                                            <tr class="cart_item">
+                                                <td data-label="Product Name" class="product-id">
+
+                                                    {{ i.idR }}
+                                                </td>
+                                                <td data-label="Product Name" class="product-thumbnail">
+
+                                                    <a href="{{path('reservation_booking',{id_v:i.idV})}}"><img src="{{ asset("uploads/images/"~ i.Image) }}" ></a>
+                                                </td>
+                                                <td class="product-name-thumb" data-title="Product">
+
+                                                    <a href="{{path('reservation_booking',{id_v:i.idV})}}">{{i.Libelle}}</a>
+
+                                                    <small style="display: block; color: #959595;">{{i.type}}</small>
+
+
+
+                                                </td>
+
+                                                <td data-label="Product Price" class="product-price" data-title="Price">
+                                                    <span class="amount">{{ i.prix }}DT</span>
+                                                </td>
+
+                                                <td data-label="DATE" class="product-dateD" data-title="DATE DEBUT">
+                                                        <input type="text" name="Date_D" READONLY value=" {{ i.Date_D }}"  >
+
+
+                                                </td>
+
+                                                <td data-label="DATE" class="product-dateF"data-title="DATE FIN">
+                                                    <input type="text"name="Date_F" READONLY  value=" {{ i.Date_F }}"  >
+
+                                                </td>
+
+
+                                                <td class="product-remove">
+                                                    <a class="remove" href="{{ path("reservation_supprimer",{idR:i.idR}) }}"><i class="ti-close" aria-hidden="true"></i></a>
+                                                </td>
+
+                                            </tr>
+
+
+
+                                    {% endfor %}
+                                            </tbody>
+
+
+                                        </table>
+
+                                    </div>
+                                    <div class="navigation">
+                                        {{ knp_pagination_render(rese) }}
+                                    </div>
+                                    <div class="cart_totals ">
+
+                                        <div class="continue-shopping1">
+                                            <a href="{{ path('redirect') }}">Continue Shopping</a>
+                                        </div>
+
+                                        <div class="cart-check">
+
+                                            <h2 class="cart-title">CART TOTALS</h2>
+                                            <table class="total-checkout">
+                                                <tbody>
+                                                <tr>
+                                                    {% set y=0 %}
+                                                    {% for i in rese %}
+                                                    {% set y=y+ i.prix  %}
+                                                    {% endfor %}
+                                                    <th class="cart-label"><span>Total</span></th>
+                                                    <td class="cart-amount"><span><strong><span class="amount">
+
+                                                                {{ y }}DT</span></strong> </span></td>
+
+                                                </tr>
+                                                </tbody>
+                                            </table>
+
+
+
+
+                                            <div class="wc-proceed-to-checkout clearfix">
+
+                                                <a class="checkout-button button alt wc-forward bg-color" href="{{path('reservation_pdf')}}">IMPRIMER PDF</a>
+
+                                                <p class="notice-currency">
+                                                    " Bestbike - Bike Store Business Shopify Theme processes all orders in USD.
+                                                    While the content of your cart is currently displayed in
+                                                    <span class="selected-currency">USD</span>,
+                                                    the checkout will use USD at the most current exchange rate. "
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </form></div>
+                        </div>
+                    </div>
+                    <!-- End Content Pages -->
+                </section>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

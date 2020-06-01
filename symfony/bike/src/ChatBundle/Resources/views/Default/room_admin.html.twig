@@ -1,0 +1,116 @@
+{% extends 'temp_admin.html.twig' %}
+
+{% block content %}
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            <!-- page start-->
+            <div class="chat-room mt" style="
+    margin-left: -150px;
+">
+                <aside class="mid-side">
+                    <div class="chat-room-head">
+                        <h3> Rooms </h3>
+                        <form action="#" class="pull-right position">
+                            <input type="text" placeholder="Search" class="form-control search-btn ">
+                        </form>
+                    </div>
+                    <div class="room-desk">
+                        <h4 class="pull-left">Open Room</h4>
+                        <button class="pull-right btn btn-theme02"  data-toggle="modal" data-target="#myModal">
+                            + Create Room
+                        </button>
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+
+                                    {{ form_start(form) }}
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title" id="myModalLabel">Cree Room</h4>
+                                    </div>
+
+
+                                    <div class="modal-body">
+
+                                        <div class="form-group">
+
+                                            <label>Destinataire</label>
+                                            {{ form_widget(form.recipient, { 'attr': {'class': 'form-control'} }) }}
+
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Sujet</label>
+
+                                            {{ form_widget(form.subject, { 'attr': {'class': 'form-control'} }) }}
+
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Corps</label>
+
+                                            {{ form_widget(form.body, { 'attr': {'class': 'form-control'} }) }}
+
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="button"class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button  type="submit"name="valider" class="btn btn-success">Ajout</button>
+                                    </div>
+                                    {{ form_end(form) }}
+                                </div>
+                            </div>
+                        </div>
+
+                        {% for row in list_room %}
+                        <div class="room-box">
+                            <h5 class="text-primary"><a href="{{path('chat_homepage')}}">room {{ row.id }}</a></h5>
+                            <p>We talk here about {{ row.subject }}.</p>
+                            <p><span class="text-muted">Admin :</span> {{   app.user.firstName ~ " " ~  app.user.lastName  }}  | <span class="text-muted">created at  :</span> {{ row.created_at }}</p>
+                        </div>
+                        {% endfor %}
+
+
+                    </div>
+
+                </aside>
+                <aside class="right-side">
+                    <div class="user-head">
+                        <a href="#" class="chat-tools btn-theme"><i class="fa fa-cog"></i> </a>
+                        <a href="#" class="chat-tools btn-theme03"><i class="fa fa-key"></i> </a>
+                    </div>
+                    <div class="invite-row">
+                        <h4 class="pull-left">Users</h4>
+
+                    </div>
+                    <ul class="chat-available-user">
+
+                        {% for row in list_users %}
+                            {% if row.roles[0]  == "ROLE_USER" %}
+                        <li>
+                            <a href="{{path('chat_homepage')}}">
+                                <img class="img-circle" src="{{ asset('uploads/images/' ~row.userImage) }}" width="32">
+                                {{ row.firstName ~ " " ~  row.lastName }}
+                                <span class="text-muted">{{row.lastLogin|ago}}</span>
+
+                            </a>
+                        </li>
+{% endif %}
+                        {% endfor %}
+
+
+                    </ul>
+                </aside>
+            </div>
+            <!-- page end-->
+        </section>
+        <!-- /wrapper -->
+    </section>
+
+{%  endblock %}

@@ -1,0 +1,30 @@
+reservation_homepage:
+    path:     /rese
+    defaults: { _controller: ReservationBundle:Default:index }
+reservation_affichage:
+    path:     /affiche
+    defaults: { _controller: ReservationBundle:Reservation:AfficherReservation }
+reservation_booking:
+    path:     /book/{id_v}
+    defaults: { _controller: ReservationBundle:Reservation:booking }
+reservation_reserver:
+    path:     /reserver
+    defaults: { _controller: ReservationBundle:Reservation:reserver }
+reservation_supprimer:
+    path:     /supprimer/{idR}
+    defaults: { _controller: ReservationBundle:Reservation:Delete }
+reservation_display:
+    path:     /display
+    defaults: { _controller: ReservationBundle:Reservation:AfficherLesReservation }
+reservation_edit:
+    path:     /edit/{idR}
+    defaults: { _controller: ReservationBundle:Reservation:editReservation }
+reservation_count:
+    path:     /count
+    defaults: { _controller: ReservationBundle:Reservation:count }
+reservation_pdf:
+    path:     /pdf
+    defaults: { _controller: ReservationBundle:Reservation:print }
+reservation_product:
+    path:     /product
+    defaults: { _controller: ReservationBundle:Reservation:shopnow }

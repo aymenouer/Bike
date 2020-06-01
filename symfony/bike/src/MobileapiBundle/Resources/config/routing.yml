@@ -1,0 +1,269 @@
+_all_users:
+    path:     /users/all
+    defaults: { _controller: MobileapiBundle:usermobile:AllUsers }
+
+_new_user:
+    path:     /users/new
+    defaults: { _controller: MobileapiBundle:usermobile:newUser }
+
+_recap_users:
+    path:     /users/user/{id}
+    defaults: { _controller: MobileapiBundle:usermobile:reacapUser }
+
+_update_user:
+    path:     /users/update
+    defaults: { _controller: MobileapiBundle:usermobile:updateUser }
+
+_Desactiver_user:
+    path:     /users/desactiver
+    defaults: { _controller: MobileapiBundle:usermobile:desactiverUser }
+
+_activer_user:
+    path:     /users/activer
+    defaults: { _controller: MobileapiBundle:usermobile:activerUser }
+
+_all_sites:
+    path:     /sites/all
+    defaults: { _controller: MobileapiBundle:Sitemobile:Allsites }
+
+_update_sites:
+    path:     /sites/update
+    defaults: { _controller: MobileapiBundle:Sitemobile:updatesite }
+
+_delete_sites:
+    path:     /sites/remove
+    defaults: { _controller: MobileapiBundle:Sitemobile:deletesite }
+
+_new_sites:
+    path:     /sites/new
+    defaults: { _controller: MobileapiBundle:Sitemobile:newsite }
+
+_all_categories:
+    path:     /categories/all
+    defaults: { _controller: MobileapiBundle:Categoriemobile:AllCategories }
+
+_update_categories:
+    path:     /categories/update
+    defaults: { _controller: MobileapiBundle:Categoriemobile:UpdateCategories }
+
+_Delete_categories:
+    path:     /categories/remove
+    defaults: { _controller: MobileapiBundle:Categoriemobile:DeleteCategories }
+
+_new_categories:
+    path:     /categories/new
+    defaults: { _controller: MobileapiBundle:Categoriemobile:newCategories }
+
+_all_abonnments:
+    path:     /Abonnments/all
+    defaults: { _controller: MobileapiBundle:Abonnmentmobile:AllAbonnments }
+
+_update_abonnment:
+    path:     /Abonnments/update
+    defaults: { _controller: MobileapiBundle:Abonnmentmobile:UpdateAbonnment }
+
+_delete_abonnment:
+    path:     /Abonnments/remove
+    defaults: { _controller: MobileapiBundle:Abonnmentmobile:DeleteAbonnment }
+
+new_abonnment:
+    path:     /Abonnments/new
+    defaults: { _controller: MobileapiBundle:Abonnmentmobile:newAbonnment }
+
+Stat_abonnment:
+    path:     /Abonnments/stat
+    defaults: { _controller: MobileapiBundle:Abonnmentmobile:Stat }
+
+_all_accessoires:
+    path:     /Accessoires/all
+    defaults: { _controller: MobileapiBundle:Acessoiremobile:AllAccessoires }
+
+_update_accessoire:
+    path:     /Accessoires/update
+    defaults: { _controller: MobileapiBundle:Acessoiremobile:UpdateAccessoire }
+
+_delete_accessoire:
+    path:     /Accessoires/remove
+    defaults: { _controller: MobileapiBundle:Acessoiremobile:DeleteAccessoire }
+
+new_accessoire:
+    path:     /Accessoires/new
+    defaults: { _controller: MobileapiBundle:Acessoiremobile:newAccessoire }
+
+achat_trois_mois:
+    path:     /Achat/trois_mois
+    defaults: { _controller: MobileapiBundle:Achatmobile:Achat_troisMois }
+
+achat_unans:
+    path:     /Achat/ans
+    defaults: { _controller: MobileapiBundle:Achatmobile:Achat_unans }
+
+achat_mois:
+    path:     /Achat/mois
+    defaults: { _controller: MobileapiBundle:Achatmobile:Achat_unmois }
+
+_achat_all:
+    path:     /Achat/all
+    defaults: { _controller: MobileapiBundle:Achatmobile:AchatAll }
+
+_deleteoffre:
+    path:     /Achat/remove
+    defaults: { _controller: MobileapiBundle:Achatmobile:Deleteoffre }
+
+list_reclamation_user_mobile:
+    path:     /Reclamation/ListReclamationUser
+    defaults: { _controller: MobileapiBundle:Reclamationmobile:ListReclamationUser }
+
+list_reclamation_users_mobile:
+    path:     /Reclamation/ListReclamationUsers
+    defaults: { _controller: MobileapiBundle:Reclamationmobile:ListReclamationUsers }
+
+_add_reclamation_user_mobile:
+    path:     /Reclamation/AddReclamationUser
+    defaults: { _controller: MobileapiBundle:Reclamationmobile:AddReclamationUser }
+
+delete_reclamation_mobile:
+    path:     /Reclamation/DeleteReclamation
+    defaults: { _controller: MobileapiBundle:Reclamationmobile:DeleteReclamation }
+
+traite_reclamation_mobile:
+    path:     /Reclamation/TraiteReclamation
+    defaults: { _controller: MobileapiBundle:Reclamationmobile:TraiteReclamation }
+
+_all_pieces:
+    path:     /Pieces/AllPieces
+    defaults: { _controller: MobileapiBundle:Piecemobile:AllPieces }
+
+_update_piece:
+    path:     /Pieces/UpdatePiece
+    defaults: { _controller: MobileapiBundle:Piecemobile:UpdatePiece }
+
+_delete_piece:
+    path:     /Pieces/DeletePiece
+    defaults: { _controller: MobileapiBundle:Piecemobile:DeletePiece }
+
+new_piece:
+    path:     /Pieces/newPiece
+    defaults: { _controller: MobileapiBundle:Piecemobile:newPiece }
+
+verif_rating_mobile:
+    path:     /rates/verif
+    defaults: { _controller: MobileapiBundle:rateproduitmobile:Verif_Rating }
+
+add_rating_mobile:
+    path:     /rates/new
+    defaults: { _controller: MobileapiBundle:rateproduitmobile:ADD_Rating }
+
+add_maintenance_user:
+    path:     /Maintenances/Add_maintenance_user
+    defaults: { _controller: MobileapiBundle:maintenancemobile:Add_maintenance_user }
+
+list__maintenance_user:
+    path:     /Maintenances/List_MaintenanceUser
+    defaults: { _controller: MobileapiBundle:maintenancemobile:List_MaintenanceUser }
+
+list_maintenance_admin:
+    path:     /Maintenances/ListMaintenanceAdmin
+    defaults: { _controller: MobileapiBundle:maintenancemobile:ListMaintenanceAdmin }
+
+Delete_maintenance:
+    path:     /Maintenances/Delete
+    defaults: { _controller: MobileapiBundle:maintenancemobile:DeleteMaintenance }
+
+Update_maintenance:
+    path:     /Maintenances/Update
+    defaults: { _controller: MobileapiBundle:maintenancemobile:UpdateMaintenance }
+
+find:
+    path:     /panier/find/{id}
+    defaults: { _controller: panierBundle:panier:find }
+create:
+    path:     /panier/new
+    defaults: { _controller: panierBundle:panier:new }
+_update_panier:
+    path:     /panier/update
+    defaults: { _controller: panierBundle:panier:update }
+_delete_panier:
+    path:     /panier/delete
+    defaults: { _controller: panierBundle:panier:delete }
+_montant_panier:
+    path:     /panier/montant
+    defaults: { _controller: panierBundle:panier:montant }
+al:
+    path:     /commande/all
+    defaults: { _controller: commandeBundle:commande:all}
+fin:
+    path:     /commande/find/{id}
+    defaults: { _controller: commandeBundle:commande:find }
+creat:
+    path:     /commande/new
+    defaults: { _controller: commandeBundle:commande:new }
+_update_commande:
+    path:     /commande/update
+    defaults: { _controller: commandeBundle:commande:update }
+_delete_commande:
+    path:     /commande/delete
+    defaults: { _controller: commandeBundle:commande:delete}
+_montant_commande:
+    path:     /commande/montant
+    defaults: { _controller: commandeBundle:commande:montant}
+_afficher_commande:
+    path:     /commande/afficher
+    defaults: { _controller: commandeBundle:commande:affiche}
+_all_events:
+    path:     /Events/all
+    defaults: { _controller: MobileapiBundle:EvenementMobile:AllEvents }
+_new_events:
+    path:     /Events/new
+    defaults: { _controller: MobileapiBundle:EvenementMobile:newEvent }
+_update_events:
+    path:     /Events/update
+    defaults: { _controller: MobileapiBundle:EvenementMobile:updateEvent }
+_findById_events:
+    path:     /Events/{id}
+    defaults: { _controller: MobileapiBundle:EvenementMobile:FindEventById }
+_all_commentss:
+    path:     /Comments/All/{id}
+    defaults: { _controller: MobileapiBundle:CommentMobile:AllComments }
+_new_commentss:
+    path:     /Comments/new/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:CommentMobile:newComment }
+_update_commentss:
+    path:     /Comments/update/{id}
+    defaults: { _controller: MobileapiBundle:CommentMobile:updateEvent }
+_delete_commentss:
+    path:     /Comments/delete/{id}
+    defaults: { _controller: MobileapiBundle:CommentMobile:deleteComment }
+_ById_comment:
+    path:     /Comments/{id}
+    defaults: { _controller: MobileapiBundle:CommentMobile:FindCommentById }
+_all_comments_User:
+    path:     /Comments/All/User/{idu}/{ide}
+    defaults: { _controller: MobileapiBundle:CommentMobile:FindCommentByUser }
+_new_partcipers:
+    path:     /Participe/new/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:ParticiperMobile:Participer }
+_find_partcipers:
+    path:     /Participe/find/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:ParticiperMobile:FindParticiper }
+_findAll_partcipers:
+    path:     /Participe/find
+    defaults: { _controller: MobileapiBundle:ParticiperMobile:FindParticiperAll }
+_delete_partcipers:
+    path:     /Participe/delete/{ide}/{idu}
+    defaults: { _controller: MobileapiBundle:ParticiperMobile:deletParticiper }
+_Like_Vote:
+    path:     /Vote/like/{id}/{idu}
+    defaults: { _controller: MobileapiBundle:VoteMobile:Like}
+_DeLike_Vote:
+    path:     /Vote/deslike/{id}/{idu}
+    defaults: { _controller: MobileapiBundle:VoteMobile:DesLike}
+_rating_Vote:
+    path:     /Vote/rate
+    defaults: { _controller: MobileapiBundle:VoteMobile:rate}
+_All_Vote:
+    path:     /Vote/All
+    defaults: { _controller: MobileapiBundle:VoteMobile:FindVoteAll}
+_delete_events:
+    path:     /Events/delete/{id}
+    defaults: { _controller: MobileapiBundle:EvenementMobile:deleteEvent }

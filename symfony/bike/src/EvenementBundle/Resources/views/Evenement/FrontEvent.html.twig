@@ -1,0 +1,149 @@
+
+
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <style>
+        .mystar{
+            font-size: 25px !important;
+            color: #f9d933 !important;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="shopify-section-1565539591269" class="shopify-section"><div data-section-id="1565539591269" data-section-type="section-product-v2" style=" ">
+
+            <div class="section-product-v2" style="background-image: url({{ asset('cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_product22ee9.jpg?v=1580885233') }})">
+                <div class="container container-v2">
+                    <div class="text-center title-product-v2">
+
+                        <h3 class="block-title">OUR Events</h3>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="product_best_sell engoc-row-equal">
+
+
+                            {% for e in event  %}
+
+                                <div class=" col-lg-3 col-6 col-md-4">
+                                    <div class="product-item-v1">
+                                        <div class="product mb-30 engoj_grid_parent relative">
+                                            <div class="img-product relative">
+                                                <a href="#" class="engoj_find_img">
+                                                    <img style="width: 100%" src="{{ asset('Upload/')}}{{ e.image }}" class="img-responsive" alt="Giant Stance">
+
+                                                </a>
+
+                                                <figure style= "background : #ff6601; color: #ffffff"  class="absolute uppercase label-new text-center">
+                                                    New
+                                                </figure>
+
+
+                                                <div class="product-icon-action">
+
+                                                    <div class="quick-view">
+                                                        <a href="{{ path('Comment',{'id':e.id}) }}" data-toggle="tooltip" data-placement="top" data-original-title="Details">
+                                                            <i class="ti-search"></i>
+
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                                <!--     END ICON -->
+
+
+
+
+                                                <!--     SOLD OUT -->
+
+                                                <!-- END SOLD OUT     -->
+
+                                            </div>
+
+
+
+
+                                            <div class="info-product">
+                                                <h4 class="des-font capital title-product mb-0 flex">
+                                                <a href="#">{{ e.titre }}</a>
+
+                                                </h4>
+                                                <!--     PRICE -->
+
+
+
+                                                <p class="price-product">
+
+                                                    <span class="price">{{ e.discription }}</span>
+
+                                                    {{ socialButtons( { 'facebook': {'locale':'fr_FR','url':'https://www.facebook.com/', 'send':true}} ) }}
+
+                                                </p>
+                                                <!-- END PRODUCT     -->
+
+                                                <!-- VARIANT PRODUCT -->
+
+                                                <nav class="engoj_select_color">
+
+                                                    <div class="course-ratings">
+                                                        {% if e.rate < 1 %}
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true" ></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar " aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                        {% elseif e.rate >= 1 %}
+                                                            {% for i in 1..e.rate | round %}
+                                                                <i class="fa fa-star mystar" aria-hidden="true"></i>
+                                                            {% endfor %}
+                                                        {% else %}
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true" ></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar " aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                            <i class="fa fa-star-o mystar" aria-hidden="true"></i>
+                                                        {% endif  %}
+                                                    </div>
+
+
+                                                </nav>
+
+
+                                                <!-- END VARIANT     -->
+
+
+
+
+                                                <!--     THUMBNAIL PRODUCT -->
+
+
+
+                                                <!-- END THUMBNAIL     -->
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+
+                        </div>
+
+                    </div>
+                    <div class="navigation">
+                        {{ knp_pagination_render(event) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

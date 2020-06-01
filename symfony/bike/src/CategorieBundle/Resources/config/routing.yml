@@ -1,0 +1,12 @@
+_list_categories:
+    path:     /ListCategories
+    defaults: { _controller: CategorieBundle:Categorie:ListCategories }
+
+_delete_categorie:
+    path:     /Deletecategorie/{idC}
+    defaults: { _controller: CategorieBundle:Categorie:Deletecategorie }
+
+_update_categorie:
+    path:     /Updatecategorie/{idC}
+    defaults: { _controller: CategorieBundle:Categorie:Updatecategorie }
+

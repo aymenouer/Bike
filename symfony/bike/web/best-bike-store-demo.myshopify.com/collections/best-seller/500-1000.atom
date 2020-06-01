@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en-US" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://best-bike-store-demo.myshopify.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://best-bike-store-demo.myshopify.com/collections/best-seller/500-1000.atom"/>
+  <title>Bestbike - Bike Store Business Shopify Theme</title>
+  <updated>2020-02-02T05:54:07-05:00</updated>
+  <author>
+    <name>Bestbike - Bike Store Business Shopify Theme</name>
+  </author>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/giant-roam-3"/>
+    <title>Giant Roam 3</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/15.1_5e302e6f-0025-4d45-a9cd-86a1867f2f2d.jpg?v=1580655715"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            2199.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">Casual yet always capable. The Giant Roam Disc is built for multi-purpose adventure, so you can follow your own route, wherever it takes you. With its confident, flat handlebar positioning and lightweight ALUXX aluminum frame, Roam Disc gives you all the best qualities of a mountain bike and a road bike. Its front suspension adds comfort and control. It has powerful disc brakes and durable components, so it can take some bumps on rough city roads. And the fast-rolling 700c wheels can handle smooth roads or dirt, making it a great choice for town-to-trail adventures. LIGHTWEIGHT AGILITY ALUXX aluminum frame lets you climb hills and accelerate with ease. COMFORT AND CONTROL Flat-bar frame geometry puts the rider in a position that balances efficiency with stability, and disc brakes give you added control on rugged roads or dirt. INTEGRATED RACK MOUNTS Compatible with front and rear racks, allowing easy cargo capacity for daily trips or longer treks.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$2000 &amp; Up</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>LightBlue</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>X</s:tag>
+    <s:tag>XL</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>S / LightBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>S / SteelBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>S / Black</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>M / LightBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>M / SteelBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>M / Black</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>L / LightBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>L / SteelBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>L / Black</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>XL / LightBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>XL / SteelBlue</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514159722636</id>
+      <title>XL / Black</title>
+      <s:price currency="USD">2199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/giant-explore-e-4"/>
+    <title>Giant Explore E+ 4</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/13.1.jpg?v=1580655246"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1788.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">Pick your destination and discover the joy in the journey. This new E-bike is ideal for trekking, giving you the power to ride farther with a boost that’s pure fun. The new Explore E+ is engineered to help you make the most of every journey. The ALUXX aluminum frame features a step-through design, making it easier to mount and dismount while carrying bags or panniers. Its powerful and tunable SyncDrive Sport motor and integrated EnergyPak provide a smooth, seamless boost of power so you can cover greater distances and conquer steep climbs. Its integrated rack mounts allow you to customize your cargo capacity, making it easier to carry the essentials for journeys near and far. Overall stability The ALUXX aluminum frameset and SyncDrive Sport motor combine for smooth handling and acceleration on all types of roads from hills to flats. SyncDrive Sport The small mid-drive motor delivers a powerful 80Nm of torque and is widely acclaimed for its performance and reliability. It delivers instant motor engagement and smooth power delivery that feels like a natural extension of a rider’s own pedaling power. Longer range Explore E+ gives riders the freedom to ride farther with its EnergyPak Smart battery.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$1500-$2000</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>Blue</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>XL</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>S / Black</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>S / SteelBlue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>S / Blue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>M / Black</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>M / SteelBlue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>M / Blue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>L / Black</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>L / SteelBlue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>L / Blue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>XL / Black</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>XL / SteelBlue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514151628940</id>
+      <title>XL / Blue</title>
+      <s:price currency="USD">1788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/diamondback-overdrive-1"/>
+    <title>Diamondback Overdrive 2</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/12.1_fc2b0a14-92d0-4711-bde5-a68c5fdcb479.jpg?v=1580655059"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            788.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">The classic 29er hardtail — that’s the best way to describe Diamondback's premier aluminum model. They’ve taken their strong and light aluminum 29er frame and increased the stiffness and handling precision by adding Boost 148 rear spacing and thru-axles front and rear. They’ve also dressed the bike in an envy-provoking parts package that includes a plush and confidence-inspiring RockShox Reba RL fork, strong Shimano hydraulic disc brakes, and a SRAM GX/NX 1x drivetrain that provides you plenty of granny gear for the ugliest of climbs, without the complexity of a traditional front derailleur system. Thanks to its 29er wheels, cleaning tricky rock sections and log-overs is a whole lot less tricky on this big wheeler, and since you can never have enough traction — particularly on a hardtail — we went the extra step and equipped this Overdrive with our own Blanchard 25 tubeless ready wheelset. Ready Ride bikes are shipped 95 percent assembled. Typical bike assembly is time-consuming and requires technical know-how. Ready Ride reduces the time and skills needed for the final, four-step assembly.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$500-$1000</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>YellowGreen</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>S / YellowGreen</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>S / Black</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>M / YellowGreen</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>M / Black</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>L / YellowGreen</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>L / Black</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>XL / YellowGreen</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514147762316</id>
+      <title>XL / Black</title>
+      <s:price currency="USD">788.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514140291212</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/giant-stance-e"/>
+    <title>Giant Stance E+</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/9.1_561200c5-fa95-42c8-b436-5046b9ef98aa.jpg?v=1580654278"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1650.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">Steep climbs, technical descents, longer days on the trail. With a powerful SyncDrive Sport motor, this full-suspension E-bike gives you the power and technology to ride the trails you dream about. Designed with trail-friendly geometry, Stance E+ helps beginner or intermediate trail riders experience off-road E-bike riding at its best. Its lightweight, strong and stiff ALUXX SL aluminum frame with FlexPoint suspension makes tricky singletrack trails easier to ride. It features 120mm of rear suspension travel and 130mm up front, plus the stable, nimble ride quality of 27.5+ wheels. The SyncDrive Sport motor delivers 350 percent tunable support ratios through the Giant E-bike App. The RideControl ONE integrated handlebar support buttons offer ergonomic control, and the EnergyPak 500Wh battery system lets you extend the ride. And now you can charge it up quickly with a new smart charger. Strong motor support The SyncDrive Sport motor with 70Nm of torque and 360 percent tunable support helps you climb steep, rugged trails with ease. Total control ALUXX SL aluminum frame with 120mm FlexPoint suspension and 27.5+ wheels produces a smooth, confident ride on technical trails. Giant E-bike App gives you navigation, health and fitness functions. Efficient 500Wh EnergyPak offers the longest possible range. Integrated battery pack is easy to charge, up to 80% in just 60 minutes with new 6A Fast Charger.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$1500-$2000</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>Yellow</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514140291212</id>
+      <title>S / Yellow</title>
+      <s:price currency="USD">1650.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/liv-embolden"/>
+    <title>Liv Embolden</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/6.1_41a4dc97-a063-408d-a313-89b807db9fba.jpg?v=1580651618"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1399.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">Discover a little mischief and unknown territory with the trail-ready Liv Embolden, the perfect bike to get you into the trails and singletracks. Embolden is designed with women’s-specific geometry and 130 mm front/120 mm rear suspension, on the single-pivot Flexpoint platform. This bike feels stable, fast and energetic even as the terrain gets technical, meeting the demands of trail riding. Using our 3F Design Philosophy, we designed a geometry that provides a low standover height, making dismounts and maneuvering your body around the frame effortless. 27.5-inch wheels ensure bike handling is still nimble and playful, while carrying more speed in corners and through rocks, providing a stable, trustworthy feel. Trail Confidence 120 mm rear travel and 130 mm front travel, plus confidence-inspiring geometry, disc brakes and dropper post. Accessible Performance Utilizing Giant’s premium single-pivot suspension design, Embolden is a highly capable, trail-versed dual suspension bike. Inspiring Comfort LivRight Sizing and 3F Design Philosophy guarantee a design built truly for women and the perfect fit across all frame sizes. WHY WE LOVE IT With 130 mm front and 120 mm rear suspension around a geometry that offers confidence-inspiring handling, Embolden holds the keys to unlock your mountain bike potential and get you hooked on dirt. With an active feel, ample traction and powerful disc brakes, this bike encourages you to go out and ride it, because you know Embolden’s got your back.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Black</s:tag>
+    <s:tag>Orange</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>Tan</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>S / Black</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>S / Orange</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>S / Tan</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>S / SteelBlue</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>M / Black</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>M / Orange</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>M / Tan</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>M / SteelBlue</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>L / Black</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>L / Orange</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>L / Tan</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>L / SteelBlue</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>XL / Black</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>XL / Orange</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>XL / Tan</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514115223692</id>
+      <title>XL / SteelBlue</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+    <published>2020-02-02T05:54:07-05:00</published>
+    <updated>2020-02-02T05:54:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/diamondback-atroz"/>
+    <title>Diamondback Atroz</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/5.1.jpg?v=1581018407"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            1199.00 - 1499.00
+            <a href="https://best-bike-store-demo.myshopify.com/products/diamondback-atroz">(12 variants)</a>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+<div class="container container-v2 py-4">
+<div class="row">
+<div class="col-md-6"><a> <img src="https://cdn.shopify.com/s/files/1/0321/8109/2492/files/product1.jpg?v=1581019127" alt=""> </a></div>
+<div class="col-md-6 info1">
+<div>
+<h3>High-quality  <br> Aluminum frame</h3>
+<p>We love hardtails, but there’s no denying the benefits of full-suspension mountain bikes - the added comfort and control. Unfortunately, dualies often add another thing: more dollar signs to the price tag. That’s not the case here.</p>
+</div>
+</div>
+</div>
+<div class="container container-v2 py-4">
+<div class="row">
+<div class="col-md-6 info2">
+<div>
+<h3>Diamondback Hook <br> Mountain Bike</h3>
+<p>That’s not the case here. The Atroz utilizes sealed cartridge bearings in an understated single-pivot design to deliver smooth, durable performance. The Atroz 2 ups the ante with Shimano hydraulic disc brakes, Suntour air-sprung rear suspension and an easy-to-operate single-ring drivetrain - features you usually find on bikes with a whole lot more dollar signs on their price tags.</p>
+</div>
+</div>
+<div class="col-md-6"><a><img src="https://cdn.shopify.com/s/files/1/0321/8109/2492/files/product2.jpg?v=1581019126" alt=""> </a></div>
+</div>
+</div>
+</div></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$1000-$1500</s:tag>
+    <s:tag>Black</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>S / Black</title>
+      <s:price currency="USD">1199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>S / White</title>
+      <s:price currency="USD">1199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>S / Red</title>
+      <s:price currency="USD">1199.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>M / Black</title>
+      <s:price currency="USD">1299.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>M / White</title>
+      <s:price currency="USD">1299.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>M / Red</title>
+      <s:price currency="USD">1299.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>L / Black</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>L / White</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>L / Red</title>
+      <s:price currency="USD">1399.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>XL / Black</title>
+      <s:price currency="USD">1499.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>XL / White</title>
+      <s:price currency="USD">1499.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4514097528972</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">1499.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+    <published>2020-01-31T04:34:52-05:00</published>
+    <updated>2020-01-31T04:34:52-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/diamondback-catch-1"/>
+    <title>Diamondback Catch 1</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/4.1_47c86090-a5dc-4706-a4a2-9046d1755b30.jpg?v=1580464241"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            850.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">“Adventure bikes” are often plodding beasts of burden that sacrifice thrills in the pursuit of extra stability. Well, where’s the adventure in that? Diamondback went a different route entirely. By adding 2.8” wide, plus-size tires to their Level Link suspension, they’ve created a bike that absolutely rips on tight trails, but does so with the extra grip and control of a plus-size bike. Voila — adventure made awesome. Diamondback gave the Catch a slack-but-not-too-slack front end. They wanted control on fast descents but weren’t willing to give up maneuverability on tight trails. A Shimano Deore 1x10-speed drivetrain gives you the gearing to tackle any terrain and TRP Slate X2 hydraulic disc brakes bring this machine to a tidy stop. If you’re looking to tackle rough terrain and want the ultimate in control, without sacrificing the thrill of riding, the Catch is your bike.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>$500-$1000</s:tag>
+    <s:tag>L</s:tag>
+    <s:tag>M</s:tag>
+    <s:tag>Red</s:tag>
+    <s:tag>S</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>XL</s:tag>
+    <s:tag>YellowGreen</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>S / White</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>S / SteelBlue</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>S / Red</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>S / YellowGreen</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>M / White</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>M / SteelBlue</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>M / Red</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>M / YellowGreen</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>L / White</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>L / SteelBlue</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>L / Red</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>L / YellowGreen</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>XL / White</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>XL / SteelBlue</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4510241161356</id>
+      <title>XL / YellowGreen</title>
+      <s:price currency="USD">850.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+    <published>2020-01-30T04:05:48-05:00</published>
+    <updated>2020-01-30T04:05:48-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://best-bike-store-demo.myshopify.com/products/diamondback-line"/>
+    <title>Diamondback Line</title>
+    <s:type></s:type>
+    <s:vendor>BestBike - Bike Store Business Shopify Theme</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0321/8109/2492/products/2.1_2bf558e7-f35a-410b-88ac-73a9b31c670c.jpg?v=1580376404"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>BestBike - Bike Store Business Shopify Theme<br>
+        <strong>Type: </strong><br>
+        <strong>Price: </strong>
+            699.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="ml-3 mr-3" style="text-align: left;">From parkways to paths and everything in between, this versatile bike can add some spice to your commute or fitness routine. With its flat handlebar, upright positioning and suspension fork, it’s cool and capable on-road or off-road.
+
+With a rugged personality and a smooth riding style, ATX features the familiar flat-handlebar look of a traditional mountain bike. It has a lightweight yet durable ALUXX aluminum frame and a suspension fork with 100mm of smooth travel to soak up bumps. The wheel diameter varies based on bike size, with 26-inch wheels on smaller frames and 27.5 on larger ones. This tailors the bike’s handling to a rider’s height. Powerful brakes deliver confident handling in all types of weather, and integrated mounts make it easy to add racks or fenders to suit your riding adventures.
+
+All-terrain versatility
+With a mountain bike style flat handlebar, and suspension fork, you can ride road or dirt with confidence.
+
+Lightweight and durable
+Frameset constructed with high-quality ALUXX aluminum.
+
+Comfort and stability
+Frame geometry puts the rider in a position that balances efficiency with stability on rough roads, paths or trails.</p></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Red</s:tag>
+    <s:tag>SteelBlue</s:tag>
+    <s:tag>White</s:tag>
+    <s:tag>YellowGreen</s:tag>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>S / SteelBlue</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>S / YellowGreen</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>S / Red</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>S / White</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>M / SteelBlue</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>M / YellowGreen</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>M / Red</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>M / White</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>L / SteelBlue</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>L / YellowGreen</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>L / Red</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>L / White</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>XL / SteelBlue</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>XL / YellowGreen</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>XL / Red</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+    <s:variant>
+      <id>https://best-bike-store-demo.myshopify.com/products/4507692892300</id>
+      <title>XL / White</title>
+      <s:price currency="USD">699.00</s:price>
+      <s:sku></s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+</feed>

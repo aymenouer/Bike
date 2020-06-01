@@ -1,0 +1,19 @@
+_achat_trois_mois:
+    path:     /Achat_troisMois/{ID_A}
+    defaults: { _controller: AchatBundle:Achat:Achat_troisMois }
+
+_achat_unans:
+    path:     /Achat_unans/{ID_A}
+    defaults: { _controller: AchatBundle:Achat:Achat_unans }
+
+_achat_unmois:
+    path:     /Achat_unmois/{ID_A}
+    defaults: { _controller: AchatBundle:Achat:Achat_unmois }
+
+_affichage_offre:
+    path:     /AffichageOffre
+    defaults: { _controller: AchatBundle:Achat:AffichageOffre }
+
+_delete_offre:
+    path:     /DeleteOffre
+    defaults: { _controller: AchatBundle:Achat:DeleteOffre }

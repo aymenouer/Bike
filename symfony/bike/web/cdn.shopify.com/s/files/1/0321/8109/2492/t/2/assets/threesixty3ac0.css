@@ -1,0 +1,170 @@
+.threesixty {
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.threesixty .threesixty_images {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.threesixty .threesixty_images img {
+  position: absolute;
+  top:30px;
+  width: 100%;
+  height: auto;
+}
+.threesixty .threesixty_images img.previous-image {
+  visibility: hidden;
+  /*
+           Do not put here any other styles.
+           It causes massive recalc / repaints and image flickering,
+           especially on Firefox.
+        */
+
+}
+.threesixty .threesixty_images img.current-image {
+  visibility: visible;
+  /*
+           Do not put here any other styles.
+           It causes massive recalc / repaints and image flickering,
+           especially on Firefox.
+        */
+
+}
+.threesixty .spinner {
+  width: 60px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.threesixty .spinner span {
+  font-family: Arial, "MS Trebuchet", sans-serif;
+  font-size: 12px;
+  font-weight: bolder;
+  color: #FFF;
+  text-align: center;
+  line-height: 30px;
+  display: block;
+}
+.threesixty .nav_bar {
+  position: absolute;
+	
+  bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+  z-index: 11;
+  background: #f1f1f1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+.threesixty .nav_bar a {
+  display: block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  float: left;
+  font-size: 0;
+  text-align: center;
+  
+}
+.threesixty .nav_bar a.nav_bar_play {
+  background-position: 0 0 !important;
+}
+.threesixty .nav_bar a.nav_bar_play:before{
+	content: "\f04b";
+    font-family: FontAwesome;
+  	font-size: 19px;
+}
+
+.threesixty .nav_bar a.nav_bar_previous {
+  background-position: 0 -73px !important;
+}
+    
+
+.threesixty .nav_bar a.nav_bar_previous:before{
+	content: "\f104";
+    font-family: FontAwesome;
+  	font-size: 25px;
+}
+.threesixty .nav_bar a.nav_bar_stop {
+  background-position: 0 -37px !important;
+}
+.threesixty .nav_bar a.nav_bar_stop:before{
+	content: "\f04d";
+    font-family: FontAwesome;
+  	font-size: 18px;
+}
+    
+
+.threesixty .nav_bar a.nav_bar_next {
+  background-position: 0 -104px !important;
+}
+.threesixty .nav_bar a.nav_bar_next:before{
+	content: "\f105";
+    font-family: FontAwesome;
+  	font-size: 25px;
+}
+    
+
+/* html */
+.threesixty:-webkit-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px;
+}
+.threesixty:-moz-full-screen {
+  background: #ffffff;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 200px;
+}
+button.close{
+  font-size: 30px;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  font-weight: 400;
+  position: absolute; 
+  right: 0;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+  /* float: right; */
+  display: block;
+  /* text-align: right; */
+}
+.e-threed-view:after {
+    content: '';
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    height: 50%;
+    z-index: 5;
+    border-bottom: 5px solid rgba(175, 175, 175, 0.15);
+    border-top: 2px solid rgba(175, 175, 175, 0.05);
+    border-right: 2px solid rgba(175, 175, 175, 0.1);
+    border-left: 2px solid rgba(175, 175, 175, 0.1);
+    border-radius: 50%;
+}
+.modal-content{
+	background: #f1f1f1;
+  	border:0;
+  	
+}
+#my360{
+  background: rgba(255,255,255,0.3); 
+}

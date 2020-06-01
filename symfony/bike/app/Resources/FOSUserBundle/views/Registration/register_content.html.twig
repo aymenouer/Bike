@@ -1,0 +1,126 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<span class="login100-form-title p-b-32">
+						Account registration
+					</span>
+{{ form_start(form, { 'attr': {'class': 'login100-form validate-form'} }) }}
+
+<div class="form-group" id="fos_user_registration_form">
+    <label class="txt1 p-b-11" for="FirstName">FirstName</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "FirstName is required">
+        {{ form_widget(form.FirstName, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.FirstName) }}
+
+        <span class="focus-input100"></span>
+    </div>
+    <label class="txt1 p-b-11" for="LastName">LastName</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "LastName is required">
+        {{ form_widget(form.LastName, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.LastName) }}
+
+        <span class="focus-input100"></span>
+    </div>
+
+    <label class="txt1 p-b-11" for="userNumber">userNumber</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "userNumber is required">
+        {{ form_widget(form.userNumber, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.userNumber) }}
+
+        <span class="focus-input100"></span>
+    </div>
+    <label class="txt1 p-b-11" for="userAge">user Age</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "userAge is required">
+        {{ form_widget(form.userAge, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.userAge) }}
+
+        <span class="focus-input100"></span>
+    </div>
+
+
+
+
+
+    <label class="txt1 p-b-11" for="username">Username</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+        {{ form_widget(form.username, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.username) }}
+
+        <span class="focus-input100"></span>
+    </div>
+
+    <label class="txt1 p-b-11" for="username">Email</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "Valid email is required: ex@abc.xyz">
+        {{ form_widget(form.email, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.email) }}
+
+        <span class="focus-input100"></span>
+    </div>
+
+
+
+    <label class="txt1 p-b-11" for="password">Password</label>
+
+
+    <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+						<span class="btn-show-pass">
+							<i class="fa fa-eye"></i>
+						</span>
+        {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'input100'} }) }}
+        {{ form_errors(form.plainPassword.first) }}
+        <span class="focus-input100"></span>
+    </div>
+
+
+    <label class="txt1 p-b-11" for="password">Confirm Password</label>
+
+
+    <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+						<span class="btn-show-pass">
+							<i class="fa fa-eye"></i>
+						</span>
+        {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'input100'} }) }}
+        {{ form_errors(form.plainPassword.second) }}
+        <span class="focus-input100"></span>
+    </div>
+
+
+
+
+    <label class="txt1 p-b-11" for="userimage">userimage</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "userimage is required">
+        {{ form_widget(form.userimage, { 'attr': {'class': 'input100' } }) }}
+        {{ form_errors(form.userimage) }}
+
+        <span class="focus-input100"></span>
+    </div>
+
+
+
+
+    {{ form_rest(form) }}
+
+</div>
+
+
+<div class="container-login100-form-btn">
+    <input class="login100-form-btn" type="submit" value="Sign up">
+</div>
+
+<div class="text-center p-t-46 p-b-20">
+						<span class="txt2">
+							already on Bike ?
+						</span>
+</div>
+
+<div class="container-login100-form-btn">
+    <a href="{{ path('fos_user_security_login') }}" class="login100-form-btn" style="background: #1da1f2" name="Sign up">
+        Login
+    </a>
+</div>
+{{ form_end(form) }}
+
+
+
+
+
+<div class="login100-more" style="background-image: url({{ asset('loginassets/images/pub.jpg') }});">
+</div>

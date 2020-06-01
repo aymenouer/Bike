@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div id="shopify-section-contact-template" class="shopify-section"><div class="wrap-bread-crumb breadcrumb_collection2">
+            <div class="text-center bg-breadcrumb" style="background-image : url({{ asset('cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_aboutusa7d1.jpg?v=1580436779') }})">
+                <div class="title-page">
+
+                    <h2 class="" style="color: #fff">Reclamation</h2>
+
+                </div>
+                <!-- /snippets/breadcrumb.liquid -->
+
+
+
+                <div class="bread-crumb">
+                    <a href="{{path('redirect')}}" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                    <strong>Reclamation</strong>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <section id="content">
+            <div class="content-page contact-page">
+                <div class="container container-v2">
+                    <h3 class="title_desc"> réclamer <br>  si vous avez un problème</h3>
+                    <iframe src="{{path('_map')}}" width="100%" height="100%"></iframe>
+
+
+                </div>
+
+                <div class="container">
+                    <div class="contact-form">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="address-shop">
+                                    <h3 class="shop-name">
+                                        BESTBIKE WP SHOP THEME
+                                    </h3>
+                                    <p class="shop-address">3100 West Cary Street Richmond, Virginia 23221<br> P: 804.355.4383 F: 804.367.7901</p>
+                                </div>
+
+
+                                <div class=" info-shop ">
+                                    <h3 class="title">
+                                        Store Hours
+                                    </h3>
+                                    <p class="content">Monday-Saturday 11am-7pm ET <br> Sunday 11am-6pm ET</p>
+                                </div>
+
+
+
+                                <div class="info-shop">
+                                    <h3 class="title">
+                                        Specialist Hours
+                                    </h3>
+                                    <p class="content">Monday-Friday 9am-5pm ET</p>
+
+
+                                    <button href="" class="button"><span> <a href="{{ path('_list_reclamation_users') }}" style="color: white"> ListReclamation </a>   </span></button>
+
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="contact-form-page">
+
+
+
+
+
+
+                                    <div class="contact-form">
+                                        {{ form_start(form) }}
+
+
+
+
+
+                                        <p class="contact-message">
+                                            {{ form_widget(form.contenu, { 'attr': {'class': 'contact-message'} }) }} </p>
+                                        <p class="contact-subject">
+                                            Type :
+                                            {{ form_widget(form.type, { 'attr': {'class': 'contact-subject', 'style':' border: 2px solid blue;'} }) }}
+                                        </p>
+                                        <p class="contact-submit">
+                                        <div class="fileupload fileupload-new" data-provides="fileupload">
+
+                                            <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                                            <div>
+                                                {{ form_widget(form.image, { 'attr': {'class': 'contact-submit shop-button'} }) }}
+                                            </div>
+                                        </div>
+
+                                        </p>
+
+
+
+                                        <p class="contact-subject">
+                                        <p style="font-size:50px">💔<label style="
+    position: absolute;
+    margin-top: 20px;
+" class="switch">
+
+                                                <input name="etat" type="checkbox" checked>
+                                                <span class="slider round"></span>
+
+                                            </label>
+
+                                        <p style="position: absolute;font-size:50px;margin-left: 130px;margin-top: -91px;"> ❤ </p>
+                                        </p>
+
+
+                                        <p style="font-size:100px"></p>
+
+                                        </p>
+                                        <p class="contact-subject">
+
+                                            {{ form_widget(form.captchaCode, { 'attr': {'class': 'contact-subject', 'style':' border: 2px solid blue;'} }) }}
+                                        </p>
+                                        <p class="contact-submit">
+
+                                            <input  class="shop-button" type="submit" value="Send To us">
+                                        </p>
+                                        {{ form_end(form) }}
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </div>
+{% endblock %}

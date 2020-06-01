@@ -1,0 +1,1760 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+    <div id="shopify-section-collection-template" class="shopify-section"><!-- collection-template.liquid -->
+
+
+
+
+
+
+        <div class="wrap-bread-crumb breadcrumb_collection">
+            <div class="text-center bg-breadcrumb" style="background-image : url(//cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_aboutus.jpg?v=1580436779 )">
+                <div class="title-page">
+
+                    <h2 class="" style="color: #fff">Products</h2>
+
+                </div>
+                <!-- /snippets/breadcrumb.liquid -->
+
+
+
+                <div class="bread-crumb">
+                    <a href="/" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+
+
+                    <a href="/collections/all" title="">Products</a>
+                    <strong>Bikes</strong>
+
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <section class="collection-page-sidebar">
+            <div class="container container-v2">
+                <div class="row">
+                    <div class="col-lg-3  order-1  ">
+                        <div class="filter_sidebar d-none d-lg-block">
+                            <div class=" engoj-collection-sidebar engoc_sw_filter_tag">
+
+
+                                <div class="widget widget-category filter-category">
+                                    <h2 class="widget-title ">Categories</h2>
+                                    <div class="widget-content">
+                                        <ul class="list-category-toggle toggle-tab list-none">
+
+                                            {% for i in LC %}
+                                            <li class="item-toggle-tab"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>{{ i.libC }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+
+                                <section class="widget widget-category widget_product_categories filter-brand">
+                                    <h2 class="widget-title">Brand</h2>
+                                    <ul class="list-none list-brand">
+
+                                        <li class="cat-item">
+
+
+                                            {% for i in LS %}
+                                        <li class="item-toggle-tab"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>{{ i.libS }}</a></li>
+                                        {% endfor %}
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.product-categories -->
+                                </section>
+
+
+
+
+                                <div class="filter-color widget widget-category widget_product_categories filter-tag">
+                                    <h2 class="widget-title">Color option</h2>
+                                    <ul class="list-none list_color">
+
+
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="black">
+                                            <a href="javascript:void(0)" title="Black" style="background: Black">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="blue">
+                                            <a href="javascript:void(0)" title="Blue" style="background: Blue">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="lightblue">
+                                            <a href="javascript:void(0)" title="LightBlue" style="background: LightBlue">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="maroon">
+                                            <a href="javascript:void(0)" title="Maroon" style="background: Maroon">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="orange">
+                                            <a href="javascript:void(0)" title="Orange" style="background: Orange">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="red">
+                                            <a href="javascript:void(0)" title="Red" style="background: Red">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="steelblue">
+                                            <a href="javascript:void(0)" title="SteelBlue" style="background: SteelBlue">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="tan">
+                                            <a href="javascript:void(0)" title="Tan" style="background: Tan">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="white">
+                                            <a href="javascript:void(0)" title="White" style="background: White">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="yellow">
+                                            <a href="javascript:void(0)" title="Yellow" style="background: Yellow">
+                                            </a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="yellowgreen">
+                                            <a href="javascript:void(0)" title="YellowGreen" style="background: YellowGreen">
+                                            </a>
+                                        </li>
+
+
+                                    </ul>
+                                    <!-- /.product-categories -->
+                                </div>
+
+
+
+
+                                <section class=" filter-size filter-tag">
+                                    <h2 class="widget-title title14 font-bold dosis-font text-uppercase">Size Option</h2>
+                                    <ul class="list-none list-size">
+
+
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="s">
+                                            <a href="javascript:void(0)" title="S">S</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="m">
+                                            <a href="javascript:void(0)" title="M">M</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="l">
+                                            <a href="javascript:void(0)" title="L">L</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="xl">
+                                            <a href="javascript:void(0)" title="XL">XL</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.product-categories -->
+                                </section>
+
+
+
+
+                                <section class="filter-price filter-tag">
+                                    <h2 class="widget-title ">Price Filter</h2>
+                                    <ul class="list-none list-price">
+
+
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="0-30">
+                                            <a href="javascript:void(0)" title="$0-30"><i class="fa fa-angle-right" aria-hidden="true"></i>0-30</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item current-cat">
+                                            <input type="checkbox" value="$30-90" checked="">
+                                            <a href="javascript:void(0)" title="30-90"><i class="fa fa-angle-right" aria-hidden="true"></i>$30-90"</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="90-200">
+                                            <a href="javascript:void(0)" title="90-200><i class="fa fa-angle-right" aria-hidden="true"></i>$90-200</a>
+                                        </li>
+
+
+
+                                        <li class="cat-item">
+                                            <input type="checkbox" value="200-up">
+                                            <a href="javascript:void(0)" title="$200 &amp; Up"><i class="fa fa-angle-right" aria-hidden="true"></i>$200 &amp; Up</a>
+                                        </li>
+
+                                    </ul>
+                                    <!-- /.product-categories -->
+                                </section>
+
+
+
+
+
+                                <div class="widget widget-tags">
+                                    <h2 class="widget-title title14 font-bold dosis-font text-uppercase">Tags</h2>
+                                    <ul class="list-none wg-list-tags list-tag">
+
+                                        <li><a href="/collections/all/1000-1500?sort_by=price-descending" title="Show products matching tag $1000-$1500">$1000-$1500</a></li>
+
+                                        <li><a href="/collections/all/1500-2000?sort_by=price-descending" title="Show products matching tag $1500-$2000">$1500-$2000</a></li>
+
+                                        <li><a href="/collections/all/2000-up?sort_by=price-descending" title="Show products matching tag $2000 &amp; Up">$2000 &amp; Up</a></li>
+
+                                        <li><a href="/collections/all/500-1000?sort_by=price-descending" title="Show products matching tag $500-$1000">$500-$1000</a></li>
+
+                                        <li><a href="/collections/all/black?sort_by=price-descending" title="Show products matching tag Black">Black</a></li>
+
+                                        <li><a href="/collections/all/blue?sort_by=price-descending" title="Show products matching tag Blue">Blue</a></li>
+
+                                        <li><a href="/collections/all/l?sort_by=price-descending" title="Show products matching tag L">L</a></li>
+
+                                        <li><a href="/collections/all/lightblue?sort_by=price-descending" title="Show products matching tag LightBlue">LightBlue</a></li>
+
+                                        <li><a href="/collections/all/lightgrey?sort_by=price-descending" title="Show products matching tag LightGrey">LightGrey</a></li>
+
+                                        <li><a href="/collections/all/m?sort_by=price-descending" title="Show products matching tag M">M</a></li>
+
+                                        <li><a href="/collections/all/maroon?sort_by=price-descending" title="Show products matching tag Maroon">Maroon</a></li>
+
+                                        <li><a href="/collections/all/orange?sort_by=price-descending" title="Show products matching tag Orange">Orange</a></li>
+
+                                        <li><a href="/collections/all/red?sort_by=price-descending" title="Show products matching tag Red">Red</a></li>
+
+                                        <li><a href="/collections/all/s?sort_by=price-descending" title="Show products matching tag S">S</a></li>
+
+                                        <li><a href="/collections/all/steelblue?sort_by=price-descending" title="Show products matching tag SteelBlue">SteelBlue</a></li>
+
+                                        <li><a href="/collections/all/tan?sort_by=price-descending" title="Show products matching tag Tan">Tan</a></li>
+
+                                        <li><a href="/collections/all/white?sort_by=price-descending" title="Show products matching tag White">White</a></li>
+
+                                        <li><a href="/collections/all/x?sort_by=price-descending" title="Show products matching tag X">X</a></li>
+
+                                        <li><a href="/collections/all/xl?sort_by=price-descending" title="Show products matching tag XL">XL</a></li>
+
+                                        <li><a href="/collections/all/yellow?sort_by=price-descending" title="Show products matching tag Yellow">Yellow</a></li>
+
+                                        <li><a href="/collections/all/yellowgreen?sort_by=price-descending" title="Show products matching tag YellowGreen">YellowGreen</a></li>
+
+                                    </ul>
+                                </div>
+
+
+
+                            </div>
+                            <!-- #secondary -->
+                        </div>
+
+
+                        <div class="filter-to-left d-lg-none">
+                            <div class="filter_sidebar">
+                                <div class="close_filter">close <i class="ti-close"></i></div>
+                                <div class=" engoj-collection-sidebar engoc_sw_filter_tag">
+
+
+
+
+                                    <section class=" filter-size filter-tag">
+                                        <h2 class="widget-title title14 font-bold dosis-font text-uppercase">Size Option</h2>
+                                        <ul class="list-none list-size">
+
+
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="s">
+                                                <a href="javascript:void(0)" title="S">S</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="m">
+                                                <a href="javascript:void(0)" title="M">M</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="l">
+                                                <a href="javascript:void(0)" title="L">L</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="xl">
+                                                <a href="javascript:void(0)" title="XL">XL</a>
+                                            </li>
+
+                                        </ul>
+                                        <!-- /.product-categories -->
+                                    </section>
+
+
+
+
+                                    <section class="filter-price filter-tag">
+                                        <h2 class="widget-title ">Price Filter</h2>
+                                        <ul class="list-none list-price">
+
+
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="500-1000">
+                                                <a href="javascript:void(0)" title="$500-$1000"><i class="fa fa-angle-right" aria-hidden="true"></i>$500-$1000</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item current-cat">
+                                                <input type="checkbox" value="1000-1500" checked="">
+                                                <a href="javascript:void(0)" title="$1000-$1500"><i class="fa fa-angle-right" aria-hidden="true"></i>$1000-$1500</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="1500-2000">
+                                                <a href="javascript:void(0)" title="$1500-$2000"><i class="fa fa-angle-right" aria-hidden="true"></i>$1500-$2000</a>
+                                            </li>
+
+
+
+                                            <li class="cat-item">
+                                                <input type="checkbox" value="2000-up">
+                                                <a href="javascript:void(0)" title="$2000 &amp; Up"><i class="fa fa-angle-right" aria-hidden="true"></i>$2000 &amp; Up</a>
+                                            </li>
+
+                                        </ul>
+                                        <!-- /.product-categories -->
+                                    </section>
+
+
+
+
+
+                                    <div class="widget widget-tags">
+                                        <h2 class="widget-title title14 font-bold dosis-font text-uppercase">Tags</h2>
+                                        <ul class="list-none wg-list-tags list-tag">
+
+                                            <li><a href="/collections/all/1000-1500?sort_by=price-descending" title="Show products matching tag $1000-$1500">$1000-$1500</a></li>
+
+                                            <li><a href="/collections/all/1500-2000?sort_by=price-descending" title="Show products matching tag $1500-$2000">$1500-$2000</a></li>
+
+                                            <li><a href="/collections/all/2000-up?sort_by=price-descending" title="Show products matching tag $2000 &amp; Up">$2000 &amp; Up</a></li>
+
+                                            <li><a href="/collections/all/500-1000?sort_by=price-descending" title="Show products matching tag $500-$1000">$500-$1000</a></li>
+
+                                            <li><a href="/collections/all/black?sort_by=price-descending" title="Show products matching tag Black">Black</a></li>
+
+                                            <li><a href="/collections/all/blue?sort_by=price-descending" title="Show products matching tag Blue">Blue</a></li>
+
+                                            <li><a href="/collections/all/l?sort_by=price-descending" title="Show products matching tag L">L</a></li>
+
+                                            <li><a href="/collections/all/lightblue?sort_by=price-descending" title="Show products matching tag LightBlue">LightBlue</a></li>
+
+                                            <li><a href="/collections/all/lightgrey?sort_by=price-descending" title="Show products matching tag LightGrey">LightGrey</a></li>
+
+                                            <li><a href="/collections/all/m?sort_by=price-descending" title="Show products matching tag M">M</a></li>
+
+                                            <li><a href="/collections/all/maroon?sort_by=price-descending" title="Show products matching tag Maroon">Maroon</a></li>
+
+                                            <li><a href="/collections/all/orange?sort_by=price-descending" title="Show products matching tag Orange">Orange</a></li>
+
+                                            <li><a href="/collections/all/red?sort_by=price-descending" title="Show products matching tag Red">Red</a></li>
+
+                                            <li><a href="/collections/all/s?sort_by=price-descending" title="Show products matching tag S">S</a></li>
+
+                                            <li><a href="/collections/all/steelblue?sort_by=price-descending" title="Show products matching tag SteelBlue">SteelBlue</a></li>
+
+                                            <li><a href="/collections/all/tan?sort_by=price-descending" title="Show products matching tag Tan">Tan</a></li>
+
+                                            <li><a href="/collections/all/white?sort_by=price-descending" title="Show products matching tag White">White</a></li>
+
+                                            <li><a href="/collections/all/x?sort_by=price-descending" title="Show products matching tag X">X</a></li>
+
+                                            <li><a href="/collections/all/xl?sort_by=price-descending" title="Show products matching tag XL">XL</a></li>
+
+                                            <li><a href="/collections/all/yellow?sort_by=price-descending" title="Show products matching tag Yellow">Yellow</a></li>
+
+                                            <li><a href="/collections/all/yellowgreen?sort_by=price-descending" title="Show products matching tag YellowGreen">YellowGreen</a></li>
+
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+                                <!-- #secondary -->
+                                <div class="banner_sidebar">
+                                    <a href="">
+                                        <img class="w-100" src=" //cdn.shopify.com/s/files/1/0321/8109/2492/files/banner_sidebar.jpg?v=1580932710 ">
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="overlay-filter d-lg-none"></div>
+                    </div>
+
+
+                    <div class="col-lg-9 px-0  order-2 ">
+                        <div class="content-page">
+                            <div class="container container-v2">
+
+                                <div class="title-cate">
+                                    <h2 class="mb-0">Products</h2>
+                                </div>
+
+                                <div class="row shop_control ">
+                                    <div style="" class="col-md-6 col-12 ">
+                                        <div class="filter_sortby">
+
+                                            <a class="filter js_filter" data-toggle="collapse" data-target="#demo" href="javascript:void(0)">
+                                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.008 485.008" style="enable-background:new 0 0 485.008 485.008;" xml:space="preserve">
+                      <g>
+                          <g>
+                              <path d="M171.501,464.698v-237.9l-166.3-192.6c-8.9-10.9-7.9-33.3,15.1-33.3h443.6c21.6,0,26.6,19.8,15.1,33.3l-162.3,187.5v147.2
+                                   c0,6-2,11.1-7.1,15.1l-103.8,95.8C193.801,488.698,171.501,483.898,171.501,464.698z M64.701,41.298l142.2,164.3c3,4,5,8.1,5,13.1
+                                   v200.6l64.5-58.5v-146.1c0-5,2-9.1,5-13.1l138.1-160.3L64.701,41.298L64.701,41.298z"></path>
+                          </g>
+                      </g>
+
+                    </svg>
+                                                <p class="mb-0">filter</p>
+                                            </a>
+
+
+
+                                            <!-- /snippets/collection-sorting.liquid -->
+
+
+                                            <ul class="sort-pagi-bar">
+                                                <li>
+                                                    <div class="sort-by">
+                                                        <div class="select-box inline-block">
+                                                            <select name="SortBy" id="SortBy" class="orderby">
+                                                                <option value="manual">Featured</option>
+                                                                <option value="best-selling">Best Selling</option>
+                                                                <option value="title-ascending">Alphabetically, A-Z</option>
+                                                                <option value="title-descending">Alphabetically, Z-A</option>
+                                                                <option value="price-ascending">Price, low to high</option>
+                                                                <option value="price-descending">Price, high to low</option>
+                                                                <option value="created-descending">Date, new to old</option>
+                                                                <option value="created-ascending">Date, old to new</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                            <script>
+                                                /*============================================================================
+                                                  Inline JS because collection liquid object is only available
+                                                  on collection pages and not external JS files
+                                                ==============================================================================*/
+                                                Shopify.queryParams = {};
+                                                if (location.search.length) {
+                                                    for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+                                                        aKeyValue = aCouples[i].split('=');
+                                                        if (aKeyValue.length > 1) {
+                                                            Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+                                                        }
+                                                    }
+                                                }
+
+                                                $(function() {
+                                                    $('#SortBy')
+                                                        .val('price-descending')
+                                                        .bind('change', function() {
+                                                                Shopify.queryParams.sort_by = jQuery(this).val();
+                                                                location.search = jQuery.param(Shopify.queryParams);
+                                                            }
+                                                        );
+                                                    $('#showby')
+                                                        .val('12')
+                                                        .bind('change', function() {
+                                                                Shopify.queryParams.view = jQuery(this).val();
+                                                                location.search = jQuery.param(Shopify.queryParams);
+                                                            }
+                                                        );
+                                                });
+                                            </script>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div style="" class="col-md-6 col-12">
+                                        <div class="style_layout_prod justify-content-center justify-content-md-end   ">
+
+
+                                            <div class="prod_grid active">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="5px" height="5px" viewBox="0 0 5 5" enable-background="new 0 0 5 5" xml:space="preserve">
+                      <g>
+                          <g>
+                              <path d="M0,2.191h2.191V0H0V2.191z M0.626,0.626h0.939v0.939H0.626V0.626z"></path>
+                              <path d="M2.81,0v2.191H5V0H2.81z M4.375,1.565h-0.94V0.626h0.94V1.565z"></path>
+                              <path d="M0,5h2.191V2.809H0V5z M0.626,3.435h0.939v0.939H0.626V3.435z"></path>
+                              <path d="M2.81,5H5V2.809H2.81V5z M3.435,3.435h0.94v0.939h-0.94V3.435z"></path>
+                          </g>
+                      </g>
+                    </svg>
+                                            </div>
+
+                                            <div class="prod_list ">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="5px" height="5px" viewBox="0 0 5 5" enable-background="new 0 0 5 5" xml:space="preserve">
+                      <g>
+                          <rect y="0.683" width="3.629" height="0.454"></rect>
+                          <rect y="3.863" width="2.5" height="0.454"></rect>
+                          <rect y="2.267" width="5" height="0.453"></rect>
+                      </g>
+                    </svg>
+                                            </div>
+
+
+                                            <div class="prod_per">
+                                                <a href="javascript:void(0)" class="size_1 d-md-none">1</a>
+                                                <a href="javascript:void(0)" class="size_2 d-lg-none">2</a>
+                                                <a href="javascript:void(0)" class="size_3 active">3</a>
+                                                <a href="javascript:void(0)" class="size_4">4</a>
+                                                <a href="javascript:void(0)" class="size_5 d-none">5</a>
+                                                <a href="javascript:void(0)" class="size_6 d-none">6</a>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="d-lg-block d-none">
+                                    <div id="demo" class="collapse filter_ver2">
+                                        <div class="filter_sidebar row engoj-collection-sidebar engoc_sw_filter_tag">
+
+
+
+
+                                            <div class="col-lg-2dot4 col-6 col-md-4">
+                                                <div class="widget widget-category filter-category">
+                                                    <h2 class="widget-title ">Categories</h2>
+                                                    <div class="widget-content">
+                                                        <ul class="list-category-toggle toggle-tab list-none">
+
+                                                                        {% for i in LC %}
+                                                            <li class="item-toggle-tab"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>{{i.libC}}</a></li>
+                                                                        {% endfor %}
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="col-lg-2dot4 col-6 col-md-4">
+                                                <section class="widget widget-category widget_product_categories filter-brand">
+                                                    <h2 class="widget-title">Site</h2>
+                                                    <ul class="list-none list-brand">
+
+                                                        <li class="cat-item">
+                                                            {% for i in LS %}
+                                                        <li class="item-toggle-tab"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>{{i.libS}}</a></li>
+                                                        {% endfor %}
+                                                        </li>
+
+                                                    </ul>
+                                                    <!-- /.product-categories -->
+                                                </section>
+                                            </div>
+
+
+
+
+                                            <div class="col-lg-2dot4 col-6 col-md-4">
+                                                <div class="filter-color widget widget-category widget_product_categories filter-tag">
+                                                    <h2 class="widget-title">Color option</h2>
+                                                    <ul class="list-none list_color">
+
+
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="black">
+                                                            <a href="javascript:void(0)" title="Black" style="background: Black">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="blue">
+                                                            <a href="javascript:void(0)" title="Blue" style="background: Blue">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="lightblue">
+                                                            <a href="javascript:void(0)" title="LightBlue" style="background: LightBlue">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="maroon">
+                                                            <a href="javascript:void(0)" title="Maroon" style="background: Maroon">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="orange">
+                                                            <a href="javascript:void(0)" title="Orange" style="background: Orange">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="red">
+                                                            <a href="javascript:void(0)" title="Red" style="background: Red">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="steelblue">
+                                                            <a href="javascript:void(0)" title="SteelBlue" style="background: SteelBlue">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="tan">
+                                                            <a href="javascript:void(0)" title="Tan" style="background: Tan">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="white">
+                                                            <a href="javascript:void(0)" title="White" style="background: White">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="yellow">
+                                                            <a href="javascript:void(0)" title="Yellow" style="background: Yellow">
+                                                            </a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="yellowgreen">
+                                                            <a href="javascript:void(0)" title="YellowGreen" style="background: YellowGreen">
+                                                            </a>
+                                                        </li>
+
+
+                                                    </ul>
+                                                    <!-- /.product-categories -->
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="col-lg-2dot4 col-6 col-md-4">
+                                                <section class=" filter-size filter-tag">
+                                                    <h2 class="widget-title title14 font-bold dosis-font text-uppercase">Size Option</h2>
+                                                    <ul class="list-none list-size">
+
+
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="s">
+                                                            <a href="javascript:void(0)" title="S">S</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="m">
+                                                            <a href="javascript:void(0)" title="M">M</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="l">
+                                                            <a href="javascript:void(0)" title="L">L</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="xl">
+                                                            <a href="javascript:void(0)" title="XL">XL</a>
+                                                        </li>
+
+                                                    </ul>
+                                                    <!-- /.product-categories -->
+                                                </section>
+                                            </div>
+
+
+
+
+                                            <div class="col-lg-2dot4 col-6 col-md-4">
+                                                <section class="filter-price filter-tag">
+                                                    <h2 class="widget-title ">Price Filter</h2>
+                                                    <ul class="list-none list-price">
+
+
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="500-1000">
+                                                            <a href="javascript:void(0)" title="$500-$1000"><i class="fa fa-angle-right" aria-hidden="true"></i>$500-$1000</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item current-cat">
+                                                            <input type="checkbox" value="1000-1500" checked="">
+                                                            <a href="javascript:void(0)" title="$1000-$1500"><i class="fa fa-angle-right" aria-hidden="true"></i>$1000-$1500</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="1500-2000">
+                                                            <a href="javascript:void(0)" title="$1500-$2000"><i class="fa fa-angle-right" aria-hidden="true"></i>$1500-$2000</a>
+                                                        </li>
+
+
+
+                                                        <li class="cat-item">
+                                                            <input type="checkbox" value="2000-up">
+                                                            <a href="javascript:void(0)" title="$2000 &amp; Up"><i class="fa fa-angle-right" aria-hidden="true"></i>$2000 &amp; Up</a>
+                                                        </li>
+
+                                                    </ul>
+                                                    <!-- /.product-categories -->
+                                                </section>
+                                            </div>
+
+
+
+                                            <!-- #secondary -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="clearfix relative collection_prod">
+                                    {% for i in rese %}
+                                        <div class="product-grid-view active">
+                                            <div class="row grid-uniform">
+
+                                                <div class="js_size_prod col-md-4 col-6 pb-4 trans-product ">
+                                                    <div class="product-item-v1">
+
+                                                        <div class="product mb-30 engoj_grid_parent relative">
+                                                            <div class="img-product relative">
+                                                                <a href="/collections/all/products/diamondback-atroz" class="engoj_find_img">
+                                                                    <img style="width: 100%" src="{{ asset("uploads/images/"~ i.Image) }}" class="img-responsive" alt="{{i.Libelle}}">
+                                                                </a>
+
+                                                                <!--     label product -->
+                                                                <button type="submit" aria-hidden="true" style= "background : #ff6601; color: #ffffff"  class="absolute uppercase label-new text-center">
+                                                                    <a href="{{path('reservation_booking',{id_v:i.id})}}" style="color: #ffffff" >BOOK</a>
+                                                                </button>
+                                                                <!--     END LABEL -->
+                                                                <!--     ICON PRODUCT -->
+
+                                                                <div class="product-icon-action">
+                                                                    <div class="add-wishlist">
+
+                                                                        <a href="/account/login" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+                                                                            <i class="fa fa-heart-o "></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                    <div class="add-to-cart">
+
+
+                                                                        <a href="/collections/all/products/diamondback-atroz" class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Select Option">
+                                                                            <i class="ti-more-alt"></i>
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="quick-view">
+                                                                        <a href="/products/diamondback-atroz" class="engoj_btn_quickview icon-quickview inline-block box-shadow" data-id="diamondback-atroz" data-toggle="tooltip" data-placement="top" data-original-title="Quickview">
+                                                                            <i class="ti-search"></i>
+
+                                                                        </a>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!--     END ICON -->
+
+
+
+
+                                                                <!--     SOLD OUT -->
+
+                                                                <!-- END SOLD OUT     -->
+
+                                                            </div>
+
+
+
+
+                                                            <div class="info-product">
+                                                                <h4 class="des-font capital title-product mb-0 flex">
+                                                                    <a href="{{path('reservation_booking',{id_v:i.id})}}">{{ i.Libelle }}</a>
+
+                                                                </h4>
+                                                                <!--     PRICE -->
+
+
+
+                                                                <p class="price-product">
+
+                                                                    <span class="price"> {{ i.Prix }}DT</span>
+                                                                </p>
+                                                                <!-- END PRODUCT     -->
+
+                                                                <!-- VARIANT PRODUCT -->
+
+                                                                <nav class="engoj_select_color">
+
+
+
+
+	  <span class="">
+      		<a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/5.1_grande.jpg?v=1581018407" style="background-color: black;"></a>
+      </span>
+
+                                                     <span class="">
+      		<a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/7.1_grande.jpg?v=1581018407" style="border: 1px solid #bcbcbc; background-color: white;"></a>
+      </span>
+
+
+
+                                                                    <span class="">
+      		<a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/8.1_grande.jpg?v=1581018407" style="background-color: red;"></a>
+      </span>
+
+
+                                                                </nav>
+                                                                <!-- END VARIANT     -->
+
+                                                                <!--     THUMBNAIL PRODUCT -->
+
+                                                                <!-- END THUMBNAIL     -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <!-- End Paginav -->
+                                </div>
+                                    {% endfor %}
+                            </div>
+
+                                    <div class="product-list-view  ">
+
+                                        <div class="list_prod">
+                                            <div class="product-item-list">
+
+                                                <div class="product engoj_grid_parent">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="img-product relative">
+                                                                <a href="/collections/all/products/giant-fathom" class="engoj_find_img">
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/14.1_86a5231e-554f-459f-a5ed-b718cde319e4.jpg?v=1580655444" class="img-responsive" alt="Giant Fathom">
+
+
+
+
+
+
+
+
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/9.1_219fb2ec-a72f-4dfc-9c2b-affc19a82f2d.jpg?v=1580655444" class="img-responsive absolute img-product-hover" alt="Giant Fathom">
+
+
+                                                                </a>
+
+                                                                <!--     label product -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                <figure style="background : #ff6601; color: #ffffff" class="absolute uppercase label-new text-center">
+                                                                    New
+                                                                </figure>
+
+
+
+                                                                <!--     END LABEL -->
+
+
+
+
+
+
+
+                                                                <!--     SOLD OUT -->
+
+                                                                <!-- END SOLD OUT     -->
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="info-product">
+                                                                <h4 class="des-font capital title-product mb-0 flex">
+                                                                    <a href="/collections/all/products/giant-fathom">Giant Fathom</a>
+
+                                                                </h4>
+                                                                <!--     PRICE -->
+
+
+
+                                                                <p class="price-product">
+
+                                                                    <span class="price">$1,299.00</span>
+                                                                </p>
+                                                                <!-- END PRICE     -->
+
+                                                                <p class="des-product">Get your dose of singletrack on a fun hardtail that puts you in control. Featuring new 27.5+ wheels and tires, Fathom helps you climb, corner and descend with confidence. With its lightweight ALUXX SL aluminum frame and new 27.5+ wheels...</p>
+                                                                <!-- VARIANT PRODUCT -->
+
+                                                                <nav class="engoj_select_color">
+
+
+
+
+
+
+
+
+
+
+
+
+        <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: tan;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: maroon;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="border: 1px solid #bcbcbc; background-color: white;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: yellow;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                </nav>
+
+
+                                                                <!-- END VARIANT     -->
+
+                                                                <!--     ICON PRODUCT -->
+
+
+
+                                                                <div class="product-icon-action">
+                                                                    <div class="add-wishlist">
+
+                                                                        <a href="/account/login" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+
+                                                                            <i class="fa fa-heart-o "></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                    <div class="add-to-cart">
+
+
+                                                                        <a href="/collections/all/products/giant-fathom" class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Select Option">
+                                                                            <i class="ti-more-alt"></i>
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="quick-view">
+                                                                        <a href="javascript:void(0)" class="engoj_btn_quickview icon-quickview inline-block box-shadow" data-id="giant-fathom" data-toggle="tooltip" data-placement="top" data-original-title="Quickview">
+                                                                            <i class="ti-search"></i>
+
+                                                                        </a>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!--     END ICON -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list_prod">
+                                            <div class="product-item-list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <div class="product engoj_grid_parent">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="img-product relative">
+                                                                <a href="/collections/all/products/khs-four-season" class="engoj_find_img">
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/11.1.jpg?v=1580654840" class="img-responsive" alt="KHS Four Season">
+
+
+
+
+
+
+
+
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/7.1_f0e30f03-9038-4c12-a541-61e7206c7436.jpg?v=1580654840" class="img-responsive absolute img-product-hover" alt="KHS Four Season">
+
+
+                                                                </a>
+
+                                                                <!--     label product -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                <figure style="background : #ff6601; color: #ffffff" class="absolute uppercase label-new text-center">
+                                                                    New
+                                                                </figure>
+
+
+
+                                                                <!--     END LABEL -->
+
+
+
+
+
+
+
+                                                                <!--     SOLD OUT -->
+
+                                                                <!-- END SOLD OUT     -->
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="info-product">
+                                                                <h4 class="des-font capital title-product mb-0 flex">
+                                                                    <a href="/collections/all/products/khs-four-season">KHS Four Season</a>
+
+                                                                </h4>
+                                                                <!--     PRICE -->
+
+
+
+                                                                <p class="price-product">
+
+                                                                    <span class="price">$1,266.00</span>
+                                                                </p>
+                                                                <!-- END PRICE     -->
+
+                                                                <p class="des-product">The Mason 2 is a hardtail that can be ridden aggressively on the kind of trails you might have thought require a full-suspension bike. This trail bike is a fun-loving brawler, yet it practically floats over the rough stuff thanks...</p>
+                                                                <!-- VARIANT PRODUCT -->
+
+                                                                <nav class="engoj_select_color">
+
+
+
+
+
+
+
+
+
+
+
+
+        <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: maroon;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: red;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="background-color: steelblue;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" style="border: 1px solid #bcbcbc; background-color: white;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                </nav>
+
+
+                                                                <!-- END VARIANT     -->
+
+                                                                <!--     ICON PRODUCT -->
+
+
+
+                                                                <div class="product-icon-action">
+                                                                    <div class="add-wishlist">
+
+                                                                        <a href="/account/login" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+
+                                                                            <i class="fa fa-heart-o "></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                    <div class="add-to-cart">
+
+
+                                                                        <a href="/collections/all/products/khs-four-season" class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Select Option">
+                                                                            <i class="ti-more-alt"></i>
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="quick-view">
+                                                                        <a href="javascript:void(0)" class="engoj_btn_quickview icon-quickview inline-block box-shadow" data-id="khs-four-season" data-toggle="tooltip" data-placement="top" data-original-title="Quickview">
+                                                                            <i class="ti-search"></i>
+
+                                                                        </a>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!--     END ICON -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="list_prod">
+                                            <div class="product-item-list">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <div class="product engoj_grid_parent">
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="img-product relative">
+                                                                <a href="/collections/all/products/diamondback-atroz" class="engoj_find_img">
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/5.1.jpg?v=1581018407" class="img-responsive" alt="Diamondback Atroz">
+
+
+
+
+
+
+
+
+
+
+                                                                    <img style="width: 100%" src="//cdn.shopify.com/s/files/1/0321/8109/2492/products/12.1_c25c9be1-990f-42bc-a87b-9c6d58582cb2.jpg?v=1581018407" class="img-responsive absolute img-product-hover" alt="Diamondback Atroz">
+
+
+                                                                </a>
+
+                                                                <!--     label product -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                <figure style="background : #ff6601; color: #ffffff" class="absolute uppercase label-new text-center">
+                                                                    New
+                                                                </figure>
+
+
+
+                                                                <!--     END LABEL -->
+
+
+
+
+
+
+
+                                                                <!--     SOLD OUT -->
+
+                                                                <!-- END SOLD OUT     -->
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-8">
+                                                            <div class="info-product">
+                                                                <h4 class="des-font capital title-product mb-0 flex">
+                                                                    <a href="/collections/all/products/diamondback-atroz">Diamondback Atroz</a>
+
+                                                                </h4>
+                                                                <!--     PRICE -->
+
+
+
+                                                                <p class="price-product">
+
+                                                                    <span class="price">$1,199.00</span>
+                                                                </p>
+                                                                <!-- END PRICE     -->
+
+                                                                <p class="des-product">High-quality Aluminum frame We love hardtails, but there’s no denying the benefits of full-suspension mountain bikes - the added comfort and control. Unfortunately, dualies often add another thing: more dollar signs to the price tag. That’s not the case here....</p>
+                                                                <!-- VARIANT PRODUCT -->
+
+                                                                <nav class="engoj_select_color">
+
+
+
+
+
+
+
+
+
+
+
+
+        <span class="">
+          <a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/5.1_grande.jpg?v=1581018407" style="background-color: black;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/7.1_grande.jpg?v=1581018407" style="border: 1px solid #bcbcbc; background-color: white;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+                                                                    <span class="">
+          <a class="circle" href="javascript:void(0)" data-engojvariant-img="//cdn.shopify.com/s/files/1/0321/8109/2492/products/8.1_grande.jpg?v=1581018407" style="background-color: red;"></a>
+        </span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                </nav>
+
+
+                                                                <!-- END VARIANT     -->
+
+                                                                <!--     ICON PRODUCT -->
+
+
+
+                                                                <div class="product-icon-action">
+                                                                    <div class="add-wishlist">
+
+                                                                        <a href="/account/login" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+
+                                                                            <i class="fa fa-heart-o "></i>
+                                                                        </a>
+
+                                                                    </div>
+
+                                                                    <div class="add-to-cart">
+
+
+                                                                        <a href="/collections/all/products/diamondback-atroz" class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Select Option">
+                                                                            <i class="ti-more-alt"></i>
+                                                                        </a>
+
+
+                                                                    </div>
+
+                                                                    <div class="quick-view">
+                                                                        <a href="javascript:void(0)" class="engoj_btn_quickview icon-quickview inline-block box-shadow" data-id="diamondback-atroz" data-toggle="tooltip" data-placement="top" data-original-title="Quickview">
+                                                                            <i class="ti-search"></i>
+
+                                                                        </a>
+                                                                    </div>
+
+                                                                </div>
+                                                                <!--     END ICON -->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <!-- End Paginav -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </div>
+{% endblock %}

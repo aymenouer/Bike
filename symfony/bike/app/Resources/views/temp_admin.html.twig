@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}admin{% endblock %}</title>
+    {% block stylesheets %}
+
+        <link href="{{ asset('admin_temp/img/favicon.png') }}" rel="icon">
+        <link href="{{ asset('admin_temp/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+        <!-- Bootstrap core CSS -->
+        <link href="{{ asset('admin_temp/lib/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <!--external css-->
+        <link href="{{ asset('admin_temp/lib/font-awesome/css/font-awesome.css') }}" rel="stylesheet" />
+        <!-- Custom styles for this template -->
+        <link href="{{ asset('admin_temp/css/style.css') }}" rel="stylesheet">
+        <link href="{{ asset('admin_temp/css/style-responsive.css') }}" rel="stylesheet">
+        <link href="{{ asset('admin_temp/css/datatables.min.css') }}" rel="stylesheet">
+
+        <style>
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #ccc;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 26px;
+                width: 26px;
+                left: 4px;
+                bottom: 4px;
+                background-color: white;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            input:checked + .slider {
+                background-color: #2196F3;
+            }
+
+            input:focus + .slider {
+                box-shadow: 0 0 1px #2196F3;
+            }
+
+            input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+
+            /* Rounded sliders */
+            .slider.round {
+                border-radius: 34px;
+            }
+
+            .slider.round:before {
+                border-radius: 50%;
+            }
+        </style>
+        <style>
+            .demo{ background: #e7e7e7; }
+            .pricingTable{
+                background: #fff;
+                font-family: 'Heebo', sans-serif;
+                text-align: center;
+                padding: 0 0 20px;
+                margin: 0 15px;
+                transition: all 0.3s ease 0s;
+            }
+            .pricingTable:hover{ box-shadow: 0 0 15px -3px rgba(0,0,0,0.6); }
+            .pricingTable .pricingTable-header{
+                color: #fff;
+                background-color: #11B293;
+                padding: 25px 0 0;
+                margin-bottom: 95px;
+                border: 1px solid transparent;
+                border-radius: 0 0 50% 50%;
+            }
+            .pricingTable .title{
+                font-size: 30px;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                margin: 0 0 10px 0;
+            }
+            .pricingTable .icon{
+                color: #11B293;
+                background-color: #fff;
+                font-size: 100px;
+                line-height: 175px;
+                height: 180px;
+                width: 180px;
+                margin: 0 auto -80px;
+                border: 7px solid #11B293;
+                border-radius: 50%;
+            }
+            .pricingTable .pricing-content{
+                padding: 0;
+                margin: 0 0 30px;
+                list-style: none;
+            }
+            .pricingTable .pricing-content li{
+                color: #505050;
+                font-size: 19px;
+                margin: 0 0 10px;
+                border-radius: 10px;
+                position: relative;
+            }
+            .pricingTable .pricing-content li.disable{ color: #999; }
+            .pricingTable .pricing-content li i{
+                color: #11B293;
+                margin: 0 7px 0 0;
+                display: inline-block;
+            }
+            .pricingTable .price-value{
+                color: #00B99A;
+                margin: 0 0 7px;
+                border: 2px solid #fff;
+                border-radius: 25px;
+            }
+            .pricingTable .amount{
+                font-size: 80px;
+                line-height: 50px;
+                font-weight: 700;
+                display: block;
+            }
+            .pricingTable .month{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 40px;
+                display: block;
+            }
+            .pricingTable .pricingTable-signup{
+                color: #fff;
+                background-color: #11B293;
+                font-size: 20px;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 13px 25px;
+                border-radius: 30px;
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
+            .pricingTable .pricingTable-signup:hover{
+                color: #00B99A;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5) inset, 0 0 10px 5px #00B99A;
+            }
+            .pricingTable.red .pricingTable-header{ background-color: #FD7962; }
+            .pricingTable.red .icon{
+                color: #FD7962;
+                border-color: #FD7962;
+            }
+            .pricingTable.red .pricing-content li i,
+            .pricingTable.red .price-value{
+                color: #FD7962;
+            }
+            .pricingTable.red .pricingTable-signup{ background-color: #FD7962; }
+            .pricingTable.red .pricingTable-signup:hover{
+                color: #FD7962;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5) inset, 0 0 10px 5px #FD7962;
+            }
+            .pricingTable.blue .pricingTable-header{ background-color: #00B2FD; }
+            .pricingTable.blue .icon{
+                color: #00B2FD;
+                border-color: #00B2FD;
+            }
+            .pricingTable.blue .pricing-content li i,
+            .pricingTable.blue .price-value{
+                color: #00B2FD;
+            }
+            .pricingTable.blue .pricingTable-signup{ background-color: #00B2FD; }
+            .pricingTable.blue .pricingTable-signup:hover{
+                color: #00B2FD;
+                background-color: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5) inset, 0 0 10px 5px #00B2FD;
+            }
+            @media only screen and (max-width: 990px){
+                .pricingTable{ margin: 0 auto 30px; }
+            }
+            License Terms
+
+        </style>
+
+
+
+    {% endblock %}
+</head>
+<body>
+<section id="container">
+    <header class="header black-bg">
+{% block header %}
+    <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+    </div>
+    <!--logo start-->
+    <a href="index.html" class="logo"><b>DASH<span>IO</span></b></a>
+    <!--logo end-->
+    <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+        <ul class="nav top-menu">
+            <!-- settings start -->
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                    <i class="fa fa-tasks"></i>
+                    <span class="badge bg-theme"> *</span>
+                </a>
+                <ul class="dropdown-menu extended tasks-bar">
+                    <div class="notify-arrow notify-arrow-green"></div>
+                    <li>
+                        <p class="green">You have * pending tasks</p>
+                    </li>
+
+
+
+
+                    <li class="external">
+                        <a href="#">See All Tasks</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- settings end -->
+            <!-- inbox dropdown start-->
+            <li id="header_inbox_bar" class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-theme">*</span>
+                </a>
+                <ul class="dropdown-menu extended inbox">
+                    <div class="notify-arrow notify-arrow-green"></div>
+                    <li>
+                        <p class="green">You have * new messages</p>
+                    </li>
+
+
+
+                    <li>
+                        <a href="index.html#">See all messages</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- inbox dropdown end -->
+            <!-- notification dropdown start-->
+            <li id="header_notification_bar" class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+                    <i class="fa fa-bell-o"></i>
+                    <span class="badge bg-warning">*</span>
+                </a>
+                <ul class="dropdown-menu extended notification">
+                    <div class="notify-arrow notify-arrow-yellow"></div>
+                    <li>
+                        <p class="yellow">You have * new notifications</p>
+                    </li>
+
+
+
+
+                    <li>
+                        <a href="index.html#">See all notifications</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+    </div>
+    <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+            <li><a class="logout" href="{{path('fos_user_security_logout')}}">Logout</a></li>
+        </ul>
+    </div>
+
+
+
+{% endblock %}
+    </header>
+    <aside>
+        <div id="sidebar" class="nav-collapse ">
+            <!-- sidebar menu start-->
+            <ul class="sidebar-menu" id="nav-accordion">
+
+                <p class="centered"><a href="profile.html"><img src="{{ asset('uploads/images/' ~app.user.userImage) }}" class="img-circle" width="80"></a></p>
+                <h5 class="centered">{{   app.user.firstName ~ " " ~  app.user.lastName  }}</h5>
+                <li class="mt">
+                    <a  href="{{path('redirect')}}">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-desktop"></i>
+                        <span>Product</span>
+
+                    </a>
+
+                    <ul class="sub">
+
+                        <li><a href="{{ path('_list_abonnements')}}">Abonnment</a></li>
+                        <li><a href="{{ path('velo_display')}}">Velo</a></li>
+                        <li><a href="{{path('_list_accessoire')}}">accessoire</a></li>
+                        <li><a href="{{path('_list_piece')}}">piece </a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-cogs"></i>
+                        <span>Outils</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{ path('_list_categories')}}">Categories</a></li>
+                        <li><a href="{{ path('_list_sites')}}">Sites</a></li>
+
+
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>Gestion Sponsor</span>
+                    </a>
+                    <ul class="sub">
+                        <li ><a href="{{ path('AjouterSponsor') }}">Ajouter Sponsor</a></li>
+                        <li><a href="{{ path('AffichierSponsor') }}">Affichier Sponsor</a></li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{path('_list__product__maitenance_admin')}}">
+                        <i class="fa fa-envelope"></i>
+                        <span>Maintenance </span>
+                        <span class="label label-theme pull-right mail-info">{% block nbr_maintenance %}
+ {% endblock %}</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-th"></i>
+                        <span>Evenment</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="{{ path('evenement_Affiche') }}">Afficher Evenement</a></li>
+                        <li><a href="{{ path('evenement_Ajout') }}">Ajouter Evenement</a></li>
+                    </ul>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="{{ path('Reservation_AfficheAdmin') }}">
+                        <i class="fa fa-cogs"></i>
+                        <span>Participation List</span>
+                    </a>
+                </li>
+
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-comments-o"></i>
+                        <span>Chat Room</span>
+                    </a>
+                    <ul class="sub">
+
+                        <li><a href="{{path('room_cree')}}">cree Room</a></li>
+                        <li><a href="{{path('chat_homepage')}}"> Chat Room</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="{{path('_map_site')}}">
+                        <i class="fa fa-map-marker"></i>
+                        <span>Sites Maps </span>
+                    </a>
+                </li>
+            </ul>
+            <!-- sidebar menu end-->
+        </div>
+    </aside>
+    <section id="main-content">
+        <section class="wrapper site-min-height">
+            {% block content %}{% endblock %}
+
+
+        </section>
+        <!-- /wrapper -->
+    </section>
+
+    <footer class="site-footer">
+{% block footer %}
+    <div class="text-center">
+        <p>
+            &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+        </p>
+        <div class="credits">
+            <!--
+              You are NOT allowed to delete the credit link to TemplateMag with free version.
+              You can delete the credit link only if you bought the pro version.
+              Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+              Licensing information: https://templatemag.com/license/
+            -->
+            Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
+        <a href="blank.html#" class="go-top">
+            <i class="fa fa-angle-up"></i>
+        </a>
+    </div>
+{% endblock %}
+    </footer>
+</section>
+
+</body>
+{% block javascripts %}
+
+
+    <script src="{{ asset('admin_temp/lib/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/jquery-ui-1.9.2.custom.min.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/jquery.ui.touch-punch.min.js') }}"></script>
+    <script class="include" type="text/javascript" src="{{ asset('admin_temp/lib/jquery.dcjqaccordion.2.7.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/jquery.scrollTo.min.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/jquery.nicescroll.js') }}" type="text/javascript"></script>
+    <script  src="{{ asset('admin_temp/lib/gritter-conf.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/gritter/js/jquery.gritter.js') }}"></script>
+    <!--common script for all pages-->
+    <script src="{{ asset('admin_temp/lib/common-scripts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('admin_temp/lib/bootstrap-fileupload/bootstrap-fileupload.js') }}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.7"></script>
+    <script src="{{ asset('admin_temp/lib/google-maps/maplace.js') }}"></script>
+    <script src="{{ asset('admin_temp/lib/google-maps/data/points.js') }}"></script>
+
+    <script>
+        //ul list example
+        new Maplace({
+            locations: LocsB,
+            map_div: '#gmap-list',
+            controls_type: 'list',
+            controls_title: 'Choose a location:'
+        }).Load();
+
+        new Maplace({
+            locations: LocsB,
+            map_div: '#gmap-tabs',
+            controls_div: '#controls-tabs',
+            controls_type: 'list',
+            controls_on_map: false,
+            show_infowindow: false,
+            start: 1,
+            afterShow: function(index, location, marker) {
+                $('#info').html(location.html);
+            }
+        }).Load();
+    </script>
+    <script>
+        $(document).ready(function(){
+            $('#search').keyup(function(){
+                search_table($(this).val());
+            });
+            function search_table(value){
+                $('#tableac tbody tr').each(function(){
+                    var found = 'false';
+                    $(this).each(function(){
+                        if($(this).text().toLowerCase().indexOf(value.toLowerCase()) >= 0)
+                        {
+                            found = 'true';
+                        }
+                    });
+                    if(found == 'true')
+                    {
+                        $(this).show();
+                    }
+                    else
+                    {
+                        $(this).hide();
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="{{ asset('admin_temp/lib/datatables.min.js') }}"></script>
+    <script>
+
+        $(document).ready(function () {
+            $('#tableac').DataTable({
+                "aaSorting": [],
+                columnDefs: [{
+                    orderable: false,
+                    targets: 7
+                }]
+                , "searching": false,
+                "paging":   false,
+                "info":     false,
+            });
+            $('.dataTables_length').addClass('bs-select');
+        });
+
+    </script>
+
+{% endblock %}
+</html>

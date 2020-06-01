@@ -1,0 +1,20 @@
+_list_abonnements:
+    path:     /ListAbonnements
+    defaults: { _controller: AbonnementBundle:abonnement:ListAbonnements }
+
+_update__abonnement:
+    path:     /Update_Abonnement/{ID_A}
+    defaults: { _controller: AbonnementBundle:abonnement:Update_Abonnement }
+
+_delete__abonnement:
+    path:     /Delete_Abonnement/{ID_A}
+    defaults: { _controller: AbonnementBundle:abonnement:Delete_Abonnement }
+
+_detail__abonnement:
+    path:     /Detail_Abonnement/{ID_A}
+    defaults: { _controller: AbonnementBundle:abonnement:Detail_Abonnement }
+
+_fairePDF:
+    path:     /print
+    defaults: { _controller: AbonnementBundle:abonnement:print }
+

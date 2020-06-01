@@ -1,0 +1,308 @@
+{% extends 'temp_admin.html.twig' %}
+
+
+{% block content %}
+    <h3><i class="fa fa-angle-right"></i> Velo </h3>
+<div class="row mt">
+    <div class="col-lg-12 col-md-6 col-sm-12">
+    <div class="form-panel">
+        <div class="showback">
+
+
+                                                        <!-- Ajout Velo -->
+
+            <!-- Button trigger modal -->
+            <button class="btn btn-success btn-lg" style="margin-left: 450px;" data-toggle="modal" data-target="#myModal">
+                <i class=" fa  fa-plus"></i>
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        {{ form_start(form) }}
+                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Ajout velo</h4>
+                        </div>
+
+                        <div class="modal-body">
+                                                <div class="form-group">
+                                                    <label>Libelle</label>
+                                                    {{ form_widget(form.libelle, { 'attr': {'class': 'form-control', 'type' : 'textarea'} }) }}
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Description</label>
+                                                    {{ form_widget(form.description, { 'attr': {'class': 'form-control', 'type' : 'textarea'} }) }}
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Prix</label>
+                                                    {{ form_widget(form.prix, { 'attr': {'class': 'form-control' } }) }}
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Categorie</label>
+                                                    <select name="categorie" class="form-control">
+                                                        {% for row in list_categorie %}
+                                                            <option>{{ row.libC }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>Site</label>
+                                                    <select name="site" class="form-control">
+                                                        {% for row in list_site %}
+                                                            <option>{{ row.libS }}</option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                                                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+
+                                                        <div>
+
+                                                            {{ form_widget(form.image, { 'attr': {'class': 'btn btn-theme03 btn-file' } }) }}
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>type</label>
+                                                    <input type="text" name="type" class="form-control">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label>couleur</label>
+                                                    <input type="text" name="couleur" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>age</label>
+                                                    <input type="number" name="age" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>etat</label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="radio" id="a" name="etat" class="form-control" value="non reservée" checked>
+                                                    <label for="huey">non reservée</label>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="radio" id="b" class="form-control" name="etat" value="reservée">
+                                                    <label for="dewey">reservée</label>
+                                                </div>
+
+
+                        </div>
+
+                        <div class="modal-footer">
+                                            <button type="button"class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            <button  type="submit"name="valider" class="btn btn-success">Ajout</button>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+
+
+                                                         <!-- END Ajout Velo -->
+
+
+                                                      <!--  Affichage Velo -->
+
+
+            <div class="showback">
+                <label class="col-sm-2 col-sm-2 control-label" style="margin-top: 8px;width: 120px;"   >Recherche : </label>
+                <input type="text" id="search" class="form-control" style="
+    width: 20%;
+" placeholder="Rechercher  ...">
+            </div>
+
+            <div class="showback">
+                <div class="adv-table">
+                     <table  cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="tableac">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>type</th>
+                                        <th>age</th>
+                                        <th>couleur</th>
+                                        <th>etat</th>
+                                        <th>idA</th>
+                                       <th>Details</th>
+                                        <th>Delete</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                    </thead>
+                <tbody>
+                {% for i in velo %}
+
+
+                    <tr>
+                        <td>{{ i.id }}</td>
+                        <td>{{ i.type }}</td>
+                        <td>{{ i.age }}</td>
+                        <td>{{ i.couleur }}</td>
+                        <td>{{ i.etat }}</td>
+                        <td>{{ i.idA }}</td>
+
+                        <td>
+                            <button type="submit" class="btn btn-theme start" data-toggle="modal" data-target="#mode{{i.id}}" >
+                                <span>Details</span>
+                            </button>
+
+                        <div class="modal fade" id="mode{{i.id}}"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title"  id="myModalLabel">Details velo</h4>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="form-group">
+                                            <label>Libelle     :    {{ i.Libelle }}</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>image     :    </label>
+                                            <img src="{{ asset("uploads/images/"~ i.Image) }}" width="100" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Description     :    {{ i.Description }}</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Prix     :    {{ i.Prix }}</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Categorie     :    {{ i.Lib_C }}</label>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label>Site     :    {{ i.Lib_S }}</label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </td>
+                        <!--  END Affichage Velo -->
+                        <!--   Suppression Velo -->
+                        <td>
+                            <button type="button" class="btn btn-theme04 delete">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <a href="{{ path('velo_delete',{id:i.id}) }}"style="color:#ffffff;">
+                                <span>Delete</span>
+                                </a> </button>
+
+                        </td>
+                        <!--   END Suppression Velo -->
+                        <!--   Edit Velo -->
+
+                        <td>
+                            <button class="btn btn-theme"data-toggle="modal" data-target="#mode{{ i.idA}}" >edit</button>
+                            <div class="modal fade" id="mode{{i.idA}}"tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <form method="post" action="{{ path('velo_edit',{('id'):i.id}) }}">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Edit velo</h4>
+                                        </div>
+
+                                        <div class="modal-body">
+
+
+                                            <div class="form-group">
+                                                <label>type</label>
+                                                <input type="text" name="type" value="{{  i.type  }}" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Couleur</label>
+                                                <input type="text" name="couleur" value="{{  i.couleur  }}" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>age</label>
+                                                <input type="text" name="age" value="{{  i.age  }}" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>etat</label>
+                                                <input type="text" name="etat" value="{{  i.etat  }} "  class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Libelle</label>
+                                                <input type="text" name="Libeller" value="{{  i.Libelle  }}" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Description</label>
+                                                <input type="text" name="Description" value="{{  i.Description  }}" class="form-control">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Prix</label>
+                                                <input type="text" name="Prix" value="{{  i.Prix  }}" class="form-control">
+                                            </div>
+
+
+                                            <div class="form-group">
+                                                <label>Categorie</label>
+                                                <select name="categorie" class="form-control">
+                                                    {% for row in list_categorie %}
+                                                        <option>{{ row.libC }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label>Site</label>
+                                                <select name="site" class="form-control">
+                                                    {% for row in list_site %}
+                                                        <option>{{ row.libS }}</option>
+                                                    {% endfor %}
+                                                </select>
+
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="button"class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            <button  type="submit"name="valider" class="btn btn-success">Modifier</button>
+                                        </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    </div>
+</div>
+
+
+
+
+{% endblock %}

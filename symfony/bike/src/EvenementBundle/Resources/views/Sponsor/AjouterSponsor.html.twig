@@ -1,0 +1,57 @@
+
+{% extends "temp_admin.html.twig" %}
+
+{% block content %}
+
+    <div class="row mt">
+        <div class="col-lg-12">
+            <div class="form-panel">
+                <h4 class="mb"><i class="fa fa-angle-right"></i> Ajouter Sponsor</h4>
+
+                {{ form_start(form, {'attr': {'id': 'form'}}) }}
+                <form class="form-horizontal style-form">
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Nom du Sponsor</label>
+                        <div class="col-sm-10">
+                            {{  form_errors(form.nomsponsor) }}
+                            {{ form_widget(form.nomsponsor, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Adresse</label>
+                        <div class="col-sm-10">
+                            {{ form_widget(form.adresse, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Type</label>
+
+                        <div class="col-sm-10">
+                            {{ form_widget(form.typesponsor, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 col-sm-2 control-label">Numéro de  Sponsor</label>
+                        <div class="col-sm-10">
+                            {{  form_errors(form.num) }}
+                            {{ form_widget(form.num, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 col-sm-2 control-label">Evenement</label>
+                        <div class="col-lg-10">
+                            {{ form_widget(form.idevenement, { 'attr': {'class': 'form-control'} }) }}
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Enregistrer" class="btn btn-success"/>
+                    {{ form_end(form) }}
+                </form>
+            </div>
+        </div>
+        <!-- col-lg-12-->
+    </div>
+
+
+{% endblock %}

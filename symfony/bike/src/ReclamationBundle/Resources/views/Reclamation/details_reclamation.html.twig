@@ -1,0 +1,66 @@
+{% extends 'temp_admin.html.twig' %}
+
+
+
+{% block content %}
+    <div class="col-lg-4 col-md-4 col-sm-12" style="
+    margin-left: 350px;
+    margin-top: 50px;
+">
+        <div class="dmbox">
+            <div id="google_translate_element"></div>
+            <div class="service-icon">
+                <a class="" href="{{ path('redirect') }}"><i class="dm-icon fa fa-envelope-o fa-3x"></i></a>
+            </div>
+            <h4> Recalamtion sur {{ reclamation.type  }}</h4>
+            <h5> De MR/Mme {{ user.lastName ~ " " ~ user.firstName }} </h5>
+
+            <h4
+                    {% if reclamation.etat =="Bien" %}
+                   style="color: green"
+                    {% else %}
+                        style="color: red"
+                    {% endif %}
+
+            > Contenu : {{ reclamation.contenu|raw }} </h4>
+            {% if reclamation.etat =="Bien" %}
+            <p style="font-size:50px;">  ❤ </p>
+            {% else %}
+                <p style="font-size:50px;"> 💔  </p>
+            {% endif %}
+            
+            <p><img src="{{ asset('uploads/images/') ~ reclamation.image}}" width="50%"></p>
+            {% if reclamation.etat =="Bien" %}
+                <button type="button" class="btn btn-round  btn-success"><i class="fa fa-smile-o"></i>  <a style="color: white" href="{{ path('_delete_reclamation',{('ID_R'):reclamation.id}) }}  ">supprimer  </a> </button>
+
+            {% else %}
+            {% if reclamation.traite =="Traite" %}
+                <button type="button" class="btn btn-round  btn-success"><i class="fa  fa-check-square-o"></i> Deja Traite  </button>
+
+            {% else %}
+                  <button type="button" class="btn btn-round  btn-success"><i class="fa fa-square-o"></i> <a style="color: white" href="{{ path('_Traite_reclamation',{('ID_R'):reclamation.id}) }}">Traite  </a></button>
+
+            {% endif %}
+                <br>
+                <br>
+                <br>
+                <button type="button" class="btn btn-round  btn-theme04"><i class="fa fa-frown-o"></i> <a style="color: white" href="{{ path('_delete_reclamation',{('ID_R'):reclamation.id}) }}">supprimer  </a></button>
+
+
+            {% endif %}
+
+
+
+               </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+{% endblock %}

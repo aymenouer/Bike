@@ -1,0 +1,24 @@
+_list_accessoire:
+    path:     /ListAccessoire
+    defaults: { _controller: AccessoireBundle:accessoire:ListAccessoire }
+
+_update__accessoire:
+    path:     /Update_Accessoire/{ID_A}
+    defaults: { _controller: AccessoireBundle:accessoire:Update_Accessoire }
+
+_delete__accessoire:
+    path:     /Delete_Accessoire/{ID_A}
+    defaults: { _controller: AccessoireBundle:accessoire:Delete_Accessoire }
+
+_detail__accessoire:
+    path:     /Detail_Accessoire/{ID_A}
+    defaults: { _controller: AccessoireBundle:accessoire:Detail_Accessoire }
+
+_print_p_d_f__accessoire:
+    path:     /PrintPDF_Accessoire
+    defaults: { _controller: AccessoireBundle:accessoire:PrintPDF_Accessoire }
+
+_detail__front_accessoire:
+    path:     /Detail_front_Accessoire/{ID_A}
+    defaults: { _controller: AccessoireBundle:accessoire:Detail_front_Accessoire }
+

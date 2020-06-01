@@ -1,0 +1,164 @@
+
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+
+    <style>
+        .mystar{
+            font-size: 25px !important;
+            color: #f9d933 !important;
+        }
+    </style>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 ftco-animate">
+                    <h2 class="mb-3">Title :{{ event.titre }}</h2>
+                    <img src="{{ asset('Upload/')}}{{ event.image }}"  alt="">  Lieu : {{ event.lieu }}<br>
+                    Date de Début : {{ event.dated |date }}<br>
+                    Date de Fin : {{ event.dateF | date}}
+
+                    <BR><BR><BR>
+
+                    <H4> <p>Description :<br>{{ event.discription }}</p></H4><br>
+
+                    {% if reserv == null %}
+                    <p class="mb-0"><a href="{{ path('Reservation_ajout',{'id':event.id}) }}" class="btn btn-success">Participer <span class="ion-ios-arrow-round-forward"></span></a></p>
+                    {% else %}
+
+                    <p class="mb-0"><a href="{{ path('AnnulerReservation',{'id':event.id}) }}" class="btn btn-danger">Annuler Participation <span class="ion-ios-arrow-round-forward"></span></a></p>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div style="display: flex;">
+
+                            <span style="cursor:pointer" class="fa fa-star-o mystar"></span>
+                            <span style="cursor:pointer" class="fa fa-star-o mystar"></span>
+                            <span style="cursor:pointer" class="fa fa-star-o mystar"></span>
+                            <span style="cursor:pointer" class="fa fa-star-o mystar"></span>
+                            <span style="cursor:pointer" class="fa fa-star-o mystar"></span>
+                            &nbsp; &nbsp;&nbsp;&nbsp;
+                             <button id="btnVote" class="btn btn-success">Vote</button>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                    </div>
+                    <div class="pt-5 mt-5">
+
+                        <h3 class="mb-5 h4 font-weight-bold">{{ c }} Comments</h3>
+                        {% set like =0 %}
+                        {% set deslike =0 %}
+                        {% for c in comment %}
+                           {% for v in vote %}
+                               {% if v.type == 1 and v.idcomment.id == c.id %}
+                        {% set like = like +1  %}
+                                   {% endif %}
+                        {% if v.type == 2 and v.idcomment.id == c.id %}
+                            {% set deslike = deslike+1 %}
+                            {% endif %}
+                               {% endfor %}
+                            <ul class="comment-list">
+                                <li class="comment">
+                                    <div class="vcard bio">
+                                    </div>
+                                    <div class="comment-body">
+                                        <h4>{{ c.getIdUser.getUsername }}</h4>
+                                        <p><i> {{ c.commentaire }}</i><p>
+                                            {% if user.id == c.getIdUser.getId() %}
+                                        <a href="{{ path('Comment_edit',{'idc':c.id,'ide':event.id}) }}" class="reply"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                            <a href="{{ path('Comment_delete',{'idc':c.id,'ide':event.id})}}" class="reply"><button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button></a>
+                                            {% else %}
+                                       {{ like }} <a href="{{ path('Like',{'id':c.id }) }}" class="reply"><img src="{{ asset('image/like.png')}}" height="40" width="40"  alt=""></a>
+                                        <a href="{{ path('Deslike',{'id':c.id})}}" class="reply"><img src="{{ asset('image/deslike.png')}}" height="42" width="42"  alt=""></a>{{ deslike }}
+                                        {% endif %}
+                                    </div>
+                                </li>
+                            </ul>
+                        {% endfor %}
+                        <!-- END comment-list -->
+                        <div class="comment-form-wrap pt-5">
+                            <h3 class="mb-5 h4 font-weight-bold">Leave a comment</h3>
+                            {{ form_start(form) }}
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                {{  form_errors(form.commentaire) }}
+                                {{ form_widget(form.commentaire, { 'attr': {'class':'form-control'} }) }}                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Commenter" class="btn btn-success"/>
+                            </div>
+                            {{ form_end(form) }}
+
+                          {% endif %}
+                        </div>
+                    </div>
+                </div> <!-- .col-md-8 -->
+                <div class="col-lg-4 sidebar ftco-animate">
+                    <div class="sidebar-box">
+                    </div>
+                </div><!-- END COL -->
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="https://use.fontawesome.com/9fb4b83f9f.js"></script>
+    <script>
+        // Starrr plugin (https://github.com/dobtco/starrr)
+        var __slice = [].slice;
+        $("#btnVote").click(function () {
+            var number = $(".fa-star").length;
+            swal("Good job","Votre vote de  "+number+" est bien récu","success" );
+            console.log({number});
+            var obj = {
+                "rate" :number,
+                "evenement" : {{ event.id }}
+            }
+            $.ajax({
+                url: '{{ path('rate_') }}',
+                type: 'post',
+                data: JSON.stringify(obj),
+                success: function (result) {
+                    console.log(result);
+                    fillStars(result-1);
+                }
+            });
+            console.log(number);
+        })
+
+        $(document).ready(function () {
+            $(".mystar").each(function (i,e) {
+                $(this).click(function () {
+
+                    fillStars(i);
+                })
+            })
+            fillStars(Math.round({{ event.rate-1 }}));
+        });
+
+        function fillStars(index) {
+            $(".mystar").each(function (i,e) {
+                if(i<=index){
+                    $(this).removeClass();
+                    $(this).addClass("fa fa-star mystar");
+                }else{
+                    $(this).removeClass();
+                    $(this).addClass("fa fa-star-o mystar");
+                }
+            })
+        }
+    </script>
+
+
+{% endblock %}

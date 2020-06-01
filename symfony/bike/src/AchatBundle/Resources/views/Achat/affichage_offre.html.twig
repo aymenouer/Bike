@@ -1,0 +1,363 @@
+{% extends 'base.html.twig' %}
+
+
+
+
+
+
+
+{% block content %}
+
+    <div id="shopify-section-product-template" class="shopify-section">
+
+
+
+
+
+
+
+
+
+        <div class="prod_largeimg">
+            <section id="content">
+                <div class="wrap-bread-crumb">
+                    <div class="container container-v2  ">
+                        <!-- /snippets/breadcrumb.liquid -->
+
+
+
+                        <div class="bread-crumb">
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+                <!-- End Bread Crumb -->
+                <div class="">
+                    <div class="content-page">
+                        <div class="content-page-detail">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="gallery-control ">
+
+
+
+
+                                        <div class="img_thumb js_prod_detail ">
+                                            <div class="engoj-nav-item">
+                                                <div class="planContainer"
+                                                        {% if   quantite <5  %}
+                                                    style="background-color: red;"
+                                                        {% endif %}>
+                                                <div class="plan">
+                                                    <div class="titleContainer">
+                                                        <div class="title">{{  produit.LIBC }}</div>
+                                                    </div>
+                                                    <div class="infoContainer">
+                                                        <div class="price">
+
+                                                            {% if   quantite > 50  %}
+                                                                <strike style="color: red;">{{produit.prix}} DT</strike>
+                                                                <p>{{  produit.prix-(produit.prix*0.05)  }} </p><span>DT</span>
+                                                            {% else %}
+                                                                <p>{{  produit.prix  }} </p><span> DT</span>
+                                                            {% endif %}
+
+                                                        </div>
+                                                        <div class="p desc"><em>{{  produit.description }}</em></div>
+                                                        <ul class="features">
+                                                            <li ><strong>{{produit.libelle}}</strong> </li>
+                                                            {% if   quantite > 10  %}
+                                                                <li style="color:green;"><strong> Disponible &#128515;</strong> </li>
+                                                            {% elseif quantite < 10 and quantite > 5 %}
+                                                                <li style="color:darkorange;"><strong>Limite &#128561;</strong> </li>
+                                                            {% else %}
+                                                                <li style="color:red;"><strong>Epuise &#128557;</strong> </li>
+                                                            {% endif %}
+                                                            <li><strong>Site</strong> {{  produit.libS  }}</li>
+                                                            <li><img style="
+
+    margin-left: 10px;
+    width: 40%;
+
+" src="{{ asset('uploads/images/qruser/') ~  achat[0].image }}"></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                                     </div>
+
+
+
+                                        </div>
+                                    </div>
+
+                                    <!-- End Gallery -->
+                                </div>
+                                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                                    <div class="detail-info">
+
+                                        <div class="wrap-rating pb-3">
+                                            <span class="shopify-product-reviews-badge" data-id="4514097528972"></span>
+                                        </div>
+<br>
+                                        <h2 class="product-title ">{{produit.libelle}}</h2>
+                                        <div class="product-price ">
+
+                                            {% if   quantite > 50  %}
+                                            <ins class="enj-product-price engoj_price_main">{{  produit.Prix-(produit.Prix*0.05)  }} DT</ins>
+                                            {% else %}
+                                                <ins class="enj-product-price engoj_price_main">{{  produit.Prix }} DT</ins>
+                                            {% endif %}
+                                        </div>
+
+
+                                        <div class="pd_summary">
+                                            <p class=" mb-0">{{  produit.description }}  </p>
+
+                                        </div>
+                                        <div class="pd_summary">
+
+                                        <p class=" mb-0">Jour : {{  achat[0].dateD|ago}}  </p>
+                                        </div>
+
+
+
+
+
+
+
+
+                                        <div class="btn-addwhlist">
+
+                                            <a href="{{ path('_delete_offre') }} " class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="supprimer mon offre">
+                                                <i class="ti-close"></i>
+                                            </a>
+
+                                            <span class="text_whlist">supprimer l offre</span>
+
+                                        </div>
+
+                                        <ul class="product-meta-info">
+
+
+
+
+
+                                            <li>
+                                                <div class="item-product-meta-info product-category-info">
+                                                    <label>Categorie :</label>
+
+
+                                                    <label style=" color: #2294d6;" >{{  produit.libC }}</label>
+
+
+
+                                                </div>
+
+
+
+                                                <div class="item-product-meta-info product-category-info">
+                                                    <label>Site :</label>
+                                                    <label style="color: #2294d6;" >{{  produit.libS }}</label>
+
+
+
+
+                                                </div>
+                                                <div class="item-product-meta-info product-category-info">
+                                                    <br>
+                                                    {% if verif_rating == null %}
+                                                        <p>vous pouvez vote &#128522;</p>
+                                                    <div id="star_rating">
+                                                    </div>
+                                                    {% else %}
+                                                        <p>Merci pour votre vote &#128525;</p>
+                                                        <div id="star_rating">
+                                                        </div>
+                                                    {% endif %}
+
+
+                                                    <br>
+                                                </div>
+                                                <div class="item-product-meta-info product-category-info">
+
+                                                <a href="{{ path('redirect') }}"  class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Back to home">
+                                                    <i class="ti-angle-left"></i>
+                                                    <span style="color: Black;" class="text_whlist">Back to home</span>
+                                                </a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+
+
+
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}
+{% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // create object
+        var starRating = ( function() {
+            /**
+             * Constructor function
+             *
+             * @param Object args
+             *
+             * @return Object
+             */
+            var starRating = function( args ) {
+                // give us our self
+                var self = this;
+               args.starWidth=50;
+                args.starHeight=50;
+                // set global vars for our object
+                self.container = jQuery( '#' + args.containerId );
+                self.containerId = args.containerId;
+                self.starClass = 'sr-star' + args.containerId;
+                self.starWidth = args.starWidth;
+                self.starHeight = args.starHeight;
+                self.containerWidth = args.starWidth * 5;
+                self.ratingPercent = args.ratingPercent;
+                self.newRating = 0;
+                self.canRate = args.canRate;
+                // draw the 5 star rating system out to the dom
+                self.draw();
+                if ( self.canRate ) { // do other things if user can rate
+                    if ( typeof args.onRate !== 'undefined' ) { // bind custom function
+                        self.onRate = args.onRate;
+                    }
+                    jQuery( '.' + self.starClass ).on( 'mouseover', function() { // mouseover a star
+                        // determine the percent width on mouseover of any star
+                        var percentWidth = 20 * jQuery( this ).data( 'stars' );
+                        // set the percent width  of the star bar to the new mouseover width
+                        $( '.sr-star-bar' + self.containerId ).css( 'width', percentWidth + '%' );
+                    });
+                    jQuery( '.' + self.starClass ).on( 'mouseout', function() { // mouseout of a star
+                        // return the star rating system percent to its previous percent on mouse out of any star
+                        jQuery( '.sr-star-bar' + self.containerId ).css( 'width', self.ratingPercent );
+                    });
+                    jQuery( '.' + self.starClass ).on( 'click', function() { // click on a star
+                        // ner rating set to the number of stars the user clicked on
+                        self.newRating = jQuery( this ).data( 'stars' );
+                        // determine the percent width based on the stars clicked on
+                        var percentWidth = 20 * jQuery( this ).data( 'stars' );
+                        // new rating percent is the number of stars clicked on
+                        self.ratingPercent = percentWidth + '%';
+                        // set new star bar percent width
+                        $( '.sr-star-bar' + self.containerId ).css( 'width', percentWidth + '%' );
+                        // run the on rate function passed in when the object was created
+                        self.onRate();
+                    } );
+                }
+            };
+            /**
+             * Draw html out to the page
+             *
+             * @param void
+             *
+             * @return void
+             */
+            starRating.prototype.draw = function() {
+                var self = this;
+                var pointerStyle = ( self.canRate ? 'cursor:pointer' : '' );
+                var starImg = '<img src="{{asset('uploads/staroutline.png')}}" style="width:' + self.starWidth + 'px" />';
+                var html = '<div style="width:' + self.containerWidth + 'px;height:' + self.starHeight + 'px;position:relative;' + pointerStyle + '">';
+                // create the progress bar that sits behinde the png star outlines
+                html += '<div class="sr-star-bar' + self.containerId + '" style="width:' + self.ratingPercent + ';background:#FFD700;height:100%;position:absolute"></div>';
+                for ( var i = 0; i < 5; i++ ) { // add each star to the page
+                    var currStarStyle = 'position:absolute;margin-left:' + self.starWidth * i + 'px';
+                    html += '<div class="' + self.starClass + '" data-stars="' + ( i + 1 ) + '" style="' + currStarStyle + '">' +
+                        starImg +
+                        '</div>';
+                }
+                html += '</div>';
+                // write out to the dom
+                self.container.html( html );
+            };
+            // return it all!
+            return starRating;
+        } )();
+        $( function() {
+
+
+            var rating = new starRating( { // create first star rating system on page load
+
+                containerId: 'star_rating', //  element id in the dom for this star rating system to use
+                starWidth: 100, // width of stars
+                starHeight: 100, // height of stars
+                ratingPercent: '0%', // percentage star system should start
+                {% if verif_rating == null %}
+                canRate: true, // can the user rate this star system?
+            {% else %}
+                ratingPercent:  "{{ (verif_rating[0].vote * 20)~'%' }}",
+                canRate: false,
+            {% endif %}
+                onRate: function() { // this function runs when a star is clicked on
+
+
+                    $.ajax({
+                        method: 'POST', // Le type de la requête HTTP.
+                        url: '{{ path("_add__rating") }}', // La ressource ciblée
+
+                        data: {"rate": rating.newRating, "idP": {{ produit.idP }}},
+                        success: function(){
+
+                            location.reload(true);
+                        }
+                    });
+
+
+
+
+
+
+                }
+            } );
+
+        } );
+
+    </script>
+
+{% endblock %}
+
+

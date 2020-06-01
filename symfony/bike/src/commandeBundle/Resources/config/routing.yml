@@ -1,0 +1,24 @@
+commande_homepage:
+    path:     /
+    defaults: { _controller: commandeBundle:Default:index }
+al:
+    path:     /commande/all
+    defaults: { _controller: commandeBundle:commande:all}
+fin:
+    path:     /commande/find/{id}
+    defaults: { _controller: commandeBundle:commande:find }
+creat:
+    path:     /commande/new
+    defaults: { _controller: commandeBundle:commande:new }
+_update_commande:
+    path:     /commande/update
+    defaults: { _controller: commandeBundle:commande:update }
+_delete_commande:
+    path:     /commande/delete
+    defaults: { _controller: commandeBundle:commande:delete}
+_montant_commande:
+        path:     /commande/montant
+        defaults: { _controller: commandeBundle:commande:montant}
+_afficher_commande:
+    path:     /commande/afficher
+    defaults: { _controller: commandeBundle:commande:affiche}

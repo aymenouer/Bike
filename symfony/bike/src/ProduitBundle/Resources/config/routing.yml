@@ -1,0 +1,27 @@
+produit_homepage:
+    path:     /pp
+    defaults: { _controller: ProduitBundle:Default:index }
+
+_affichage__products:
+    path:     /Affichage_Products
+    defaults: { _controller: ProduitBundle:produitcontroller:Affichage_Products }
+
+_affichage__products_selon_site:
+    path:     /Affichage_Products_selon_site/{lib_S}
+    defaults: { _controller: ProduitBundle:produitcontroller:Affichage_Products_selon_site }
+
+_affichage__products_cas:
+    path:     /Affichage_Products_cas/{cas}
+    defaults: { _controller: ProduitBundle:produitcontroller:Affichage_Products_cas }
+
+_affichage__products_prix:
+    path:     /Affichage_Products_prix/{cas}
+    defaults: { _controller: ProduitBundle:produitcontroller:Affichage_Products_prix }
+
+
+
+
+
+
+
+

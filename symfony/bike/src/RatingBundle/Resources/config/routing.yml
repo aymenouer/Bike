@@ -1,0 +1,6 @@
+_add__rating:
+    path:     /ADD_Rating
+    defaults: { _controller: RatingBundle:ratingcontroller:ADD_Rating }
+
+
+

@@ -1,0 +1,53 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<span class="login100-form-title p-b-32">
+						Account Login
+					</span>
+{% if error %}
+    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+{% endif %}
+
+<form action="{{ path("fos_user_security_check") }}" method="post">
+
+    {% if csrf_token %}
+
+        <input  type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+    {% endif %}
+
+    <label class="txt1 p-b-11" for="username">{{ 'security.login.username'|trans }}</label>
+    <div class="wrap-input100 validate-input m-b-36" data-validate = "Username is required">
+        <input class="input100" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />
+        <span class="focus-input100"></span>
+    </div>
+
+    <label class="txt1 p-b-11" for="password">{{ 'security.login.password'|trans }}</label>
+
+
+    <div class="wrap-input100 validate-input m-b-12" data-validate = "Password is required">
+						<span class="btn-show-pass">
+							<i class="fa fa-eye"></i>
+						</span>
+        <input class="input100" type="password" id="password" name="_password" required="required" autocomplete="current-password" />
+
+        <span class="focus-input100"></span>
+    </div>
+
+
+    <div class="flex-sb-m w-full p-b-48">
+        <div class="contact100-form-checkbox">
+            <input class="input-checkbox100" type="checkbox" id="remember_me" name="_remember_me" value="on" />
+            <label class="label-checkbox100" for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+        </div>
+    </div>
+
+
+        <div class="container-login100-form-btn">
+            <input class="login100-form-btn" type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
+        </div>
+
+
+
+    <a href="{{path('fos_user_registration_register')}}" title="Login-Register" class="delay03 relative nav-link menu_lv1 ">Register</a>
+
+
+</form>

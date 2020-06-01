@@ -1,0 +1,201 @@
+{% extends 'temp_admin.html.twig' %}
+{% block nbr_maintenance %}
+    {{ list|length }}
+ {% endblock %}
+{% block content %}
+    <h3><i class="fa fa-angle-right"></i> Maintenance</h3>
+    <!-- BASIC FORM ELELEMNTS -->
+    <div class="row mt">
+        <div class="col-lg-12 col-md-6 col-sm-12">
+            <div class="form-panel">
+
+
+                <div class="showback">
+                    <label class="col-sm-2 col-sm-2 control-label" style="margin-top: 8px;width: 120px;"   >Recherche : </label>
+                    <input type="text" id="search" class="form-control" style="
+    width: 20%;
+" placeholder="Rechercher  ...">
+                </div>
+                <div class="showback">
+
+
+
+                    <div class="adv-table">
+                        <table cellpadding="0" cellspacing="0" border="0" class="display table table-bordered" id="tableac">
+                            <thead>
+                            <tr>
+
+                                <th>Type</th>
+                                <th>Image </th>
+                                <th >Date Debut </th>
+                                <th >Date Fin</th>
+                                <th> Problem</th>
+                                <th >Prix</th>
+                                <th >Etat</th>
+                                <th >Options</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            {% for res in list  %}
+
+                                <tr >
+
+
+
+                                    <td>{{ res.type  }}</td>
+                                    <td><img width="100"src="{{ asset('uploads/images/Maitenance/') ~ res.image }}">   </td>
+                                    <td>{{ res.dateD|date("d/m/Y")    }}</td>
+
+                                    <td>{{ res.dateF|date("d/m/Y")   }}</td>
+                                    <td>{{ res.Problem|raw }}</td>
+                                    <td>   {% if res.Prix == 0 %}
+                                            Pas encore
+                                        {% else %}
+                                            {{ res.Prix }}DT
+                                        {% endif %}
+                                       </td>
+                                    <td>
+                                        {% if res.etat == "accept" %}
+                                           <p>en attendant la confirmation de l Utilisateur</p>
+                                        {% else %}
+                                            {{ res.etat  }}
+                                        {% endif %}
+
+
+
+
+                                    </td>
+
+                                    <td>
+
+
+                                        <button class="btn btn-primary btn-xs"><i class="fa  fa-gears" data-toggle="modal" data-target="#mode{{res.IDM}}"></i></button>
+                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o" data-toggle="modal" data-target="#modesupp{{res.IDM}}"></i></button>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <div class="modal fade" id="modesupp{{res.IDM}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form action="{{ path('_delete__product__maitenance',{('IDM'):res.IDM}) }}">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">supprimer  Maitenance  </h4>
+                                                </div>
+
+
+                                                <div class="modal-body">
+
+
+
+
+
+
+
+                                                    <div class="form-group ">
+                                                        <label>vous voulez supprimer l Maintenance de Type : {{ res.type }}  ?</label>
+
+
+
+
+                                                    </div>
+
+
+
+
+
+
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button"class="btn btn-danger" data-dismiss="modal">non</button>
+                                                    <button  type="submit"name="valider" class="btn btn-success">oui</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+                                <div class="modal fade" id="mode{{res.IDM}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <form method="post" action="{{ path('_update__product__maitenance',{('IDM'):res.IDM}) }}">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title" id="myModalLabel">Maitenance</h4>
+                                                </div>
+
+
+                                                <div class="modal-body">
+
+
+
+
+
+
+
+
+
+                                                    <div class="form-group">
+                                                        <label>prix</label>
+                                                        <input type="number" name="prix"  class="form-control">
+                                                    </div>
+
+
+
+
+
+
+                                                </div>
+
+                                                <div class="modal-footer">
+                                                    <button type="button"class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                    <button  type="submit"name="valider" class="btn btn-success">Valider</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- col-lg-12-->
+    </div>
+
+
+{% endblock %}
+

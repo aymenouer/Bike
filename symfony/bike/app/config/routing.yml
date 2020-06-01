@@ -1,0 +1,72 @@
+mobileapi:
+    resource: "@MobileapiBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+evenement:
+    resource: "@EvenementBundle/Resources/config/routing.yml"
+    prefix:   /
+
+maitenance:
+    resource: "@MaitenanceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+chat:
+    resource: "@ChatBundle/Resources/config/routing.yml"
+    prefix:   /
+
+piece:
+    resource: "@PieceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+rating:
+    resource: "@RatingBundle/Resources/config/routing.yml"
+    prefix:   /
+
+accessoire:
+    resource: "@AccessoireBundle/Resources/config/routing.yml"
+    prefix:   /
+
+reclamation:
+    resource: "@ReclamationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+reservation:
+    resource: "@ReservationBundle/Resources/config/routing.yml"
+    prefix:   /
+velo:
+    resource: "@VeloBundle/Resources/config/routing.yml"
+    prefix:   /
+
+achat:
+    resource: "@AchatBundle/Resources/config/routing.yml"
+    prefix:   /
+
+abonnement:
+    resource: "@AbonnementBundle/Resources/config/routing.yml"
+    prefix:   /
+
+produit:
+    resource: "@ProduitBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site:
+    resource: "@SiteBundle/Resources/config/routing.yml"
+    prefix:   /
+
+categorie:
+    resource: "@CategorieBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+fos_message:
+    resource: "@FOSMessageBundle/Resources/config/routing.xml"
+    prefix: /msg

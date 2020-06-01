@@ -1,0 +1,4 @@
+services:
+#    rating.example:
+#        class: RatingBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

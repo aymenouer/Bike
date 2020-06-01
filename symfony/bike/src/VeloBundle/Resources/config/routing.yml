@@ -1,0 +1,12 @@
+velo_add:
+    path:     /add_Velo
+    defaults: { _controller: VeloBundle:Velo:addVelo }
+velo_display:
+    path:     /display_Velo
+    defaults: { _controller: VeloBundle:Velo:displayVelo }
+velo_delete:
+    path:     /delete_Velo/{id}
+    defaults: { _controller: VeloBundle:Velo:deleteVelo }
+velo_edit:
+    path:     /edit_Velo/{id}
+    defaults: { _controller: VeloBundle:Velo:editVelo }

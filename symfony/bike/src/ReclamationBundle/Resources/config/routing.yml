@@ -1,0 +1,25 @@
+_details_reclamation:
+    path:     /DetailsReclamation/{ID_R}
+    defaults: { _controller: ReclamationBundle:Reclamation:DetailsReclamation }
+
+_delete_reclamation:
+    path:     /DeleteReclamation/{ID_R}
+    defaults: { _controller: ReclamationBundle:Reclamation:DeleteReclamation }
+
+_list_reclamation_user:
+    path:     /ListReclamationUser
+    defaults: { _controller: ReclamationBundle:reclamationUser:ListReclamationUser }
+
+_add_reclamation_user:
+    path:     /AddReclamationUser
+    defaults: { _controller: ReclamationBundle:reclamationUser:AddReclamationUser }
+
+_list_reclamation_users:
+    path:     /ListReclamationUsers
+    defaults: { _controller: ReclamationBundle:reclamationUser:ListReclamationUsers }
+_Traite_reclamation:
+    path:     /TraiteReclamation/{ID_R}
+    defaults: { _controller: ReclamationBundle:Reclamation:TraiteReclamation }
+_map:
+    path:     /map
+    defaults: { _controller: ReclamationBundle:reclamationUser:affmap }

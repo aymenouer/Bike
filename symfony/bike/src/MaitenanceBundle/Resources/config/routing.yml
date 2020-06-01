@@ -1,0 +1,29 @@
+
+
+_add_product__maitenance:
+    path:     /Add_product_Maitenance
+    defaults: { _controller: MaitenanceBundle:maitenance:Add_product_Maitenance }
+
+_list__product__maitenance__user:
+    path:     /List_Product_Maitenance_User
+    defaults: { _controller: MaitenanceBundle:maitenance:List_Product_Maitenance_User }
+
+_list__product__maitenance_admin:
+    path:     /List_Product_Maitenance_admin
+    defaults: { _controller: MaitenanceBundle:maitenance:List_Product_Maitenance_admin }
+
+_update__product__maitenance:
+    path:     /Update_Product_Maitenance/{IDM}
+    defaults: { _controller: MaitenanceBundle:maitenance:Update_Product_Maitenance }
+
+_delete__product__maitenance:
+    path:     /Delete_Product_Maitenance/{IDM}
+    defaults: { _controller: MaitenanceBundle:maitenance:delete_Product_Maitenance }
+
+_update__product__maitenance_trait_user:
+    path:     /Update_Product_Maitenance_trait_user/{IDM}
+    defaults: { _controller: MaitenanceBundle:maitenance:Update_Product_Maitenance_trait_user }
+_delete__product__maitenance_user:
+    path:     /Delete_Product_Maitenance_user/{IDM}
+    defaults: { _controller: MaitenanceBundle:maitenance:delete_Product_Maitenance_user }
+

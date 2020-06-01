@@ -1,0 +1,220 @@
+{% extends 'base.html.twig' %}
+
+
+{% block content %}
+    <div class="wrap-bread-crumb breadcrumb_collection2">
+        <div class="text-center bg-breadcrumb" style="background-image : url({{ asset('cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_aboutusa7d1.jpg?v=1580436779') }})">
+            <div class="title-page">
+
+                <h2 class="" style="color: #fff">Maintenance</h2>
+
+            </div>
+            <!-- /snippets/breadcrumb.liquid -->
+
+
+
+            <div class="bread-crumb">
+                <a href="index.html" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                <strong>MES Maintenances</strong>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <section class="page-cart">
+        <div id="shopify-section-1580703879140" class="shopify-section"><div data-section-id="1580703879140" data-section-type="section-newsletter-v1" style=" ">
+
+                <div class="section-newsletter-v1 pd-small" style="background: #fbf3f0">
+                    <div class="container container-v2">
+
+
+
+                        <div class="title_newletter">
+                            <h3 class="title mb-0 " style="font-size:40px">SEARCH Maintenance</h3>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-lg-12">
+                                <div class="newletter_email">
+                                    <form class="needs-validation form-inline" action="#" method="post">
+                                        <div class="form-group">
+
+                                            <input class="form-control" id="search" type="text" placeholder="Search..">
+
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+
+            </style>
+
+
+
+
+
+
+        </div>
+        <div class="content-pages">
+            <div class="container">
+                <div class="content-about content-cart-page">
+
+
+
+                    <br><br>
+
+
+                    <section class="page-cart">
+
+                        <div class="content-pages">
+                            <div class="container">
+                                <div class="content-about content-cart-page">
+
+
+                                    <form action="/cart" method="post" novalidate="">
+                                        <div class="table-responsive">
+                                            <table id="tableac"   class="shop_table table--responsive cart table">
+                                                <thead>
+                                                <tr class="cart-title">
+
+                                                    <th colspan="2" class="product-thumbnail"> Product name</th>
+                                                    <th class="product-price">Price</th>
+                                                    <th class="product-dateD">DATE DEBUT</th>
+                                                    <th class="product-dateF">DATE FIN</th>
+                                                    <th class="product-Etat">Problem </th>
+                                                    <th class="product-Type">Etat</th>
+                                                    <th class="product-remove">&nbsp;Options</th>
+
+
+                                                </tr>
+                                                </thead>
+
+
+
+                                                <tbody>
+                                                {% for row in listmaintenance %}
+                                                    <tr class="cart_item">
+
+                                                        <td data-label="Product Name" class="product-thumbnail">
+
+                                                          <img src="{{ asset("uploads/images/Maitenance/"~ row.image) }}" >
+                                                        </td>
+                                                        <td class="product-name-thumb" data-title="Product">
+<p>{{row.type }}</p>
+
+
+
+
+
+
+                                                        </td>
+
+                                                        <td data-label="Product Price" class="product-price" data-title="Price">
+                                                            <span class="amount">
+
+                                                                {% if row.Prix == 0 %}
+                                                                                Pas encore
+                                                                {% else %}
+                                                                    {{ row.Prix }}DT
+                                                                    {% endif %}
+                                                                </span>
+                                                        </td>
+
+                                                        <td data-label="DATE" class="product-dateD" data-title="DATE DEBUT">
+                                                            <input type="text" name="Date_D" READONLY value=" {{ row.DATE_D|date("d/m/Y") }}"  >
+
+
+                                                        </td>
+
+                                                        <td data-label="DATE" class="product-dateF"data-title="DATE FIN">
+                                                            <input type="text"name="Date_F" READONLY  value=" {{ row.DATE_F|date("d/m/Y") }}"  >
+
+                                                        </td>
+                                                        <td data-label="Product Price" class="product-price" data-title="Price">
+                                                            <span class="amount">{{ row.Problem|raw }}</span>
+                                                        </td>
+                                                        <td data-label="Product Price" class="product-price" data-title="Price">
+                                                            <span class="amount">
+                                                                   {% if row.etat == "non réparé" %}
+                                                                    en attendent l acceptation de l admin
+                                                                   {% elseif row.etat == "accept" %}
+                                                                       <p style="color: red">   vous agrée a ce prix ?</p>
+                                                                       {% else %}
+                                                                       {{ row.etat }}
+                                                                   {% endif %}
+                                                               </span>
+                                                        </td>
+                                                        <td class="product-remove">
+                                                            {% if row.etat == "accept" %}
+                                                                <a class="remove" href="{{ path("_delete__product__maitenance_user",{IDM:row.ID_M}) }}"><i class="ti-close" aria-hidden="true"></i></a>
+                                                             <br>
+                                                                <a class="remove" href="{{ path("_update__product__maitenance_trait_user",{IDM:row.ID_M}) }}"><i class="ti-check" aria-hidden="true"></i></a>
+
+                                                            {% else %}
+
+                                                            {% endif %}
+                                                               </td>
+
+
+                                                    </tr>
+
+
+
+                                                {% endfor %}
+                                                </tbody>
+
+
+                                            </table>
+
+                                        </div>
+
+                                        <div class="cart_totals ">
+
+
+
+                                            <div class="cart-check">
+
+
+
+
+
+
+
+                                                <div class="wc-proceed-to-checkout clearfix">
+
+                                                    <a class="checkout-button button alt wc-forward bg-color" href="{{path('reservation_pdf')}}">IMPRIMER PDF</a>
+
+                                                    <p class="notice-currency">
+                                                        " Bestbike - Bike Store Business Shopify Theme processes all orders in USD.
+                                                        While the content of your cart is currently displayed in
+                                                        <span class="selected-currency">USD</span>,
+                                                        the checkout will use USD at the most current exchange rate. "
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </form></div>
+                            </div>
+                        </div>
+                        <!-- End Content Pages -->
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

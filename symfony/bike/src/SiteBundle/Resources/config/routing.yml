@@ -1,0 +1,15 @@
+_list_sites:
+    path:     /ListSites
+    defaults: { _controller: SiteBundle:site:ListSites }
+
+_delete_site:
+    path:     /Deletesite/{idS}
+    defaults: { _controller: SiteBundle:site:Deletesite }
+
+_update_site:
+    path:     /Updatesite/{idS}
+    defaults: { _controller: SiteBundle:site:Updatesite }
+
+_map_site:
+    path:     /Mapsite
+    defaults: { _controller: SiteBundle:site:Mapsite }

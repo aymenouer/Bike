@@ -1,0 +1,21 @@
+panier_homepage:
+    path:     /
+    defaults: { _controller: panierBundle:Default:index }
+all:
+    path:     /panier/all
+    defaults: { _controller: panierBundle:panier:all}
+find:
+    path:     /panier/find/{id}
+    defaults: { _controller: panierBundle:panier:find }
+create:
+    path:     /panier/new
+    defaults: { _controller: panierBundle:panier:new }
+_update_panier:
+    path:     /panier/update
+    defaults: { _controller: panierBundle:panier:update }
+_delete_panier:
+    path:     /panier/delete
+    defaults: { _controller: panierBundle:panier:delete }
+_montant_panier:
+    path:     /panier/montant
+    defaults: { _controller: panierBundle:panier:montant }

@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+{% block content %}
+    <div id="shopify-section-contact-template" class="shopify-section"><div class="wrap-bread-crumb breadcrumb_collection2">
+            <div class="text-center bg-breadcrumb" style="background-image : url({{ asset('cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_aboutusa7d1.jpg?v=1580436779') }})">
+                <div class="title-page">
+
+                    <h2 class="" style="color: #fff">Reclamation</h2>
+
+                </div>
+                <!-- /snippets/breadcrumb.liquid -->
+
+
+
+                <div class="bread-crumb">
+                    <a href="{{path('redirect')}}" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+                    <strong>Reclamation</strong>
+
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <section id="content">
+            <div class="content-page contact-page">
+                <div class="container container-v2">
+                    <h3 class="title_desc"> réclamer <br>  si vous avez un problème</h3>
+
+                    <a class="d-block" style="margin-bottom: 50px" target="_blank" href="https://www.google.tn/maps/place/36°50'54.0N+10°09'47.9E/@36.8492905,10.1353566,13.5z/data=!4m5!3m4!1s0x0:0x0!8m2!3d36.848329!4d10.163313?hl=fr">
+                        <img style="
+    margin-left: 80px;
+" src="{{ asset('uploads/images/map.png') }}">
+                    </a>
+
+                </div>
+
+                <div class="container">
+                    <div class="contact-form">
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="address-shop">
+                                    <h3 class="shop-name">
+                                        BESTBIKE WP SHOP THEME
+                                    </h3>
+                                    <p class="shop-address">3100 West Cary Street Richmond, Virginia 23221<br> P: 804.355.4383 F: 804.367.7901</p>
+                                </div>
+
+
+                                <div class=" info-shop ">
+                                    <h3 class="title">
+                                        Store Hours
+                                    </h3>
+                                    <p class="content">Monday-Saturday 11am-7pm ET <br> Sunday 11am-6pm ET</p>
+                                </div>
+
+
+
+                                <div class=" info-shop ">
+                                    <h3 class="title">
+                                        Specialist Hours
+                                    </h3>
+                                    <p class="content">Monday-Friday 9am-5pm ET</p>
+                                </div>
+
+
+
+                            </div>
+
+
+                            <div class="col-md-6 col-sm-6 col-12">
+                                <div class="contact-form-page">
+
+
+
+
+
+
+                                        <div class="contact-form">
+                                            <p class="contact-name">
+                                                <input class="" placeholder="Your Name (Required)" type="text" id="contactFormName" name="contact[name]" required>
+                                            </p>
+                                            <p class="contact-email">
+                                                <input class="" placeholder="Your Email (Required)" type="email" id="contactFormEmail" name="contact[email]" required>
+                                            </p>
+                                            <p class="contact-subject">
+                                                <input class="dark border" placeholder="Subject" type="text" id="contactFormSubject" name="contact[subject]" required>
+                                            </p>
+                                            <p class="contact-message">
+                                                <textarea class="" placeholder="Your Message" cols="30" rows="10" id="contactFormMessage" name="contact[body]" required></textarea>
+                                            </p>
+                                            <p class="contact-submit">
+                                                <input  class="shop-button" type="submit" value="Send To us">
+                                            </p>
+                                        </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </div>
+{% endblock %}

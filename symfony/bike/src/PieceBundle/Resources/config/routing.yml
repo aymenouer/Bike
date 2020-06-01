@@ -1,0 +1,23 @@
+_list_piece:
+    path:     /ListPiece
+    defaults: { _controller: PieceBundle:piece:ListPiece }
+
+_update__piece:
+    path:     /Update_Piece/{ID_Pi}
+    defaults: { _controller: PieceBundle:piece:Update_Piece }
+
+_delete__piece:
+    path:     /Delete_Piece/{ID_Pi}
+    defaults: { _controller: PieceBundle:piece:Delete_Piece }
+
+_detail__piece:
+    path:     /Detail_Piece/{ID_Pi}
+    defaults: { _controller: PieceBundle:piece:Detail_Piece }
+
+_detail__front__piece:
+    path:     /Detail_Front_Piece/{ID_Pi}
+    defaults: { _controller: PieceBundle:piece:Detail_Front_Piece }
+
+_print_p_d_f__piece:
+    path:     /PrintPDF_Piece
+    defaults: { _controller: PieceBundle:piece:PrintPDF_Piece }

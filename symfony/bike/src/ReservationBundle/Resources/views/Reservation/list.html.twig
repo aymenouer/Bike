@@ -1,0 +1,281 @@
+{% extends 'base.html.twig' %}
+{% block content1 %}
+    {{ x }}
+{% endblock %}
+{% block content2 %}
+    {{ x }}
+{% endblock %}
+
+{% block content %}
+
+    <div id="shopify-section-1580379262685" class="shopify-section index-section"><div data-section-id="1580379262685" data-section-type="section-slideshow-v2" style="  ">
+            <div class="section-slideshow-v2">
+                <div class="slick-side-h2">
+
+
+
+                    <div class="itemv-slide-h2">
+                        <div class="info-sideh2">
+                            <div class="picture-slideshow">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_slide38708.jpg?v=1580800436" class="img-responsive img_slideh2" alt="">
+
+                            </div>
+
+                            <div class="box-content">
+
+                                <p class="mb-0" style="color:#8e8e8e;">NEW TREND</p>
+
+
+
+                                <h3 class="title1" style="color:#333333;">Bestbike</h3>
+
+
+
+                                <h3 class="title2" style="color:#333333;">Bicycles</h3>
+
+                                <div class="box-button">
+
+                                    <a class="button-shop-1580379262685-1580379262685-0" href="{{ path("reservation_product") }}" style="color:#fff; background-color:#222">
+                                        Shop Now
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <div class="picture_left">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/slide3.1b069.png?v=1580783642" class="img-responsive" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="itemv-slide-h2">
+                        <div class="info-sideh2">
+                            <div class="picture-slideshow">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_slide3.2eabe.jpg?v=1580802261" class="img-responsive img_slideh2" alt="">
+
+                            </div>
+
+                            <div class="box-content">
+
+                                <p class="mb-0" style="color:#8e8e8e;">Bestbike  2020</p>
+
+
+
+                                <h3 class="title1" style="color:#333333;">Bicycle</h3>
+
+
+
+                                <h3 class="title2" style="color:#333333;">collection</h3>
+
+                                <div class="box-button">
+
+                                    <a class="button-shop-1580379262685-1580379262685-1" href="collections/all.html" style="color:#fff; background-color:#222">
+                                        Shop now
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <div class="picture_left">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/slide3.2b069.png?v=1580783642" class="img-responsive" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="itemv-slide-h2">
+                        <div class="info-sideh2">
+                            <div class="picture-slideshow">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/bg_slide38708.jpg?v=1580800436" class="img-responsive img_slideh2" alt="">
+
+                            </div>
+
+                            <div class="box-content">
+
+                                <p class="mb-0" style="color:#8e8e8e;">TRENDING COLLETION</p>
+
+
+
+                                <h3 class="title1" style="color:#333333;">Bestbike</h3>
+
+
+
+                                <h3 class="title2" style="color:#333333;">collection</h3>
+
+                                <div class="box-button">
+
+                                    <a class="button-shop-1580379262685-1580379262685-2" href="collections/all.html" style="color:#fff; background-color:#222">
+                                        Shop now
+                                    </a>
+
+                                </div>
+
+                            </div>
+                            <div class="picture_left">
+
+                                <img src="../cdn.shopify.com/s/files/1/0321/8109/2492/files/slide3.3b069.png?v=1580783642" class="img-responsive" alt="">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <style>
+
+
+            .section-slideshow-v2 .slick-active .info-sideh2 .box-content .box-button .button-shop-1580379262685-1580379262685-0:hover{
+                background-color: #ff6601 !important;
+            }
+
+
+
+
+            .section-slideshow-v2 .slick-active .info-sideh2 .box-content .box-button .button-shop-1580379262685-1580379262685-1:hover{
+                background-color: #ff6601 !important;
+            }
+
+
+
+
+            .section-slideshow-v2 .slick-active .info-sideh2 .box-content .box-button .button-shop-1580379262685-1580379262685-2:hover{
+                background-color: #ff6601 !important;
+            }
+
+
+
+        </style>
+
+
+
+
+
+
+    </div>
+
+<div class="instagram_v2 center">
+<div class="text-center  text_top">
+    <br>
+    <br>
+    <h3 class="title_insta" >BOOKING A BIKE </h3><br>
+    <br>
+
+</div>
+</div>
+    <div class="row">
+        <div class="product_best_sell engoc-row-equal">
+            {% for i in velo %}
+
+            <div class=" col-lg-3 col-6 col-md-4">
+                <div class="product-item-v1">
+
+                    <div class="product mb-30 engoj_grid_parent relative">
+                        <div class="img-product relative">
+                            <a href="{{path('reservation_booking',{id_v:i.id})}}" class="engoj_find_img">
+                                <img src="{{ asset("uploads/images/"~ i.Image) }}"  >
+                            </a>
+
+
+                            <!--     label product -->
+
+                            <button type="submit" aria-hidden="true" style= "background : #ff6601; color: #ffffff"  class="absolute uppercase label-new text-center">
+                                <a href="{{path('reservation_booking',{id_v:i.id})}}" style="color: #ffffff" >BOOK</a>
+                            </button>
+                            <!--     END LABEL -->
+                            <!--     ICON PRODUCT -->
+                            <div class="product-icon-action">
+                                <div class="add-wishlist">
+
+                                    <a href="account/login.html" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+
+                                        <i class="fa fa-heart-o "></i>
+                                    </a>
+                                </div>
+                                <div class="add-to-cart">
+
+                                    <a href="products/giant-atx-3.html" class="inline-block icon-addcart margin_right_10 box-shadow" data-toggle="tooltip" data-placement="top" data-original-title="Select Option">
+                                        <i class="ti-more-alt"></i>
+                                    </a>
+                                </div>
+                                <div class="quick-view">
+                                    <a href="javascript:void(0)" class="engoj_btn_quickview icon-quickview inline-block box-shadow" data-id="giant-atx-3" data-toggle="tooltip" data-placement="top" data-original-title="Quickview">
+                                        <i class="ti-search"></i>
+
+                                    </a>
+                                </div>
+                            </div>
+                            <!--     END ICON -->
+
+                            <!--     SOLD OUT -->
+
+                            <!-- END SOLD OUT     -->
+
+                        </div>
+
+                        <div class="info-product">
+                            <h4 class="des-font capital title-product mb-0 flex">
+                                <a href="{{path('reservation_booking',{id_v:i.id})}}">{{ i.Libelle }}</a>
+
+                            </h4>
+                            <!--     PRICE -->
+
+                            <p class="price-product">
+
+                                <span class="price"> {{ i.Prix }}DT</span>
+                            </p>
+                            <!-- END PRODUCT     -->
+
+                            <!-- VARIANT PRODUCT -->
+
+                            <nav class="engoj_select_color">
+	  <span class="">
+      		<a class="circle" href="javascript:void(0)"  style="background-color: lightgrey;"></a>
+      </span>
+
+                                <span class="">
+      		<a class="circle" href="javascript:void(0)"  style="background-color: yellowgreen;"></a>
+      </span>
+
+
+                                <span class="">
+      		<a class="circle" href="javascript:void(0)"  style="background-color: maroon;"></a>
+      </span>
+
+
+                                <span class="">
+      		<a class="circle" href="javascript:void(0)"  style="background-color: orange;"></a>
+      </span>
+
+                            </nav>
+                            <!-- END VARIANT     -->
+                              <!--     THUMBNAIL PRODUCT -->
+                            <!-- END THUMBNAIL     -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+
+
+</div>
+
+
+{% endblock %}

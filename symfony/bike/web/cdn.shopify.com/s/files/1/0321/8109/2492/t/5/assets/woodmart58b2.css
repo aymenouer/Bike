@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "woodmart-font";
+  src: url("woodmart-font.eot");
+  src: url("woodmart-fontd41d.eot?#iefix") format("embedded-opentype"),
+       url("woodmart-font.woff") format("woff"),
+       url("woodmart-font.woff2") format("woff2"),
+       url("woodmart-font.ttf") format("truetype"),
+       url("woodmart-font.html#woodmart-font") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[data-icon]:before {
+  font-family: "woodmart-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="wd-"]:before,
+[class*=" wd-"]:before {
+  font-family: "woodmart-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.wd-left-arrow-chevron:before {
+  content: "\f111"; }
+
+.wd-check:before {
+  content: "\f109"; }
+
+.wd-newlatter:before {
+  content: "\f11f"; }
+
+.wd-up-chevron:before {
+  content: "\f112"; }
+
+.wd-arrow-next:before {
+  content: "\f118"; }
+
+.wd-filters:before {
+  content: "\f115"; }
+
+.wd-moredots:before {
+  content: "\f10c"; }
+
+.wd-arrowaroundright:before {
+  content: "\f10e"; }
+
+.wd-bag:before {
+  content: "\f120"; }
+
+.wd-tag:before {
+  content: "\f103"; }
+
+.wd-tool:before {
+  content: "\f11b"; }
+
+.wd-login:before {
+  content: "\f10b"; }
+
+.wd-arrowaroundleft:before {
+  content: "\f10d"; }
+
+.wd-layout:before {
+  content: "\f11a"; }
+
+.wd-right-arrow-chevron:before {
+  content: "\f110"; }
+
+.wd-360-deg:before {
+  content: "\f102"; }
+
+.wd-carttest-1:before {
+  content: "\f123"; }
+
+.wd-compare:before {
+  content: "\f122"; }
+
+.wd-shapes:before {
+  content: "\f108"; }
+
+.wd-button-play-2:before {
+  content: "\f100"; }
+
+.wd-lup:before {
+  content: "\f125"; }
+
+.wd-logout:before {
+  content: "\f10a"; }
+
+.wd-eye:before {
+  content: "\f116"; }
+
+.wd-statik:before {
+  content: "\f105"; }
+
+.wd-user:before {
+  content: "\f11e"; }
+
+.wd-altcart:before {
+  content: "\f107"; }
+
+.wd-sort-by:before {
+  content: "\f117"; }
+
+.wd-coupon:before {
+  content: "\f106"; }
+
+.wd-addcart:before {
+  content: "\f11c"; }
+
+.wd-note:before {
+  content: "\f104"; }
+
+.wd-scaleerrows:before {
+  content: "\f121"; }
+
+.wd-cross:before {
+  content: "\f10f"; }
+
+.wd-symbol:before {
+  content: "\f114"; }
+
+.wd-arrows:before {
+  content: "\f124"; }
+
+.wd-arrow-back:before {
+  content: "\f119"; }
+
+.wd-edit:before {
+  content: "\f113"; }
+
+.wd-carttest-2:before {
+  content: "\f101"; }
+
+.wd-cart:before {
+  content: "\f11d"; }
+
+.wd-account-wishlist:before {
+  content: "\f431"; }
+
+.wd-account-details:before {
+  content: "\f432"; }
+
+.wd-account-download:before {
+  content: "\f433"; }
+
+.wd-account-exit:before {
+  content: "\f434"; }
+
+.wd-account-orders:before {
+  content: "\f435"; }
+
+.wd-account-address:before {
+  content: "\f436"; }
+
+.wd-account-other:before {
+  content: "\f437"; }
+
+.wd-size-ruler:before {
+  content: "\f438"; }
+
+.wd-account-payment:before {
+  content: "\f439"; }
+
+.wd-plus:before {
+  content: "\f440"; }

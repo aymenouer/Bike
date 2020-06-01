@@ -1,0 +1,89 @@
+evenement_Ajout:
+    path:     /admin/AjouterEvenement
+    defaults: { _controller: EvenementBundle:Evenement:AjoutEvenement }
+
+evenement_Affiche:
+    path:     /admin/AfficherEvenement
+    defaults: { _controller: EvenementBundle:Evenement:AfficheEvenement }
+
+evenement_Supprimer:
+    path:     /admin/SupprimerEvenement/{id}
+    defaults: { _controller: EvenementBundle:Evenement:deleteEvent }
+
+evenement_Modifier:
+    path:     /admin/ModifierEvenement/{id}
+    defaults: { _controller: EvenementBundle:Evenement:editEvenement }
+
+Front:
+    path:     /AfficheEvent
+    defaults: { _controller: EvenementBundle:Evenement:AfficheEvenementFront }
+
+Comment:
+    path:     /AddComment/{id}
+    defaults: { _controller: EvenementBundle:Commentaire:AfficheAddComment }
+
+Comment_edit:
+    path:    /editComment/{idc}/{ide}
+    defaults: { _controller: EvenementBundle:Commentaire:editCommentaire }
+
+Comment_delete:
+    path:     /deliteComment/{idc}/{ide}
+    defaults: { _controller: EvenementBundle:Commentaire:deleteComment }
+
+Reservation_ajout:
+    path:     /AjoutReservation/{id}
+    defaults: { _controller: EvenementBundle:Reservation:AjoutReservation }
+
+
+Reservation_AfficheAdmin:
+    path:     /admine/AfficherReservation
+    defaults: { _controller: EvenementBundle:Reservation:AfficheReservationAdmin }
+
+
+Reservation_Delete:
+    path:     /admin/annuler/{id}
+    defaults: { _controller: EvenementBundle:Reservation:deleteReservationAdmin }
+
+AfficherReservationClient:
+    path:     /afficherReservation
+    defaults: { _controller: EvenementBundle:Evenement:ListeReservationClient }
+
+
+AnnulerReservation:
+    path:     /annulerReservation/{id}
+    defaults: { _controller: EvenementBundle:Reservation:deleteReservationClient }
+
+
+rate_:
+    path:     /rate
+    defaults: { _controller: EvenementBundle:Vote:rate }
+
+Like:
+    path:     /Like/{id}
+    defaults: { _controller: EvenementBundle:Vote:Like }
+
+Deslike:
+    path:     /Deslike/{id}
+    defaults: { _controller: EvenementBundle:Vote:DesLike }
+
+AjouterSponsor:
+    path:     /admin/AjouterSponsor
+    defaults: { _controller: EvenementBundle:Sponsor:AjoutSponsor }
+
+AffichierSponsor:
+    path:     /admin/AffichierSponsor
+    defaults: { _controller: EvenementBundle:Sponsor:AfficheSponsor }
+
+deleteSponsor:
+    path:     /admin/deleteSponsor/{id}
+    defaults: { _controller: EvenementBundle:Sponsor:deleteSponsor }
+
+editSponsor:
+    path:     /admin/editSponsor/{id}
+    defaults: { _controller: EvenementBundle:Sponsor:editSponsor }
+
+
+Calendre:
+    path:     /Calendre
+    defaults: { _controller: EvenementBundle:Evenement:Callendre }
+

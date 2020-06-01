@@ -1,0 +1,329 @@
+{% extends 'base.html.twig' %}
+
+{% block content1 %}
+    {{ x }}
+{% endblock %}
+{% block content2 %}
+    {{ x }}
+{% endblock %}
+
+{% block content %}
+    <!-- /templates/product.liquid -->
+    <div id="shopify-section-product-template" class="shopify-section">
+        <div class="prod_largeimg">
+
+
+
+    <section id="content">
+        <div class="wrap-bread-crumb">
+            <div class="container container-v2  ">
+                <!-- /snippets/breadcrumb.liquid -->
+                <div class="bread-crumb">
+                    <a href="../index.html" title="Back to the frontpage">Home<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <strong>{{velo.Libelle}}</strong>
+                </div>
+            </div>
+        </div>
+        <!-- End Bread Crumb -->
+        <div class="">
+            <div class="content-page">
+                <div class="content-page-detail">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="gallery-control ">
+
+
+
+
+                                <div class="img_thumb js_prod_detail ">
+<br><br>
+
+                                    <div class="engoj-nav-item">
+                                        <img src="{{ asset("uploads/images/"~ velo.Image) }}" class="engoj_img_main  w-100 img-fluid"  alt="{{velo.Libelle}}"/>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+                            <!-- End Gallery -->
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                            <div class="detail-info">
+
+                                <div class="wrap-rating pb-3">
+                                    <span class="shopify-product-reviews-badge" data-id="4514097528972"></span>
+                                </div>
+
+
+
+                                <div class="pd_summary">
+                                    <h2 class="product-title ">{{velo.Libelle}}</h2>
+                                    <div class="product-price ">
+
+                                        <ins class="enj-product-price engoj_price_main">{{velo.Prix}} DT</ins>
+
+                                    </div>
+
+                                    <p class=" mb-0">{{velo.Description}}</p>
+                                    {% if list_velo_reserve_date|length !=0 %}
+                                        <p class=" mb-0">Les dates dans lesquelles ce velo est reservé :</p>
+                                    {% endif %}
+                                    {% for row in list_velo_reserve_date %}
+                                    <p class=" mb-0">{{row.Date_D}} -- {{ row.Date_F }}</p>
+                                    {% endfor %}
+                                </div>
+
+
+
+
+
+
+
+
+
+                                <form  action="https://best-bike-store-demo.myshopify.com/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="cart clearfix">
+
+
+                                    <select name="id" id="productSelect" class="product-single__variants">
+
+
+
+
+                                        <option  selected="selected"  data-sku="" value="31971609313420">S / Black - $1,199.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609346188">S / White - $1,199.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609378956">S / Red - $1,199.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609411724">M / Black - $1,299.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609444492">M / White - $1,299.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609477260">M / Red - $1,299.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609510028">L / Black - $1,399.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609542796">L / White - $1,399.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609575564">L / Red - $1,399.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609608332">XL / Black - $1,499.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609641100">XL / White - $1,499.00 USD</option>
+
+
+
+
+
+
+                                        <option  data-sku="" value="31971609673868">XL / Red - $1,499.00 USD</option>
+
+
+
+                                    </select>
+                                    </select>
+
+
+
+                                    <!--Swatch Variant -->
+
+                                    <style rel="stylesheet" type="text/css">
+                                        .proVariants .selector-wrapper:nth-child(1){display: none;}
+                                        .maxus-productdetail__options:not(:last-child) {
+                                            margin-right: 20px;
+                                        }
+                                    </style>
+
+
+                                    <div class="maxus-productdetail__options">
+                                        <div class="swatch clearfix  align-center flex engoc-flex-wrap" data-option-index="0">
+                                            <p class="text-uppercase title_variant">Type</p>
+                                   {{ velo.type }}
+                                        </div>
+                                    </div>
+
+
+                                    <style rel="stylesheet" type="text/css">
+                                        .proVariants .selector-wrapper:nth-child(2){display: none;}
+                                        .maxus-productdetail__options:not(:last-child) {
+                                            margin-right: 20px;
+                                        }
+                                    </style>
+
+
+
+
+
+                                    <div class="maxus-productdetail__options">
+                                        <div class="swatch clearfix  align-center flex engoc-flex-wrap" data-option-index="1">
+                                            <p class="text-uppercase title_variant">Color</p>
+                                            {{ velo.couleur }}
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--End Swatch Variant -->
+
+                                    <!-- Add to cart & quantity -->
+
+
+
+
+                                    <div class="btn-action detail-attr qty-cart">
+                                        <a href="#top"type="submit" class="shop-button enj-add-to-cart-btn engoj-btn-addtocart">
+                                            Rent now
+                                        </a>
+
+                                    </div>
+                                    <!-- End add to cart & quantity -->
+
+
+
+
+                                </form>
+
+                                <div class="btn-addwhlist">
+
+                                    <a href="../account/login.html" class="box-shadow icon-heart inline-block maxus-product__wishlist wish text-center" data-toggle="tooltip" data-placement="top" data-original-title="Add to Wishlist">
+
+                                        <i class="fa fa-heart-o "></i>
+                                    </a>
+
+                                    <span class="text_whlist">Add to Wishlist</span>
+                                </div>
+
+                                <ul class="product-meta-info">
+
+                                    <li>
+                                        <div class="item-product-meta-info product-category-info">
+                                            <label>Categories :</label>
+                                            <a href="#">{{ velo.Lib_C  }}</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-product-meta-info product-category-info">
+                                            <label>Sites :</label>
+                                            <a href="#">{{ velo.Lib_S  }}</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+            <section id="content">
+
+                <div id="top" class="content-page contact-page">
+                    <div class="container container-v2">
+                        <h3  class="title_desc">RENT NOW A BIKE </h3>
+
+
+
+                    </div>
+
+                    <div class="container">
+                        <div class="contact-form">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-6 col-12">
+                                    <div class="contact-form-page">
+
+                                        <form method="post" action="{{ path('reservation_reserver') }}"  id="contact_form" accept-charset="UTF-8" class="contact-form"><input type="hidden" name="form_type" value="contact" /><input type="hidden" name="utf8" value="✓" />
+                                            <div class="contact-form">
+                                                <div class="form-group">
+                                                    <input type="hidden" name="ID_V" value="{{ velo.id }}">
+                                                    <label>Date Debut</label>
+                                                    <input type="date" name="Date_D" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Date fin</label>
+                                                    <input type="date" name="Date_F" class="form-control">
+                                                </div>
+
+
+                                                <p class="contact-submit">
+                                                    <input  class="shop-button" type="submit" value="Rent Now">
+                                                </p>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+{% endblock %}
