@@ -1,0 +1,356 @@
+
+/* C:\Users\asus\Desktop\bikeMobile\css\theme.css */
+@font-face {
+    font-family: "Montserrat";
+    src: url(res/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "MontserratSB";
+    src: url(res/Montserrat-SemiBold.ttf);
+}
+ress{
+ padding-left: 280px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+rescc{
+ padding-left: 350px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+tb
+{
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+ padding-top: 50px;
+ padding-left: 30px;
+}
+rescd{
+ padding-left: 470px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+resce{
+ padding-left: 440px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+rescf{
+ padding-left: 380px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+resp{
+ padding-left: 250px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+rese{
+ padding-left: 200px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+res{
+ padding-left: 200px;
+ padding-top: 70px;
+   font-family: "MontserratSB";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+btnre
+{ padding-left: 420px;
+ padding-top: 200px;
+background-color:white;
+}
+aaa{
+ padding-left: 290px;
+ padding-top: 200px;
+   padding: 90px 60px;
+   font-family: "Montserrat";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+img
+{
+ padding-left: 290px;
+ padding-top: 10px;
+ padding-bottom: 150px;
+}
+txtn{
+   border: 0;
+font-family: "Montserrat";
+font-size: 50px;
+   border-bottom: 1px solid #ff6601;
+   outline: 0;
+}
+
+MyStyle {
+    background-image:
+        url(images/home1.png),
+        url(images/remove.png),
+        url(images/edit.png),
+        url(images/home.png),
+        url(images/LOGO_BLACK.png),
+        url(images/back.png), 
+        url(round.png), 
+        url(images/arrow.png), 
+        url(images/add.png),
+        url(images/chart.png),  
+        url(images/PRO.png),   
+        url(images/event.png),   
+        url(images/parking.png),   
+        url(images/piece.png),   
+        url(images/bike.png),   
+        url(images/abo.png),   
+        url(images/acc.png),  
+        url(images/info.png),
+        url(images/user.png),     
+        url(images/log.png),   
+        url(images/categorie.png);
+   cn1-background-type :cn1-image-align-center;
+}
+txtn.selected{
+   border: 0;
+      border-bottom: 5px solid #ff6601;
+        outline: 0;
+}
+
+txtpass{
+font-family: "Montserrat";
+font-size: 60px;
+        border: 0;
+       border-bottom: 1px solid #ff6601;
+        outline: 0;
+	
+}
+txtpass.selected{
+        border: 0;
+        border-bottom: 5px solid #ff6601;
+        outline: 0;
+	
+}
+
+pass{
+ padding: 90px 60px;
+   font-family: "Montserrat";
+   font-size: 50px;
+   color: rgb(85, 85, 85);
+}
+
+
+vtnvalid
+{
+ 
+border-radius: 50%;
+background-color: #ff6601;
+  color: white;
+  text-align: center;
+  font-size: 70px;
+font-family: "MontserratSB";
+}
+
+vtnvalid.pressed
+{
+ 
+border-radius: 50%;
+background-color: white;
+  color: #ff6601;
+  text-align: center;
+  font-size: 90px;
+font-family: "MontserratSB";
+}
+btnins
+{
+border-radius: 50%;
+background-color: white;
+  color: #ff6601;
+  text-align: center;
+  font-size: 90px;
+ font-family: "MontserratSB";
+}
+aa{
+ padding-top: 350px;
+
+}
+bb{
+ padding-top: 30px;
+}
+
+
+
+login
+{
+  padding: 200px;
+  font-family: "Montserrat";
+  text-align: center;
+  color: #555555;
+  font-size: 70px;
+}
+
+logi
+{
+  
+  font-family: "Montserrat";
+  text-align: center;
+  color: #555555;
+  font-size: 65px;
+}
+tbb
+{
+  padding-top: 50px;
+ padding-right: 30px;
+}
+
+libC
+{
+  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size: 80px;
+   color: black;
+   text-decoration: underline;
+   padding-left:50px; 
+}
+libC2
+{
+  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size:55px;
+   color: black;
+   text-decoration: underline;
+   padding-left:50px; 
+}
+vert{
+  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size: 40px;
+   color: green;
+   
+   padding-left:50px; 
+}
+orange{
+  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size: 40px;
+   color: #ff6601;
+   padding-left:50px; 
+}
+rouge{
+  
+  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size: 40px;
+   color: red;
+   padding-left:50px; 
+
+}
+SideCommand 
+{
+  margin-top: 100px;
+  background-color: white;
+  border-color: #ff6601;
+   font-family: "Montserrat";
+   font-size: 90px;
+   color: #ff6601;
+    border-left:  5px solid #ff6601;
+
+}
+
+Menu
+{
+  background-color:red;
+ font-family: "Montserrat";
+  font-size:50px;
+   color: #ff6601;
+
+}
+Command 
+{
+   background-color: white;
+     font-family: "Montserrat";
+   font-size: 50px;
+ 
+}
+CommandList
+{
+  font-family: "Montserrat";
+   font-size: 50px;
+   color: white;
+   background-color: #ff6601 5px;
+}
+SidemenuTagline
+{
+  background-color: red;
+}
+SideNavigationPanel {
+   background-color: white;
+}
+btn
+{
+  
+   font-family: "Montserrat";
+   font-size: 50px;
+   padding-left:50px; 
+   color:rgb(168, 168, 168);
+   
+}
+type
+{  padding-bottom: 190px;
+    padding-right:50px; 
+   font-size: 60px;
+   font-family: "MontserratSB";
+  color: #ff6601;
+}
+type1
+{  text-transform: capitalize;
+   font-family: "MontserratSB";
+   font-size: 60px;
+   color: black;
+   text-decoration: underline;
+   padding-left:50px;
+}
+
+type2
+{  font-family: "Montserrat";
+   font-size: 55px;
+   padding-left:50px; 
+   color: rgb(73, 80, 87);
+   padding-bottom: 50px;
+}
+mod
+{
+padding-left:730px;
+
+}
+rem
+{
+padding-left:50px;
+
+}
+
+tbbb{
+
+padding-top: 70px;
+}
+
+tool {
+  background-color: #ff6601;
+}
+
+
+
+/* End C:\Users\asus\Desktop\bikeMobile\css\theme.css */
