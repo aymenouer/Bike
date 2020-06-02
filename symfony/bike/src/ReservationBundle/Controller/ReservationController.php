@@ -43,6 +43,7 @@ class ReservationController extends Controller
     public function bookingAction($id_v)
     {
 
+
         $requestsql = $this->getDoctrine()->getRepository(produit::class);
         $list_velos = $requestsql->produit_velo();
         $velo = null;
