@@ -7,6 +7,7 @@ package forms;
 
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Form;
+import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
@@ -22,6 +23,10 @@ public class User_Achat_Form extends Form {
 
     public User_Achat_Form(Form previous, int id) {
         super("Achat", BoxLayout.y());
+          Label modif = new Label("Achat ");
+                            modif.setUIID("login");
+                            
+                            this.add(modif);
         Resources theme;
         theme = UIManager.initFirstTheme("/theme");
         ComboBox cmb = new ComboBox("Achat 3 mois", "Achat un mois", "Achat un ans");
@@ -50,11 +55,13 @@ public class User_Achat_Form extends Form {
             }
 
         });
-
+         Label Choix = new Label("Choix : ");
+Choix.setUIID("pass");
+this.add(Choix);
         this.add(cmb);
-        this.getToolbar().addCommandToOverflowMenu("Logout", null, ev -> {
-            new UserInterfaceForm(this).showBack();
-        });
+            this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), evx -> {
+                previous.showBack();
+            });
         this.show();
     }
 

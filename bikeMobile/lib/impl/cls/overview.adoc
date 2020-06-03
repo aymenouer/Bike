@@ -1,2 +1,0 @@
-= RADChatRoom
-A full-featured Chat room UI component for Codename One

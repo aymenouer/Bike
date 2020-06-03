@@ -118,7 +118,11 @@ MyStyle {
         url(images/acc.png),  
         url(images/info.png),
         url(images/user.png),     
-        url(images/log.png),   
+        url(images/log.png),
+        url(images/broke_heart.png),
+        url(images/deslike.png),
+        url(images/heart.png),
+        url(images/like.png),
         url(images/categorie.png);
    cn1-background-type :cn1-image-align-center;
 }

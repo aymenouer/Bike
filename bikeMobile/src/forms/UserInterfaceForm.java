@@ -27,6 +27,7 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import java.io.IOException;
 
 import models.Abonnement;
 import models.Accessoire;
@@ -137,11 +138,10 @@ public class UserInterfaceForm extends Form {
             new User_MaintenanceForm(this).show();
         });
         this.getToolbar().addCommandToSideMenu("Events", null, e -> {
-            Form page1 = new Form("Page 1");
-            page1.getToolbar().addCommandToLeftBar("back", theme.getImage("back-command.png"), ev -> {
-                this.show();
-            });
-            page1.show();
+         try {
+                new EventUser(this).show();
+            } catch (IOException ex) {
+            }
         });
 
         this.getToolbar().addCommandToSideMenu("Mes Reclamations", null, e -> {
@@ -279,15 +279,53 @@ public class UserInterfaceForm extends Form {
         m.addActionListener(l
                 -> {
 
-            Form f2 = new Form("Details", BoxLayout.y());
+                   Form f2 = new Form(BoxLayout.y());
+            Label AJOUT = new Label("DETAILS");
+            AJOUT.setUIID("login");
+            f2.add(AJOUT);
+            Label type1 = new Label("LIBELLE");
             Label libelle = new Label(c.getLibelle());
+            Label type2 = new Label("LIBELLE CATEGORIE");
             Label categorie = new Label(c.getLib_C());
+            Label type3 = new Label("LIBELLE SITE");
             Label site = new Label(c.getLib_S());
+            Label type4 = new Label("QUANTITE");
             Label quantite = new Label(String.valueOf(c.getQuantite()));
+            Label type5 = new Label("DESCRIPTION");
             Label Description = new Label(c.getDescription());
+            Label type6 = new Label("PRIX");
             Label Prix = new Label(String.valueOf(c.getPrix()));
-
             Button acheter = new Button("acheter");
+            acheter.setUIID("vtnvalid");
+
+            type1.setUIID("type1");
+            type2.setUIID("type1");
+            type3.setUIID("type1");
+            type4.setUIID("type1");
+            type5.setUIID("type1");
+            type6.setUIID("type1");
+            
+            libelle.setUIID("type2");
+            categorie.setUIID("type2");
+            site.setUIID("type2");
+            quantite.setUIID("type2");
+            Description.setUIID("type2");
+            Prix.setUIID("type2");
+
+         
+
+            f2.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
+                this.showBack();
+            });
+            type1.setUIID("type1");
+            type2.setUIID("type1");
+            type3.setUIID("type1");
+            type4.setUIID("type1");
+            type5.setUIID("type1");
+            type6.setUIID("type1");
+       
+             
+            
             String url2 = "http://localhost/bike/web/uploads/images/" + c.getImage();
             ImageViewer imgv2;
             Image imge2;
@@ -296,10 +334,9 @@ public class UserInterfaceForm extends Form {
             imge2 = URLImage.createToStorage(enc2, url2, url2);
             imgv2 = new ImageViewer(imge2);
 
-            f2.getToolbar().addCommandToLeftBar("Return", null, (evt) -> {
-                this.showBack();
-            });
-            f2.add(imgv2).add("Libelle : ").add(libelle).add("Categorie : ").add(categorie).add("Site : ").add(site).add("Quantite : ").add(quantite).add("Description : ").add(Description).add("Prix : ").add(Prix).add(acheter);
+              f2.add(imgv2).add(type1).add(libelle).add(type2).add(categorie).add(type3).add(site).add(type4).add(quantite).add(type5).add(Description).add(type6).add(Prix).add(acheter);
+
+           
             try {
                 Rating_Produit rate_p = new RateProduit_Service().verif_Rate(c.getId_p());
                 System.out.println("eeeeee" + rate_p);
@@ -309,7 +346,7 @@ public class UserInterfaceForm extends Form {
 
                     f2.add(FlowLayout.encloseCenter(rate));
                     Button btn_rate = new Button("Rate");
-
+btn_rate.setUIID("vtnvalid");
                     f2.add(btn_rate);
 
                     btn_rate.addActionListener(lw

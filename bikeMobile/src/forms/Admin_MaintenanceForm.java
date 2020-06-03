@@ -60,9 +60,7 @@ Display.getInstance().scheduleBackgroundTask(()-> {
         
         
 
-    this.getToolbar().addCommandToLeftBar("back", theme.getImage("back-command.png"), ev -> {
-                previous.showBack();
-            });
+    
         
         
         
@@ -89,7 +87,9 @@ Display.getInstance().scheduleBackgroundTask(()-> {
         this.getContentPane().animateLayout(150);
     }
 }, 4);
-               
+      this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), l -> {
+            new LoginForm().showBack();
+        });         
     }
     
        public MultiButton addIteam_Maintenance(Maitenance c)
@@ -163,6 +163,7 @@ Display.getInstance().scheduleBackgroundTask(()-> {
               {
                 try {
                     new Maintenance_Service().DeleteMaitenance(c);
+                    new Admin_MaintenanceForm(f2).show();
                 } catch (Exception ex) {
   
                 }

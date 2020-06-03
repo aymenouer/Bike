@@ -164,6 +164,18 @@ public String  get_libC(int id)
           return null;
   
       } 
+public String  getlib(int id)
+      {
+          for( Velo u :getAllvelos())
+          {
+             if (u.getId_v()==id)
+              {
+                  return u.getLibelle();
+              }
+          }
+          return null;
+  
+      } 
       
    public String  get_Image(int id)
       {

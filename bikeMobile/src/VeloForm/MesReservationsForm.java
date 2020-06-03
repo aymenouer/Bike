@@ -53,7 +53,7 @@ public class MesReservationsForm extends Form {
         System.out.print(x);
           Label a = new Label("TOTAL "+String.valueOf(x));
          a.setUIID("type1");
-      //   this.add(logi);
+   
         this.add(a);
     }
 
@@ -63,12 +63,12 @@ public class MesReservationsForm extends Form {
 
         Container cn1 = new Container(new BorderLayout());
         Container cn2 = new Container(BoxLayout.y());
-        Label lab = new Label(a.get_libC(c.getIdV()));
+        Label lab = new Label(a.getlib(c.getIdV()));
         
 
         Button btn = new Button(a.get_libC(c.getIdV()));
 lab.setUIID("libC");
-        btn.setUIID("btn");
+       btn.setUIID("btn");
      
         String url = "http://localhost/bike/web/uploads/images/" + a.get_Image(c.getIdV());
         ImageViewer imgv;
@@ -80,7 +80,7 @@ lab.setUIID("libC");
 
         cn2.add(lab).add(btn);
         cn1.add(BorderLayout.WEST, cn2);
-        cn1.add(BorderLayout.EAST, imgv);
+        cn1.add(BorderLayout.NORTH, imgv);
 
         btn.addActionListener(e -> {
 

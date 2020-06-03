@@ -14,6 +14,7 @@ import com.codename1.ui.AutoCompleteTextField;
 import com.codename1.ui.Button;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
@@ -26,6 +27,9 @@ import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.codename1.ui.validation.LengthConstraint;
+import com.codename1.ui.validation.RegexConstraint;
+import com.codename1.ui.validation.Validator;
 import java.io.IOException;
 import models.Accessoire;
 import models.Categorie;
@@ -108,6 +112,31 @@ public class addAccessoireForm extends Form {
             ajout.add(QUANTITE).add(Quantite);
             ajout.add(CATEGORIE).add(cmb_lib_c);
             ajout.add(SITE).add(cmb_lib_s);
+              Validator val_Libelle = new Validator();
+
+            val_Libelle.addConstraint(Libelle, new LengthConstraint(8));
+
+            String text_saisir_des_caracteres = "^[0-9]+$";
+
+            val_Libelle.addConstraint(Libelle, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Description = new Validator();
+
+            val_Description.addConstraint(Description, new LengthConstraint(8));
+
+            val_Description.addConstraint(Description, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Prix = new Validator();
+
+            val_Prix.addConstraint(Prix, new LengthConstraint(8));
+
+            val_Prix.addConstraint(Prix, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Quantite = new Validator();
+
+            val_Quantite.addConstraint(Quantite, new LengthConstraint(8));
+
+            val_Quantite.addConstraint(Quantite, new RegexConstraint(text_saisir_des_caracteres, ""));
             ajout.getToolbar().setUIID("tb");
             ajout.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), evx -> {
                 this.showBack();
@@ -138,12 +167,48 @@ public class addAccessoireForm extends Form {
 
                             ajout.revalidate();
 
+                        
                             submit.addActionListener(lll
                                     -> {
 
-                                Accessoire ab = new Accessoire(Libelle.getText(), cmb_lib_c.getSelectedItem().toString(), cmb_lib_s.getSelectedItem().toString(), nomImage, Description.getText(), Float.valueOf(Prix.getText()), Integer.valueOf(Quantite.getText()));
+                                           if (Libelle.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Libelle ", "OK", null);
+
+                                } else if (val_Libelle.isValid()) {
+                                    Dialog.show("Erreur Libelle !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Description.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Description ", "OK", null);
+
+                                } else if (val_Description.isValid()) {
+                                    Dialog.show("Erreur Description !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Prix.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Prix ", "OK", null);
+
+                                } else if (!val_Prix.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Prix.getText()) <= 0) {
+                                    Dialog.show("Erreur Prix !", "Prix n'est pas acceptable", "OK", null);
+
+                                } else if (Quantite.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Quantite ", "OK", null);
+
+                                } else if (!val_Quantite.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Quantite.getText()) <= 0) {
+                                    Dialog.show("Erreur Quantite !", "Quantite n'est pas acceptable", "OK", null);
+
+                                }
+                                           else
+                                {
+                                     Accessoire ab = new Accessoire(Libelle.getText(), cmb_lib_c.getSelectedItem().toString(), cmb_lib_s.getSelectedItem().toString(), nomImage, Description.getText(), Float.valueOf(Prix.getText()), Integer.valueOf(Quantite.getText()));
                                 new Accessoire_Service().addAccessoire(ab);
-                                new addAccessoireForm(this).show();
+                                new addAccessoireForm(this).show();   
+                                }
+                                
+                                
+                            
 
                             }
                             );
@@ -244,10 +309,12 @@ public class addAccessoireForm extends Form {
             Modifier.addActionListener(eva
                     -> {
                 Form fmodifier = new Form(BoxLayout.y());
-                Label modif = new Label("EDIT CATEGORIE");
+                Label modif = new Label("EDIT Accessoire");
                 modif.setUIID("login");
                 fmodifier.add(modif);
-
+ fmodifier.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
+                this.showBack();
+            });
                 AutoCompleteTextField Libelle = new AutoCompleteTextField(c.getLibelle());
                 Libelle.setMinimumElementsShownInPopup(1);
                 Libelle.setUIID("txtn");
@@ -303,7 +370,31 @@ public class addAccessoireForm extends Form {
                 Label LS = new Label("LIBELLE SITE");
                 LS.setUIID("pass");
                 fmodifier.add(LS).add(cmb_lib_s);
+  Validator val_Libelle = new Validator();
 
+            val_Libelle.addConstraint(Libelle, new LengthConstraint(8));
+
+            String text_saisir_des_caracteres = "^[0-9]+$";
+
+            val_Libelle.addConstraint(Libelle, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Description = new Validator();
+
+            val_Description.addConstraint(Description_mod, new LengthConstraint(8));
+
+            val_Description.addConstraint(Description_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Prix = new Validator();
+
+            val_Prix.addConstraint(Prix_mod, new LengthConstraint(8));
+
+            val_Prix.addConstraint(Prix_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Quantite = new Validator();
+
+            val_Quantite.addConstraint(Quantite_mod, new LengthConstraint(8));
+
+            val_Quantite.addConstraint(Quantite_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
                 Label PHOTO = new Label("DRAG YOUR PHOTO HERE");
                 PHOTO.setUIID("pass");
                 fmodifier.addComponent(PHOTO);
@@ -333,13 +424,46 @@ public class addAccessoireForm extends Form {
                                     this.showBack();
                                 });
 
-                                submit.addActionListener(lll
+                                                              submit.addActionListener(lll
                                         -> {
+                                       if (Libelle.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Libelle ", "OK", null);
 
+                                } else if (val_Libelle.isValid()) {
+                                    Dialog.show("Erreur Libelle !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Description_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Description ", "OK", null);
+
+                                } else if (val_Description.isValid()) {
+                                    Dialog.show("Erreur Description !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Prix_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Prix ", "OK", null);
+
+                                } else if (!val_Prix.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Prix_mod.getText()) <= 0) {
+                                    Dialog.show("Erreur Prix !", "Prix n'est pas acceptable", "OK", null);
+
+                                } else if (Quantite_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Quantite ", "OK", null);
+
+                                } else if (!val_Quantite.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Quantite_mod.getText()) <= 0) {
+                                    Dialog.show("Erreur Quantite !", "Quantite n'est pas acceptable", "OK", null);
+
+                                }
+                                       else
+                                {
                                     Accessoire ab = new Accessoire(Libelle.getText(), cmb_lib_c.getSelectedItem().toString(), cmb_lib_s.getSelectedItem().toString(), nomImage, Description_mod.getText(), Float.valueOf(Prix_mod.getText()), Integer.valueOf(Quantite_mod.getText()));
 
                                     new Accessoire_Service().ModifierAccessoire(ab, c.getId_A());
-                                    new addAccessoireForm(this).showBack();
+                                    new addAccessoireForm(this).showBack();  
+                                }
+
+                                  
 
                                 }
                                 );

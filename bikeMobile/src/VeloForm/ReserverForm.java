@@ -76,7 +76,7 @@ public class ReserverForm extends Form {
         Label prixx = new Label(String.valueOf(c.getPrix()));
         Button btn = new Button("book");
         lab.setUIID("libC");
-        btn.setUIID("btn");
+      
         prixx.setUIID("type2");
         btn.setUIID("vtnvalid");
         String url = "http://localhost/bike/web/uploads/images/" + c.getImage();
@@ -89,7 +89,7 @@ public class ReserverForm extends Form {
         System.err.println(c.getImage());
         cn2.add(lab).add(prixx).add(btn);
         cn1.add(BorderLayout.WEST, cn2);
-        cn1.add(BorderLayout.EAST, imgv);
+        cn1.add(BorderLayout.NORTH, imgv);
 
         btn.addActionListener(e -> {
 
@@ -116,6 +116,8 @@ public class ReserverForm extends Form {
             Label Description = new Label(c.getDescription());
             Label type8 = new Label("PRIX");
             Label Prix = new Label(String.valueOf(c.getPrix()));
+            Label type10 = new Label("DATE DEBUT");
+            Label type11 = new Label("DATE FINALE");
              type1.setUIID("type1");
             type2.setUIID("type1");
             type3.setUIID("type1");
@@ -125,6 +127,8 @@ public class ReserverForm extends Form {
             type7.setUIID("type1");
             type8.setUIID("type1");
             type9.setUIID("type1");
+            type10.setUIID("type1");type11.setUIID("type1");
+            
             libelle.setUIID("type2");
             site.setUIID("type2");
             categorie.setUIID("type2");
@@ -143,7 +147,7 @@ public class ReserverForm extends Form {
             f2.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
                 this.show();
             });
-           f2.add(type1).add(libelle).add(type9).add(categorie).add(type2).add(site).add(type3).add(age).add(type4).add(couleur).add(type5).add(etat).add(type6).add(type).add(type7).add(Description).add(type8).add(Prix).add(btn_modifier);
+           f2.add(type1).add(libelle).add(type9).add(categorie).add(type2).add(site).add(type3).add(age).add(type4).add(couleur).add(type5).add(etat).add(type6).add(type).add(type7).add(Description).add(type8).add(Prix).add(type10).add(dateD).add(type11).add(dateF).add(btn_modifier);
 
 
             f2.show();

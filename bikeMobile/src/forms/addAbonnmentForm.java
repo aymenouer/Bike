@@ -15,6 +15,7 @@ import com.codename1.ui.Button;
 import com.codename1.ui.ComboBox;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Dialog;
 import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
@@ -28,6 +29,9 @@ import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.codename1.ui.validation.LengthConstraint;
+import com.codename1.ui.validation.RegexConstraint;
+import com.codename1.ui.validation.Validator;
 import models.Abonnement;
 import models.Categorie;
 import models.Site;
@@ -65,7 +69,6 @@ public class addAbonnmentForm extends Form {
 
                     enc = EncodedImage.createFromImage(theme.getImage("round.png"), false);
                     imge = URLImage.createToStorage(enc, url, url);
-//this.add(logi);
                     MultiButton m = new MultiButton();
                     m.setUIIDLine1("libC");
                     m.setUIIDLine2("btn");
@@ -88,7 +91,7 @@ public class addAbonnmentForm extends Form {
                         Label Libelle1 = new Label("LIBELLE CATEGORIE");
                         Label categorie = new Label(c.getLib_C());
                         Label Libelle5 = new Label("LIBELLE SITE");
-                        Label site = new Label(c.getLib_C());
+                        Label site = new Label(c.getLib_S());
                         Label QUANTITE = new Label("QUANTITE");
                         Label quantite = new Label(String.valueOf(c.getQuantite()));
                         Label PRIX = new Label("PRIX");
@@ -132,39 +135,36 @@ public class addAbonnmentForm extends Form {
                         );
                         Modifier.addActionListener(eva
                                 -> {
-                                Form fmodifier = new Form( BoxLayout.y());
+                            Form fmodifier = new Form("Edit Abonnment", BoxLayout.y());
                             Label modif = new Label("EDIT ABONNEMENT");
                             modif.setUIID("login");
                             
                             fmodifier.add(modif);
 
                             fmodifier.getToolbar().setUIID("tb");
-                            fmodifier.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
-                                f2.showBack();
-                            });
+                           
+                              fmodifier.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
+                f2.show();
+            });
                             Button submit = new Button("Submit");
                             submit.setUIID("vtnvalid");
                             AutoCompleteTextField Libelle = new AutoCompleteTextField(c.getLibelle());
                             Libelle.setMinimumElementsShownInPopup(1);
-                            Libelle.setUIID("txtn");
-                            
+ Libelle.setUIID("txtn");
                             AutoCompleteTextField Description_mod = new AutoCompleteTextField(c.getDescription());
                             Description_mod.setMinimumElementsShownInPopup(1);
-                            Description_mod.setUIID("txtn");
+                                  Description_mod.setUIID("txtn");
                             
                             AutoCompleteTextField Prix_mod = new AutoCompleteTextField(String.valueOf(c.getPrix()));
-                            Prix_mod.setMinimumElementsShownInPopup(1);
-                            Prix_mod.setUIID("txtn");
-                            
+                            Description_mod.setMinimumElementsShownInPopup(1);
+                             Prix_mod.setUIID("txtn");
                             AutoCompleteTextField Quantite_mod = new AutoCompleteTextField(String.valueOf(c.getQuantite()));
                             Quantite_mod.setMinimumElementsShownInPopup(1);
-                            Quantite_mod.setUIID("txtn");
-                            
+                             Quantite_mod.setUIID("txtn");
                             ComboBox cmb_lib_c = new ComboBox();
                             ComboBox cmb_lib_s = new ComboBox();
-                            cmb_lib_c.setUIID("txtn");
+ cmb_lib_c.setUIID("txtn");
                             cmb_lib_s.setUIID("txtn");
-
                             for (Categorie cat : new Categorie_Service().getAllCategories()) {
 
                                 if (cat.getType().equals("Abonnement")) {
@@ -177,21 +177,78 @@ public class addAbonnmentForm extends Form {
                                 cmb_lib_s.addItem(siteq.getLib_S());
 
                             }
-                            fmodifier.add(type5).add(Libelle);
-                            fmodifier.add(Description2).add(Description_mod);
-                            fmodifier.add(PRIX).add(Prix_mod);
-                            fmodifier.add(QUANTITE).add(Quantite_mod);
-                            fmodifier.add(Libelle1).add(cmb_lib_c);
-                            fmodifier.add(Libelle5).add(cmb_lib_s);
+                            fmodifier.add("Libelle : ").add(Libelle);
+                            fmodifier.add("Description : ").add(Description_mod);
+                            fmodifier.add("Prix : ").add(Prix_mod);
+                            fmodifier.add("Quantite : ").add(Quantite_mod);
+                            fmodifier.add("Categorie : ").add(cmb_lib_c);
+                            fmodifier.add("Site : ").add(cmb_lib_s);
                             fmodifier.add(submit);
+ Validator val_Libelle = new Validator();
 
+            val_Libelle.addConstraint(Libelle, new LengthConstraint(8));
+
+            String text_saisir_des_caracteres = "^[0-9]+$";
+
+            val_Libelle.addConstraint(Libelle, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Description = new Validator();
+
+            val_Description.addConstraint(Description_mod, new LengthConstraint(8));
+
+            val_Description.addConstraint(Description_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Prix = new Validator();
+
+            val_Prix.addConstraint(Prix_mod, new LengthConstraint(8));
+
+            val_Prix.addConstraint(Prix_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
+
+            Validator val_Quantite = new Validator();
+
+            val_Quantite.addConstraint(Quantite_mod, new LengthConstraint(8));
+
+            val_Quantite.addConstraint(Quantite_mod, new RegexConstraint(text_saisir_des_caracteres, ""));
+         
                             submit.addActionListener(lll
                                     -> {
-                                String urlab = "http://127.0.0.1/bike/mobile/qrcode.php";
+                                
+                                 if (Libelle.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Libelle ", "OK", null);
+
+                                } else if (val_Libelle.isValid()) {
+                                    Dialog.show("Erreur Libelle !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Description_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Description ", "OK", null);
+
+                                } else if (val_Description.isValid()) {
+                                    Dialog.show("Erreur Description !", "il faut saisir des caracteres  !", "OK", null);
+                                } else if (Prix_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Prix ", "OK", null);
+
+                                } else if (!val_Prix.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Prix_mod.getText()) <= 0) {
+                                    Dialog.show("Erreur Prix !", "Prix n'est pas acceptable", "OK", null);
+
+                                } else if (Quantite_mod.getText().equals("")) {
+                                    Dialog.show("Erreur", "Champ vide de Quantite ", "OK", null);
+
+                                } else if (!val_Quantite.isValid()) {
+                                    Dialog.show("Erreur Prix !", "il faut saisir des numbers", "OK", null);
+
+                                } else if (Integer.valueOf(Quantite_mod.getText()) <= 0) {
+                                    Dialog.show("Erreur Quantite !", "Quantite n'est pas acceptable", "OK", null);
+
+                                }
+                                 else
+                                {
+                                             String urlab = "http://127.0.0.1/bike/mobile/qrcode.php";
 
                                 ConnectionRequest cnreq = new ConnectionRequest();
                                 cnreq.setPost(false);
-                                String data = "Libelle : " + Libelle.getText() + "<br>  Description : " + capacite.getText() + " <br>  prix :" + Prix.getText() + " DT <br> Categorie : " + cmb_lib_c.getSelectedItem().toString() + " <br> Site : " + cmb_lib_s.getSelectedItem().toString() + "<br> Merci pour votre confiance &#128525;";
+                                String data = "Libelle : " + Libelle.getText() + "<br>  Description : " + Description_mod.getText() + " <br>  prix :" + Prix_mod.getText() + " DT <br> Categorie : " + cmb_lib_c.getSelectedItem().toString() + " <br> Site : " + cmb_lib_s.getSelectedItem().toString() + "<br> Merci pour votre confiance &#128525;";
 
                                 cnreq.addArgument("data", data);
                                 cnreq.setUrl(urlab);
@@ -208,6 +265,8 @@ public class addAbonnmentForm extends Form {
                                 );
                                 NetworkManager.getInstance().addToQueueAndWait(cnreq);
 
+                                }
+                       
                             }
                             );
                             fmodifier.show();

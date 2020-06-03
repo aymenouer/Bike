@@ -37,7 +37,7 @@ public class EditProfil extends Form {
   Resources theme = UIManager.initFirstTheme("/theme");
     public EditProfil(Form previous) {
         super( BoxLayout.y());
-        Label logi = new Label("EDIT PROFIL");
+        Label logi = new Label("EDIT Profil");
         logi.setUIID("login");
         this.add(logi);
 
@@ -105,6 +105,10 @@ public class EditProfil extends Form {
         Label PHOTO = new Label("DRAG YOUR PHOTO HERE");
                 PHOTO.setUIID("pass");
                 this.addComponent(PHOTO);
+        
+        this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
+            previous.showBack();
+        });
         
         
         
@@ -201,11 +205,8 @@ public class EditProfil extends Form {
         
         
         
-        
        
-        this.getToolbar().addCommandToLeftBar("Back", null, (evt) -> {
-            previous.showBack();
-        });
+       
 
     }
 

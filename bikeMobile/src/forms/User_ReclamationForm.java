@@ -48,6 +48,10 @@ public class User_ReclamationForm extends Form {
             this.add(addItem_reclamation(c));
 
         }
+                this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt)
+                -> {
+            previous.show();
+        });
         this.getToolbar().addCommandToOverflowMenu("Add reclamation", null, ev -> {
 
             Form ajout = new Form(BoxLayout.y());
@@ -87,7 +91,24 @@ public class User_ReclamationForm extends Form {
                             ajout.add(img);
                             Container cn_sw = new Container(BoxLayout.x());
                             OnOffSwitch swi = new OnOffSwitch();
-                            cn_sw.add(new ImageViewer(theme.getImage("broke_heart.png").scaledWidth(Math.round(Display.getInstance().getDisplayWidth() / 10)))).add(swi).add(new ImageViewer(theme.getImage("heart.png").scaledWidth(Math.round(Display.getInstance().getDisplayWidth() / 10))));
+                                            // yes
+                   String url_photo_like = "http://localhost/bike/web/uploads/images/heart.png" ;
+            ImageViewer img_like;
+            Image imge_like;
+            EncodedImage enc_like;
+            enc_like = EncodedImage.createFromImage(theme.getImage("round.png"), false);
+            imge_like = URLImage.createToStorage(enc_like, url_photo_like, url_photo_like);
+            img_like = new ImageViewer(imge_like);
+                //non
+                  String url_photo_deslike = "http://localhost/bike/web/uploads/images/broke_heart.png" ;
+            ImageViewer img_deslike;
+            Image imge_deslike;
+            EncodedImage enc_deslike;
+            enc_deslike = EncodedImage.createFromImage(theme.getImage("round.png"), false);
+            imge_deslike = URLImage.createToStorage(enc_deslike, url_photo_deslike, url_photo_deslike);
+            img_deslike = new ImageViewer(imge_deslike);
+               // 
+                            cn_sw.add(imge_deslike).add(swi).add(img_like);
                             ajout.add(cn_sw);
                             ajout.add("Problem : ").add(editor);
                             ajout.revalidate();

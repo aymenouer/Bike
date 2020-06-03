@@ -24,8 +24,9 @@ public class welcomeForm extends Form {
           super("Welcome",  new BorderLayout());
        
           Button sign = new Button("Sign");
+          sign.setUIID("vtnvalid");
        try {
-    //this.add(CENTER, new ScaleImageLabel(GifImage.decode(getResourceAsStream("/accueil.gif"), 1177720)));
+    this.add(CENTER, new ScaleImageLabel(GifImage.decode(getResourceAsStream("/giphy.gif"), 1177720)));
 
   
        } catch(Exception err) {

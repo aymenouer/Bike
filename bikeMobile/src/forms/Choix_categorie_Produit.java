@@ -50,10 +50,8 @@ public class Choix_categorie_Produit extends Form {
         labPiece.setUIID("resce");
         labAccessoire.setUIID("rescc");
         labVelo.setUIID("rescd");
-//        this.getToolbar().getLeftSideMenuButton().setUIID("tb");
-        this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
-            new AccueilAdminForm(this).show();
-        });
+
+     
         Abonnment.addActionListener(abo
                 -> {
 

@@ -35,7 +35,7 @@ public class Achat_OffreForm extends Form {
     public Achat_OffreForm(Form previous) {
 
         super(BoxLayout.y());
-         Label logi = new Label("MES OFFRES");
+         Label logi = new Label("MON OFFRE");
         logi.setUIID("login");
         this.add(logi);
        
@@ -51,6 +51,7 @@ public class Achat_OffreForm extends Form {
         this.add(login);
 
             Button passer = new Button("Products");
+            passer.setUIID("vtnvalid");
             this.add(passer);
             passer.addActionListener(l
                     -> {
@@ -121,7 +122,7 @@ public class Achat_OffreForm extends Form {
                     this.add(FlowLayout.encloseCenter(rate));
                     Button btn_rate = new Button("Rate");
                      btn_rate.setUIID("vtnvalid");
-                     this.add(btn_sup);
+                  
                       this.add(btn_rate);
                       
                       
@@ -157,7 +158,7 @@ public class Achat_OffreForm extends Form {
             } catch (Exception e) {
 
             }
-
+   this.add(btn_sup);
             
 
             btn_sup.addActionListener(sss

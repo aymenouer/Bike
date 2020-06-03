@@ -80,9 +80,9 @@ public class Detail_ProfilForm extends Form {
             );
 
             this.getToolbar().setUIID("tb");
-            this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), l -> {
-                previous.showBack();
-            });
+             this.getToolbar().addCommandToLeftBar(null, theme.getImage("back.png"), (evt) -> {
+            previous.showBack();
+        });
     }
     
 }
